@@ -107,7 +107,7 @@ ctrl + c
 
 Help with <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request" target="_blank">creating a pull request.</a>
 
-Help with <a href="https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository#pulling-changes-from-a-remote-repository" target="\_blank"> pulling updates from repo
+Help with <a href="https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository#pulling-changes-from-a-remote-repository" target="_blank"> pulling updates from repo.
 
 Material Web Components on<a href="https://github.com/material-components/material-web" target="_blank"> Github. </a>
 
