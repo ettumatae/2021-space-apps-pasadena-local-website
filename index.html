@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- TODO: Reduce image size! -->
+  <!-- TODO: Add tab hover & select -->
+  <!-- TODO: Fix text size on small screens-->
+  <!-- TODO: Fix gif on smaller screens -->
+  <!-- TODO: Fix SEO -->
+  <!-- TODO: Finish older browser compatibility -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Website for NASA Space Apps Pasadena" />
+    <!-- Meta for unicode -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>NASA Space Apps Pasadena 2021 Website</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;600;700;900&family=Roboto:wght@100;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./dist/bundle.css" />
+  </head>
+
+  <body class="mdc-typography">
+    <aside class="mdc-drawer mdc-drawer--modal">
+      <div class="mdc-drawer__content">
+        <nav class="mdc-list">
+          <a
+            class="mdc-list-item mdc-list-item--activated"
+            href="#about"
+            aria-selected="true"
+          >
+            <span class="mdc-list-item__text">About</span>
+          </a>
+          <a class="mdc-list-item" href="#meet-the-team">
+            <span class="mdc-list-item__text">Meet The Team</span>
+          </a>
+          <a class="mdc-list-item" href="#collaborators" title>
+            <span class="mdc-list-item__text">Collaborators</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="mdc-drawer-scrim"></div>
+    <div class="mdc-drawer-app-content">
+      <header class="mdc-top-app-bar top-app-bar mdc-elevation--z2">
+        <div class="space-apps-pasadena-section">
+          <div class="mdc-top-app-bar__row">
+            <section
+              class="
+                mdc-top-app-bar__section mdc-top-app-bar__section--align-start
+              "
+            >
+              <button
+                class="
+                  material-icons
+                  mdc-top-app-bar__navigation-icon
+                  mdc-icon-button
+                "
+                aria-label="Open navigation menu"
+              >
+                menu
+              </button>
+              <a href="/">
+                <span class="mdc-top-app-bar__title"
+                  >NASA Space Apps Pasadena 2021</span
+                >
+              </a>
+              <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                  <div class="mdc-tab-scroller__scroll-area">
+                    <div class="mdc-tab-scroller__scroll-content">
+                      <a class="mdc-list-item" href="#about">
+                        <button
+                          class="mdc-tab mdc-tab--min-width"
+                          role="tab"
+                          tabindex="0"
+                        >
+                          <span class="mdc-tab__content">
+                            <span class="mdc-tab__text-label">About</span>
+                          </span>
+
+                          <span class="mdc-tab__ripple"></span>
+                        </button>
+                      </a>
+
+                      <a class="mdc-list-item" href="#meet-the-team">
+                        <button
+                          class="mdc-tab mdc-tab--min-width"
+                          role="tab"
+                          aria-selected="true"
+                          tabindex="0"
+                        >
+                          <span class="mdc-tab__content">
+                            <span class="mdc-tab__text-label"
+                              >Meet The Team</span
+                            >
+                          </span>
+
+                          <span class="mdc-tab__ripple"></span>
+                        </button>
+                      </a>
+
+                      <a class="mdc-list-item" href="#collaborators">
+                        <button
+                          class="mdc-tab mdc-tab--min-width"
+                          role="tab"
+                          aria-selected="true"
+                          tabindex="0"
+                        >
+                          <span class="mdc-tab__content">
+                            <span class="mdc-tab__text-label"
+                              >Collaborators</span
+                            >
+                          </span>
+
+                          <span class="mdc-tab__ripple"></span>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section
+              class="
+                mdc-top-app-bar__section mdc-top-app-bar__section--align-end
+              "
+            >
+              <!-- Register button -->
+              <a
+                href="https://2021.spaceappschallenge.org/locations/pasadena-ca/event"
+                target="_blank"
+              >
+                <div class="mdc-touch-target-wrapper">
+                  <button class="mdc-button register-button mdc-button--touch">
+                    <span class="mdc-button__ripple"></span>
+                    <span class="mdc-button__touch"></span>
+                    <span class="mdc-button__label">Register </span>
+                  </button>
+                </div>
+              </a>
+            </section>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <main class="mdc-top-app-bar--fixed-adjust">
+      <div class="space-apps-pasadena-section">
+        <div class="hero-container">
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-8-tablet
+                  mdc-layout-grid__cell--span-12-desktop
+                  mdc-layout-grid__cell--span-12-desktop-hd
+                "
+              >
+                <img
+                  class="hero-image"
+                  src="./media/2018-001-space-apps-pasadena.gif"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div id="about"></div>
+            <div
+              class="
+                mdc-layout-grid__cell
+                mdc-layout-grid__cell--span-4-phone
+                mdc-layout-grid__cell--span-8-tablet
+                mdc-layout-grid__cell--span-12-desktop
+                mdc-layout-grid__cell--span-12-desktop-hd
+              "
+            >
+              <h1>NASA Space Apps Pasadena</h1>
+
+              <h5>
+                Excepturi maiores distinctio mollitia quas dolor debitis saepe
+                aut, alias magni dolore.<br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meet the team -->
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div id="meet-the-team"></div>
+
+            <div
+              class="
+                mdc-layout-grid__cell
+                mdc-layout-grid__cell--span-4-phone
+                mdc-layout-grid__cell--span-8-tablet
+                mdc-layout-grid__cell--span-12-desktop
+                mdc-layout-grid__cell--span-12-desktop-hd
+              "
+            >
+              <h2>Meet The Team</h2>
+
+              <h5>
+                Excepturi maiores distinctio mollitia quas dolor debitis saepe
+                aut, alias magni dolore.<br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Image Grid -->
+        <div class="meet-the-team-content">
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+              <!-- Trinity -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-4-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card">
+                  <div
+                    class="team-image mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url('./media/001-team-image-trinity-chung.png');
+                    "
+                  ></div>
+                  <div class="team-card__text-label">Trinity Chung</div>
+                </div>
+              </div>
+              <!-- Janet -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-4-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card">
+                  <div
+                    class="team-image mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url('./media/002-team-image-janet-teng.png');
+                    "
+                  ></div>
+                  <div class="team-card__text-label">Janet Teng</div>
+                </div>
+              </div>
+              <!-- Jacqueline -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-4-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card">
+                  <div
+                    class="team-image mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url('./media/003-team-image-jacqueline-friedberg.png');
+                    "
+                  ></div>
+                  <div class="team-card__text-label">Jacqueline Friedberg</div>
+                </div>
+              </div>
+              <!-- Pranav -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-4-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card">
+                  <div
+                    class="team-image mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url('./media/004-team-image-pranav-patel.png');
+                    "
+                  ></div>
+                  <div class="team-card__text-label">Pranav Patel</div>
+                </div>
+              </div>
+
+              <!-- Anthony Ko -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-4-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card">
+                  <div
+                    class="team-image mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url('./media/005-team-image-anthony-ko.png');
+                    "
+                  ></div>
+                  <div class="team-card__text-label">Anthony Ko</div>
+                </div>
+              </div>
+
+              <!-- Oneal -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-4-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card">
+                  <div
+                    class="team-image mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url('./media/006-team-image-oneal-douglin.png');
+                    "
+                  ></div>
+                  <div class="team-card__text-label">Oneal Douglin</div>
+                </div>
+              </div>
+
+              <!-- Nicolas -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-4-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card">
+                  <div
+                    class="team-image mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url('./media/007-team-image-nicolas-hernandez.png');
+                    "
+                  ></div>
+                  <div class="team-card__text-label">Nicolas Hernandez</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collaborators -->
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div id="collaborators"></div>
+            <div
+              class="
+                mdc-layout-grid__cell
+                mdc-layout-grid__cell--span-4-phone
+                mdc-layout-grid__cell--span-8-tablet
+                mdc-layout-grid__cell--span-12-desktop
+                mdc-layout-grid__cell--span-12-desktop-hd
+              "
+            >
+              <h2>Collaborators</h2>
+              <h5>
+                Excepturi maiores distinctio mollitia quas dolor debitis saepe
+                aut, alias magni dolore.<br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <ul class="mdc-image-list my-image-list">
+          <!-- 1 -->
+          <li class="mdc-image-list__item tier-1">
+            <div class="mdc-image-list__image-aspect-container">
+              <img
+                class="mdc-image-list__image"
+                src="./media/logo-002-echoar.jpg"
+              />
+            </div>
+            <div class="mdc-image-list__supporting"></div>
+          </li>
+          <!-- 2 -->
+          <li class="mdc-image-list__item">
+            <div class="mdc-image-list__image-aspect-container">
+              <img
+                class="mdc-image-list__image"
+                src="./media/logo-001-wolfram.jpg"
+              />
+            </div>
+            <div class="mdc-image-list__supporting"></div>
+          </li>
+          <!-- 3 -->
+          <li class="mdc-image-list__item">
+            <div class="mdc-image-list__image-aspect-container">
+              <img
+                class="mdc-image-list__image"
+                src="./media/logo-003-replit.jpg"
+              />
+            </div>
+            <div class="mdc-image-list__supporting"></div>
+          </li>
+
+          <!-- 4 -->
+          <li class="mdc-image-list__item">
+            <div class="mdc-image-list__image-aspect-container">
+              <img
+                class="mdc-image-list__image"
+                src="./media/logo-004-pcc.jpg"
+              />
+            </div>
+            <div class="mdc-image-list__supporting"></div>
+          </li>
+
+          <!-- 5 -->
+          <li class="mdc-image-list__item">
+            <div class="mdc-image-list__image-aspect-container">
+              <img
+                class="mdc-image-list__image"
+                src="./media/logo-005-innovate-pasadena.jpg"
+              />
+            </div>
+            <div class="mdc-image-list__supporting"></div>
+          </li>
+
+          <!-- 6 -->
+          <li class="mdc-image-list__item">
+            <div class="mdc-image-list__image-aspect-container">
+              <img
+                class="mdc-image-list__image"
+                src="./media/logo-006-command-tech.jpg"
+              />
+            </div>
+            <div class="mdc-image-list__supporting"></div>
+          </li>
+
+          <!-- 7 -->
+          <li class="mdc-image-list__item">
+            <div class="mdc-image-list__image-aspect-container">
+              <img
+                class="mdc-image-list__image"
+                src="./media/logo-007-blaze-pizza.jpg"
+              />
+            </div>
+            <div class="mdc-image-list__supporting"></div>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Material JavaScript -->
+    <script src="./dist/bundle.js" async></script>
+
+    <!-- Add support for Web Components to IE11. -->
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  </body>
+</html>

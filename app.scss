@@ -1,0 +1,324 @@
+/* All Use components */
+/* Set Global Material Color */
+@use '@material/theme' with (
+  /* Colors based on NASA Space Apps 2021*/
+  $primary: #fff,
+  $secondary: #0042a6,
+  $surface: #fff,
+  $background: #fff,
+  $on-surface: #000,
+  $on-primary: #000,
+  $on-secondary: #fff,
+);
+
+@use "@material/typography" with (
+  $font-family: unquote('"Fira Sans", Helvetica, sans-serif'),
+  $styles-headline1: (
+    font-family: unquote('Fira Sans'),
+    font-weight: 700
+  ),
+  $styles-headline2: ( 
+    font-family: unquote('Fira Sans'),
+    font-weight: 700
+  ),
+  $styles-headline3: (
+    font-family: unquote('Fira Sans'),
+    font-weight: 700
+  ),
+  $styles-headline4: (
+    font-family: unquote('Fira Sans'),
+    font-weight: 700
+
+  ),
+  $styles-headline5: (
+    font-family: unquote('Roboto'),
+
+  ),
+  $styles-headline6: (
+    font-family: unquote('Roboto'),
+
+  ),
+  $styles-body1: (
+    font-family: unquote('Roboto'),
+  ),
+  $styles-body2: (
+    font-family: unquote('Roboto'),
+  ),
+  $styles-subtitle1: (
+    font-family: unquote('Fira Sans'),
+  ),
+  $styles-subtitle2: (
+    font-family: unquote('Fira Sans'),
+  ),
+  $styles-button: (
+    font-family: unquote('Roboto'),
+  ),
+  $styles-overline: (
+    font-family: unquote('Roboto'),
+  ),
+  $styles-caption: (
+    font-family: unquote('Roboto'),
+  ),
+);
+
+/* Must be configured before any other use/import that imports MDC styles */
+@use '@material/button/styles';
+/* Theme */
+@use '@material/theme/custom-properties';
+/* Customize button */
+@use '@material/button';
+/* Top app bar */
+@use '@material/icon-button';
+@use '@material/top-app-bar/mdc-top-app-bar';
+/* Typography */
+/* Grid */
+@use '@material/layout-grid/mdc-layout-grid';
+/* Shape */
+@use '@material/shape';
+/* Typography */
+@use '@material/typography/mdc-typography';
+/* Card */
+@use "@material/card";
+/* Image List */
+@use "@material/image-list/mdc-image-list";
+/* Customize Image List */
+@use "@material/image-list";
+/* Elevation */
+@use "@material/elevation/mdc-elevation";
+/* Tab bar*/
+@use "@material/tab-bar/mdc-tab-bar";
+@use "@material/tab-scroller/mdc-tab-scroller";
+@use "@material/tab-indicator/mdc-tab-indicator";
+@use "@material/tab/mdc-tab";
+
+/* Drawer*/
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
+/* Cards */
+@include card.core-styles;
+
+/* All include components */
+/* Top app bar */
+@include icon-button.core-styles;
+/* Cards */
+@include card.core-styles;
+
+/* Tabs */
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/icon-button/mdc-icon-button";
+
+html {
+  @include typography.base;
+}
+
+/* 
+Use Global set to Material typography. individual sets can also be changed w/ 
+ex: class="mdc-typography-headline4"
+*/
+h1 {
+  @include typography.typography(headline1);
+  font-size: 97;
+}
+h2 {
+  @include typography.typography(headline2);
+  font-size: 61;
+}
+h3 {
+  @include typography.typography(headline3);
+  font-size: 48;
+}
+h4 {
+  @include typography.typography(headline4);
+  font-size: 34;
+}
+h5 {
+  @include typography.typography(headline5);
+  font-size: 24;
+}
+h6 {
+  @include typography.typography(headline6);
+  font-size: 20;
+}
+p {
+  @include typography.typography(body1);
+  font-size: 16;
+}
+
+/* Use global Material design color */
+.register-button,
+.mdc-button__label {
+  @include theme.property(background, secondary);
+  @include theme.property(color, on-secondary);
+}
+
+.hero-container {
+  @include theme.property(background, primary);
+}
+
+.mdc-top-app-bar__title {
+  @include theme.property(color, on-primary);
+  text-decoration: none;
+}
+
+* {
+  /* Toggle Comment border-style & color (on/off) to see layout border */
+  // border-style: solid;
+  // border-color: #c22b10;
+
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  word-break: normal;
+}
+body,
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  text-size-adjust: 100%;
+  overflow: auto;
+  // max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Reset List Styles */
+.nav-list {
+  list-style: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0rem;
+}
+
+/* Style the list items side by side */
+.nav-list-item {
+  list-style-type: none;
+  position: relative;
+  padding: 0.5rem;
+}
+
+/* Fill the height of the top app bar with the tab bar */
+.mdc-top-app-bar__section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mdc-tab-bar,
+.mdc-tab-scroller,
+.mdc-tab-scroller__scroll-area,
+.mdc-tab {
+  height: 100%;
+}
+
+.team-card__text-label {
+  margin: 0 16px;
+  @include typography.typography(headline6);
+  @include mdc-typography-baseline-top(32px);
+}
+
+$card-secondary-baseline: 16px;
+.team-card__secondary {
+  margin: 16px;
+  @include typography.typography(body1);
+  @include mdc-typography-baseline-top(24px);
+  @include mdc-typography-baseline-bottom(-$card-secondary-baseline);
+}
+
+.mdc-card__actions {
+  justify-content: flex-end;
+}
+
+.mdc-top-app-bar__navigation-icon {
+  display: none;
+}
+
+$card-text-label-baseline: 16px;
+.team-card .mdc-card__actions {
+  margin-top: auto;
+}
+
+.mdc-typography--caption {
+  @include mdc-typography(caption);
+  @include mdc-typography-baseline-top(24px);
+  @include mdc-typography-baseline-bottom(-$card-text-label-baseline);
+}
+
+/* Meet the team image cards */
+.my-image-list {
+  @include image-list.standard-columns(7);
+  padding: 16px;
+}
+
+.team-card__secondary,
+.team-card__text-label {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .my-image-list {
+    @include image-list.standard-columns(3);
+  }
+
+  .team-card__secondary {
+    display: none;
+  }
+}
+
+/* Remove card outline */
+.mdc-card--outlined {
+  border-width: 0;
+}
+
+/* Hero */
+.hero-image {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// BREAKPOINT for viewport widths <500px
+
+@media (max-width: 500px) {
+  .mdc-top-app-bar__navigation-icon {
+    display: block;
+  }
+
+  .mdc-tab-bar {
+    display: none;
+  }
+}
+
+/* Hide on mobile */
+.mdc-top-app-bar__title {
+  display: none;
+}
+// BREAKPOINT for viewport widths > 500px
+@media (min-width: 500px) {
+  .mdc-top-app-bar__title {
+    display: block;
+  }
+}
+
+// BREAKPOINT for viewport widths > 1000px
+@media (min-width: 1000px) {
+  .meet-the-team-content {
+    margin: 0 25vh;
+  }
+}
