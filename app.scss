@@ -133,23 +133,22 @@ p {
 figcaption {
   @include typography.typography(caption);
 }
-
 // BREAKPOINT for viewport widths <500px
 @media (max-width: 500px) {
   h1 {
-    @include typography.typography(headline2);
-  }
-  h2 {
     @include typography.typography(headline3);
   }
-  h3 {
+  h2 {
     @include typography.typography(headline4);
   }
-  h4 {
+  h3 {
     @include typography.typography(headline5);
   }
-  h5 {
+  h4 {
     @include typography.typography(headline6);
+  }
+  h5 {
+    @include typography.typography(body1);
   }
   h6 {
     @include typography.typography(body1);
@@ -253,11 +252,9 @@ body {
   .mdc-top-app-bar__navigation-icon {
     display: block;
   }
-
   .mdc-tab-bar {
     display: none;
   }
-
   .mdc-top-app-bar__title {
     display: none;
   }
@@ -272,7 +269,7 @@ body {
 
 /* Hero */
 .hero-image {
-  width: 90%;
+  width: 100%;
   height: auto;
   display: block;
   margin-left: auto;
@@ -305,8 +302,8 @@ figcaption {
 
 /* BREAKPOINT for viewport widths > 900px */
 @media (min-width: 900px) {
-  .meet-the-team-content {
-    margin: 0 45vh;
+  .homepage-content {
+    margin: 0 15vh;
   }
 }
 
@@ -316,7 +313,7 @@ figcaption {
 }
 
 /* BREAKPOINT for viewport widths <900px */
-@media (max-width: 900px) {
+@media (max-width: 899px) {
   .my-image-list {
     @include image-list.standard-columns(3);
   }
