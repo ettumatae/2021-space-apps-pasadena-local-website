@@ -8671,12 +8671,16 @@ body {
 .meet-the-team-section {
   margin-top: 8rem;
   margin-bottom: 8rem;
+  padding-bottom: 4rem;
   border-top: solid 1.5px #0960e1;
   border-bottom: solid 1.5px #0960e1;
-  padding-bottom: 4rem;
 }
 
 /* Meet the team image cards */
+.meet-the-team-grid {
+  margin-top: 3rem;
+}
+
 .team-card__secondary,
 .team-card__text-label {
   text-align: center;
@@ -8738,11 +8742,20 @@ body {
   margin: 2px;
 }
 
-/* BREAKPOINT for viewport widths <900px */
-@media (max-width: 899px) {
+/* BREAKPOINT for viewport widths <500px */
+@media (max-width: 500px) {
   .my-image-list .mdc-image-list__item {
     width: calc(
         100% / 3 - 4.3333333333px
+      );
+    margin: 2px;
+  }
+}
+/* BREAKPOINT for viewport widths <500px */
+@media (max-width: 800px) {
+  .my-image-list .mdc-image-list__item {
+    width: calc(
+        100% / 4 - 4.25px
       );
     margin: 2px;
   }
