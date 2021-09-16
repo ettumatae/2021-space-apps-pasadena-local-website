@@ -8541,7 +8541,8 @@ p {
   }
 }
 /* Use global Material design color */
-.register-button,
+.register-button-fixed,
+.register-button-top-app-bar,
 .mdc-button__label {
   background: #0960e1;
   /* @alternate */
@@ -8569,6 +8570,12 @@ p {
   /* @alternate */
   color: var(--mdc-theme-secondary, #0960e1);
   text-decoration: underline;
+}
+
+.logo-link {
+  color: #000;
+  /* @alternate */
+  color: var(--mdc-theme-on-surface, #000);
 }
 
 * {
@@ -8599,13 +8606,6 @@ body {
   overflow: auto;
   max-width: 1500px;
   margin: 0 auto;
-}
-
-.register-button {
-  position: fixed;
-  bottom: 1.25em;
-  right: 1em;
-  z-index: 1;
 }
 
 /* Site logo */
@@ -8650,17 +8650,45 @@ body {
   display: none;
 }
 
-/* BREAKPOINT for viewport widths <500px */
-@media (max-width: 500px) {
+/* BREAKPOINT for viewport widths >920px */
+@media (max-width: 920px) {
   .mdc-top-app-bar__navigation-icon {
     display: block;
   }
 
-  .mdc-tab-bar {
+  .tab-list {
     display: none;
   }
 }
-/* BREAKPOINT for viewport widths <920*/
+/* Register button */
+.register-button-fixed {
+  display: none;
+}
+
+/* BREAKPOINT for viewport widths >920*/
+@media screen and (min-width: 920px) {
+  .register-button-fixed {
+    position: fixed;
+    bottom: 1.25em;
+    right: 1em;
+    z-index: 1;
+    display: block;
+  }
+
+  .register-button-top-app-bar {
+    display: none;
+  }
+}
+/* BREAKPOINT for viewport widths <500*/
+@media screen and (max-width: 500px) {
+  .register-button-fixed {
+    display: none;
+  }
+
+  .register-button-top-app-bar {
+    display: none;
+  }
+}
 /* Subtitle text */
 .subtitle-container {
   margin-top: 2rem;
@@ -8679,8 +8707,17 @@ body {
 /* Meet the team image cards */
 .meet-the-team-grid {
   margin-top: 3rem;
+  margin: 8rem 45vh 0 0;
 }
 
+/* BREAKPOINT for viewport widths >920*/
+@media screen and (max-width: 920px) {
+  .meet-the-team-grid,
+.collaborator-logo-grid {
+    margin-top: 3rem;
+    margin: 0;
+  }
+}
 .team-card__secondary,
 .team-card__text-label {
   text-align: center;
@@ -8721,10 +8758,6 @@ body {
   vertical-align: 0;
 }
 
-.meet-the-team-content {
-  margin: 0 30vh;
-}
-
 .mdc-card__actions {
   justify-content: flex-end;
 }
@@ -8734,29 +8767,14 @@ body {
   border-width: 0;
 }
 
-/* Collaborator image list */
-.my-image-list .mdc-image-list__item {
-  width: calc(
-        100% / 7 - 4.1428571429px
-      );
-  margin: 2px;
+/* Collaborator image grid */
+.collaborator-logo-grid {
+  margin: 0 50vh 0 0;
 }
 
-/* BREAKPOINT for viewport widths <500px */
-@media (max-width: 500px) {
-  .my-image-list .mdc-image-list__item {
-    width: calc(
-        100% / 3 - 4.3333333333px
-      );
-    margin: 2px;
-  }
-}
-/* BREAKPOINT for viewport widths <500px */
-@media (max-width: 800px) {
-  .my-image-list .mdc-image-list__item {
-    width: calc(
-        100% / 4 - 4.25px
-      );
-    margin: 2px;
+/* BREAKPOINT for viewport widths >920*/
+@media screen and (max-width: 920px) {
+  .collaborator-logo-grid {
+    margin: 0;
   }
 }
