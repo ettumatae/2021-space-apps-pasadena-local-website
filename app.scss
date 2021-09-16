@@ -158,7 +158,8 @@ p {
 }
 
 /* Use global Material design color */
-.register-button,
+.register-button-fixed,
+.register-button-top-app-bar,
 .mdc-button__label {
   @include theme.property(background, secondary);
   @include theme.property(color, on-secondary);
@@ -173,6 +174,9 @@ p {
 .links {
   @include theme.property(color, secondary);
   text-decoration: underline;
+}
+.logo-link {
+  @include theme.property(color, on-surface);
 }
 
 * {
@@ -204,12 +208,6 @@ body {
   margin: 0 auto;
 }
 
-.register-button {
-  position: fixed;
-  bottom: 1.25em;
-  right: 1em;
-  z-index: 1;
-}
 /* Site logo */
 .logo {
   width: 322px;
@@ -258,18 +256,42 @@ body {
   display: none;
 }
 
-/* BREAKPOINT for viewport widths <500px */
-@media (max-width: 500px) {
+/* BREAKPOINT for viewport widths >920px */
+@media (max-width: 920px) {
   .mdc-top-app-bar__navigation-icon {
     display: block;
   }
-  .mdc-tab-bar {
+  .tab-list {
     display: none;
   }
 }
-/* BREAKPOINT for viewport widths <920*/
-@media screen and (max-width: 920px) {
-  .nav-item {
+
+/* Register button */
+.register-button-fixed {
+  display: none;
+}
+
+/* BREAKPOINT for viewport widths >920*/
+@media screen and (min-width: 920px) {
+  .register-button-fixed {
+    position: fixed;
+    bottom: 1.25em;
+    right: 1em;
+    z-index: 1;
+    display: block;
+  }
+  .register-button-top-app-bar {
+    display: none;
+  }
+}
+
+/* BREAKPOINT for viewport widths <500*/
+@media screen and (max-width: 500px) {
+  .register-button-fixed {
+    display: none;
+  }
+  .register-button-top-app-bar {
+    display: none;
   }
 }
 
@@ -292,6 +314,16 @@ $on-surface-medium-emphasis: #0000008a;
 /* Meet the team image cards */
 .meet-the-team-grid {
   margin-top: 3rem;
+  margin: 8rem 45vh 0 0;
+}
+
+/* BREAKPOINT for viewport widths >920*/
+@media screen and (max-width: 920px) {
+  .meet-the-team-grid,
+  .collaborator-logo-grid {
+    margin-top: 3rem;
+    margin: 0;
+  }
 }
 
 .team-card__secondary,
@@ -305,10 +337,6 @@ $on-surface-medium-emphasis: #0000008a;
   @include mdc-typography-baseline-top(32px);
 }
 
-.meet-the-team-content {
-  margin: 0 30vh;
-}
-
 .mdc-card__actions {
   justify-content: flex-end;
 }
@@ -318,21 +346,14 @@ $on-surface-medium-emphasis: #0000008a;
   border-width: 0;
 }
 
-/* Collaborator image list */
-.my-image-list {
-  @include image-list.standard-columns(7);
+/* Collaborator image grid */
+.collaborator-logo-grid {
+  margin: 0 50vh 0 0;
 }
 
-/* BREAKPOINT for viewport widths <500px */
-@media (max-width: 500px) {
-  .my-image-list {
-    @include image-list.standard-columns(3);
-  }
-}
-
-/* BREAKPOINT for viewport widths <500px */
-@media (max-width: 800px) {
-  .my-image-list {
-    @include image-list.standard-columns(4);
+/* BREAKPOINT for viewport widths >920*/
+@media screen and (max-width: 920px) {
+  .collaborator-logo-grid {
+    margin: 0;
   }
 }

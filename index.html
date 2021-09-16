@@ -117,52 +117,74 @@
             "
             role="tablist"
           >
-            <div class="mdc-tab-scroller">
-              <div class="mdc-tab-scroller__scroll-area">
-                <div class="mdc-tab-scroller__scroll-content">
-                  <a class="mdc-list-item nav-item" href="#about">
-                    <button
-                      class="mdc-tab mdc-tab--min-width"
-                      role="tab"
-                      tabindex="0"
-                    >
-                      <span class="mdc-tab__content">
-                        <span class="mdc-tab__text-label">About</span>
-                      </span>
+            <div class="tab-list">
+              <div class="mdc-tab-scroller">
+                <div class="mdc-tab-scroller__scroll-area">
+                  <div class="mdc-tab-scroller__scroll-content">
+                    <a class="mdc-list-item nav-item" href="#about">
+                      <button
+                        class="mdc-tab mdc-tab--min-width"
+                        role="tab"
+                        tabindex="0"
+                      >
+                        <span class="mdc-tab__content">
+                          <span class="mdc-tab__text-label">About</span>
+                        </span>
 
-                      <span class="mdc-tab__ripple"></span>
-                    </button>
-                  </a>
-                  <a class="mdc-list-item nav-item" href="#meet-the-team">
-                    <button
-                      class="mdc-tab mdc-tab--min-width"
-                      role="tab"
-                      aria-selected="true"
-                      tabindex="0"
-                    >
-                      <span class="mdc-tab__content">
-                        <span class="mdc-tab__text-label">Meet The Team</span>
-                      </span>
+                        <span class="mdc-tab__ripple"></span>
+                      </button>
+                    </a>
+                    <a class="mdc-list-item nav-item" href="#meet-the-team">
+                      <button
+                        class="mdc-tab mdc-tab--min-width"
+                        role="tab"
+                        aria-selected="true"
+                        tabindex="0"
+                      >
+                        <span class="mdc-tab__content">
+                          <span class="mdc-tab__text-label">Meet The Team</span>
+                        </span>
 
-                      <span class="mdc-tab__ripple"></span>
-                    </button>
-                  </a>
-                  <a class="mdc-list-item nav-item" href="#collaborators">
-                    <button
-                      class="mdc-tab mdc-tab--min-width"
-                      role="tab"
-                      aria-selected="true"
-                      tabindex="0"
-                    >
-                      <span class="mdc-tab__content">
-                        <span class="mdc-tab__text-label">Collaborators</span>
-                      </span>
-                      <span class="mdc-tab__ripple"></span>
-                    </button>
-                  </a>
+                        <span class="mdc-tab__ripple"></span>
+                      </button>
+                    </a>
+                    <a class="mdc-list-item nav-item" href="#collaborators">
+                      <button
+                        class="mdc-tab mdc-tab--min-width"
+                        role="tab"
+                        aria-selected="true"
+                        tabindex="0"
+                      >
+                        <span class="mdc-tab__content">
+                          <span class="mdc-tab__text-label">Collaborators</span>
+                        </span>
+                        <span class="mdc-tab__ripple"></span>
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- Register button -->
+            <a
+              href="https://2021.spaceappschallenge.org/locations/pasadena-ca/event"
+              target="_blank"
+            >
+              <div class="mdc-touch-target-wrapper">
+                <button
+                  class="
+                    mdc-button
+                    register-button-top-app-bar
+                    mdc-elevation--z2
+                    mdc-button--touch
+                  "
+                >
+                  <span class="mdc-button__ripple"></span>
+                  <span class="mdc-button__touch"></span>
+                  <span class="mdc-button__label">Register </span>
+                </button>
+              </div>
+            </a>
           </section>
         </div>
       </header>
@@ -182,7 +204,7 @@
                 <button
                   class="
                     mdc-button
-                    register-button
+                    register-button-fixed
                     mdc-elevation--z2
                     mdc-button--touch
                   "
@@ -204,7 +226,7 @@
             >
               <!-- Hero -->
               <div id="about"></div>
-              <h1>Space Apps Pasadena 2021</h1>
+              <h1>Registration is open</h1>
               <div class="subtitle-container">
                 <h5>
                   The NASA International Space Apps Challenge (Space Apps) is an
@@ -263,206 +285,202 @@
                 </div>
 
                 <!-- Team Image Grid -->
-                <div class="meet-the-team-grid">
-                  <div class="mdc-layout-grid__inner">
-                    <!-- Trinity -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-2-desktop
-                        mdc-layout-grid__cell--span-2-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/001-team-image-trinity-chung-200.jpg"
-                          srcset="
-                            ./media/001-team-image-trinity-chung-100.jpg   100w,
-                            ./media/001-team-image-trinity-chung-200.jpg   200w,
-                            ./media/001-team-image-trinity-chung-400.jpg   400w,
-                            ./media/001-team-image-trinity-chung-800.jpg   800w,
-                            ./media/001-team-image-trinity-chung-1000.jpg 1000w,
-                            ./media/001-team-image-trinity-chung-1400.jpg 1400w,
-                            ./media/001-team-image-trinity-chung-1800.jpg 1800w
-                          "
-                          alt="image of Trinity Chung"
-                        />
-                        <div class="team-card__text-label">Trinity Chung</div>
+                <div class="mdc-layout-grid__inner meet-the-team-grid">
+                  <!-- Trinity -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/001-team-image-trinity-chung-200.jpg"
+                        srcset="
+                          ./media/001-team-image-trinity-chung-100.jpg   100w,
+                          ./media/001-team-image-trinity-chung-200.jpg   200w,
+                          ./media/001-team-image-trinity-chung-400.jpg   400w,
+                          ./media/001-team-image-trinity-chung-800.jpg   800w,
+                          ./media/001-team-image-trinity-chung-1000.jpg 1000w,
+                          ./media/001-team-image-trinity-chung-1400.jpg 1400w,
+                          ./media/001-team-image-trinity-chung-1800.jpg 1800w
+                        "
+                        alt="image of Trinity Chung"
+                      />
+                      <div class="team-card__text-label">Trinity Chung</div>
+                    </div>
+                  </div>
+
+                  <!-- Janet -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/002-team-image-janet-teng-200.jpg"
+                        srcset="
+                          ./media/002-team-image-janet-teng-100.jpg   100w,
+                          ./media/002-team-image-janet-teng-200.jpg   200w,
+                          ./media/002-team-image-janet-teng-400.jpg   400w,
+                          ./media/002-team-image-janet-teng-800.jpg   800w,
+                          ./media/002-team-image-janet-teng-1000.jpg 1000w,
+                          ./media/002-team-image-janet-teng-1400.jpg 1400w,
+                          ./media/002-team-image-janet-teng-1800.jpg 1800w
+                        "
+                        alt="image of Janet Teng"
+                      />
+                      <div class="team-card__text-label">Janet Teng</div>
+                    </div>
+                  </div>
+
+                  <!-- Jacqueline -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/003-team-image-jacqueline-friedberg-200.jpg"
+                        srcset="
+                          ./media/003-team-image-jacqueline-friedberg-100.jpg   100w,
+                          ./media/003-team-image-jacqueline-friedberg-200.jpg   200w,
+                          ./media/003-team-image-jacqueline-friedberg-400.jpg   400w,
+                          ./media/003-team-image-jacqueline-friedberg-800.jpg   800w,
+                          ./media/003-team-image-jacqueline-friedberg-1000.jpg 1000w,
+                          ./media/003-team-image-jacqueline-friedberg-1400.jpg 1400w,
+                          ./media/003-team-image-jacqueline-friedberg-1800.jpg 1800w
+                        "
+                        alt="image of Jacqueline Friedberg"
+                      />
+                      <div class="team-card__text-label">
+                        Jacqueline Friedberg
                       </div>
                     </div>
+                  </div>
 
-                    <!-- Janet -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-2-desktop
-                        mdc-layout-grid__cell--span-2-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/002-team-image-janet-teng-200.jpg"
-                          srcset="
-                            ./media/002-team-image-janet-teng-100.jpg   100w,
-                            ./media/002-team-image-janet-teng-200.jpg   200w,
-                            ./media/002-team-image-janet-teng-400.jpg   400w,
-                            ./media/002-team-image-janet-teng-800.jpg   800w,
-                            ./media/002-team-image-janet-teng-1000.jpg 1000w,
-                            ./media/002-team-image-janet-teng-1400.jpg 1400w,
-                            ./media/002-team-image-janet-teng-1800.jpg 1800w
-                          "
-                          alt="image of Janet Teng"
-                        />
-                        <div class="team-card__text-label">Janet Teng</div>
-                      </div>
+                  <!-- Pranav -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/004-team-image-pranav-patel-200.jpg"
+                        srcset="
+                          ./media/004-team-image-pranav-patel-100.jpg   100w,
+                          ./media/004-team-image-pranav-patel-200.jpg   200w,
+                          ./media/004-team-image-pranav-patel-400.jpg   400w,
+                          ./media/004-team-image-pranav-patel-800.jpg   800w,
+                          ./media/004-team-image-pranav-patel-1000.jpg 1000w,
+                          ./media/004-team-image-pranav-patel-1400.jpg 1400w,
+                          ./media/004-team-image-pranav-patel-1800.jpg 1800w
+                        "
+                        alt="image of Pranav Patel"
+                      />
+                      <div class="team-card__text-label">Pranav Patel</div>
                     </div>
+                  </div>
 
-                    <!-- Jacqueline -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-2-desktop
-                        mdc-layout-grid__cell--span-2-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/003-team-image-jacqueline-friedberg-200.jpg"
-                          srcset="
-                            ./media/003-team-image-jacqueline-friedberg-100.jpg   100w,
-                            ./media/003-team-image-jacqueline-friedberg-200.jpg   200w,
-                            ./media/003-team-image-jacqueline-friedberg-400.jpg   400w,
-                            ./media/003-team-image-jacqueline-friedberg-800.jpg   800w,
-                            ./media/003-team-image-jacqueline-friedberg-1000.jpg 1000w,
-                            ./media/003-team-image-jacqueline-friedberg-1400.jpg 1400w,
-                            ./media/003-team-image-jacqueline-friedberg-1800.jpg 1800w
-                          "
-                          alt="image of Jacqueline Friedberg"
-                        />
-                        <div class="team-card__text-label">
-                          Jacqueline Friedberg
-                        </div>
-                      </div>
+                  <!-- Anthony -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/005-team-image-anthony-ko-200.jpg"
+                        srcset="
+                          ./media/005-team-image-anthony-ko-100.jpg   100w,
+                          ./media/005-team-image-anthony-ko-200.jpg   200w,
+                          ./media/005-team-image-anthony-ko-400.jpg   400w,
+                          ./media/005-team-image-anthony-ko-800.jpg   800w,
+                          ./media/005-team-image-anthony-ko-1000.jpg 1000w,
+                          ./media/005-team-image-anthony-ko-1400.jpg 1400w,
+                          ./media/005-team-image-anthony-ko-1800.jpg 1800w
+                        "
+                        alt="image of Anthony Ko"
+                      />
+                      <div class="team-card__text-label">Anthony Ko</div>
                     </div>
+                  </div>
 
-                    <!-- Pranav -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-2-desktop
-                        mdc-layout-grid__cell--span-2-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/004-team-image-pranav-patel-200.jpg"
-                          srcset="
-                            ./media/004-team-image-pranav-patel-100.jpg   100w,
-                            ./media/004-team-image-pranav-patel-200.jpg   200w,
-                            ./media/004-team-image-pranav-patel-400.jpg   400w,
-                            ./media/004-team-image-pranav-patel-800.jpg   800w,
-                            ./media/004-team-image-pranav-patel-1000.jpg 1000w,
-                            ./media/004-team-image-pranav-patel-1400.jpg 1400w,
-                            ./media/004-team-image-pranav-patel-1800.jpg 1800w
-                          "
-                          alt="image of Pranav Patel"
-                        />
-                        <div class="team-card__text-label">Pranav Patel</div>
-                      </div>
+                  <!-- Oneal -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/006-team-image-oneal-douglin-200.jpg"
+                        srcset="
+                          ./media/006-team-image-oneal-douglin-100.jpg   100w,
+                          ./media/006-team-image-oneal-douglin-200.jpg   200w,
+                          ./media/006-team-image-oneal-douglin-400.jpg   400w,
+                          ./media/006-team-image-oneal-douglin-800.jpg   800w,
+                          ./media/006-team-image-oneal-douglin-1000.jpg 1000w,
+                          ./media/006-team-image-oneal-douglin-1400.jpg 1400w,
+                          ./media/006-team-image-oneal-douglin-1800.jpg 1800w
+                        "
+                        alt="image of Oneal Douglin"
+                      />
+                      <div class="team-card__text-label">Oneal Douglin</div>
                     </div>
+                  </div>
 
-                    <!-- Anthony -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-2-desktop
-                        mdc-layout-grid__cell--span-2-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/005-team-image-anthony-ko-200.jpg"
-                          srcset="
-                            ./media/005-team-image-anthony-ko-100.jpg   100w,
-                            ./media/005-team-image-anthony-ko-200.jpg   200w,
-                            ./media/005-team-image-anthony-ko-400.jpg   400w,
-                            ./media/005-team-image-anthony-ko-800.jpg   800w,
-                            ./media/005-team-image-anthony-ko-1000.jpg 1000w,
-                            ./media/005-team-image-anthony-ko-1400.jpg 1400w,
-                            ./media/005-team-image-anthony-ko-1800.jpg 1800w
-                          "
-                          alt="image of Anthony Ko"
-                        />
-                        <div class="team-card__text-label">Anthony Ko</div>
-                      </div>
-                    </div>
-
-                    <!-- Oneal -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-2-desktop
-                        mdc-layout-grid__cell--span-2-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/006-team-image-oneal-douglin-200.jpg"
-                          srcset="
-                            ./media/006-team-image-oneal-douglin-100.jpg   100w,
-                            ./media/006-team-image-oneal-douglin-200.jpg   200w,
-                            ./media/006-team-image-oneal-douglin-400.jpg   400w,
-                            ./media/006-team-image-oneal-douglin-800.jpg   800w,
-                            ./media/006-team-image-oneal-douglin-1000.jpg 1000w,
-                            ./media/006-team-image-oneal-douglin-1400.jpg 1400w,
-                            ./media/006-team-image-oneal-douglin-1800.jpg 1800w
-                          "
-                          alt="image of Oneal Douglin"
-                        />
-                        <div class="team-card__text-label">Oneal Douglin</div>
-                      </div>
-                    </div>
-
-                    <!-- Nicolas -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-2-desktop
-                        mdc-layout-grid__cell--span-2-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/007-team-image-nicolas-hernandez-200.jpg"
-                          srcset="
-                            ./media/007-team-image-nicolas-hernandez-100.jpg   100w,
-                            ./media/007-team-image-nicolas-hernandez-200.jpg   200w,
-                            ./media/007-team-image-nicolas-hernandez-400.jpg   400w,
-                            ./media/007-team-image-nicolas-hernandez-800.jpg   800w,
-                            ./media/007-team-image-nicolas-hernandez-1000.jpg 1000w,
-                            ./media/007-team-image-nicolas-hernandez-1400.jpg 1400w,
-                            ./media/007-team-image-nicolas-hernandez-1800.jpg 1800w
-                          "
-                          alt="image of Nicolas Hernandez"
-                        />
-                        <div class="team-card__text-label">
-                          Nicolas Hernandez
-                        </div>
-                      </div>
+                  <!-- Nicolas -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/007-team-image-nicolas-hernandez-200.jpg"
+                        srcset="
+                          ./media/007-team-image-nicolas-hernandez-100.jpg   100w,
+                          ./media/007-team-image-nicolas-hernandez-200.jpg   200w,
+                          ./media/007-team-image-nicolas-hernandez-400.jpg   400w,
+                          ./media/007-team-image-nicolas-hernandez-800.jpg   800w,
+                          ./media/007-team-image-nicolas-hernandez-1000.jpg 1000w,
+                          ./media/007-team-image-nicolas-hernandez-1400.jpg 1400w,
+                          ./media/007-team-image-nicolas-hernandez-1800.jpg 1800w
+                        "
+                        alt="image of Nicolas Hernandez"
+                      />
+                      <div class="team-card__text-label">Nicolas Hernandez</div>
                     </div>
                   </div>
                 </div>
@@ -470,7 +488,6 @@
 
               <!-- Collaborators -->
               <div id="collaborators"></div>
-
               <h2 class="collaborator-heading">Local Collaborators</h2>
               <div class="subtitle-container">
                 <h5>
@@ -478,120 +495,190 @@
                 </h5>
               </div>
 
-              <ul class="mdc-image-list my-image-list">
-                <!-- 1 -->
-                <div class="mdc-card mdc-card--outlined">
-                  <div class="mdc-card__primary-action" tabindex="0">
-                    <!-- content within actionable area -->
-
-                    <div
-                      class="
-                        my-card__media
-                        mdc-card__media mdc-card__media--16-9
-                      "
-                      style="
-                        background-image: url('./media/logo-001-echoar.jpg');
-                      "
-                    >
-                      <div class="mdc-card__media-content">Title</div>
-                    </div>
-                    <div class="mdc-card__ripple"></div>
-                  </div>
-                  <!-- ... content ... -->
-                </div>
-
-                <li class="mdc-image-list__item">
-                  <a href="https://www.echoar.xyz/" target="_blank">
-                    <div class="mdc-image-list__image-aspect-container">
-                      <img
-                        class="mdc-image-list__image"
-                        src="./media/logo-001-echoar.jpg"
-                      />
+              <!-- Logo Image Grid -->
+              <div class="mdc-layout-grid__inner collaborator-logo-grid">
+                <!-- echoAR -->
+                <div
+                  class="
+                    mdc-layout-grid__cell
+                    mdc-layout-grid__cell--span-2-phone
+                    mdc-layout-grid__cell--span-2-tablet
+                    mdc-layout-grid__cell--span-3-desktop
+                    mdc-layout-grid__cell--span-3-desktop-hd
+                  "
+                >
+                  <a
+                    class="logo-link"
+                    href="https://www.echoar.xyz/"
+                    target="_blank"
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <div
+                        class="mdc-card__media mdc-card__media--square"
+                        style="
+                          background-image: url('./media/logo-001-echoar.jpg');
+                        "
+                      ></div>
                     </div>
                   </a>
-                </li>
+                </div>
 
-                <!-- 2 -->
-                <li class="mdc-image-list__item">
+                <!-- Wolfram -->
+                <div
+                  class="
+                    mdc-layout-grid__cell
+                    mdc-layout-grid__cell--span-2-phone
+                    mdc-layout-grid__cell--span-2-tablet
+                    mdc-layout-grid__cell--span-3-desktop
+                    mdc-layout-grid__cell--span-3-desktop-hd
+                  "
+                >
                   <a
+                    class="logo-link"
                     href="https://www.wolfram.com/wolfram-one/"
                     target="_blank"
                   >
-                    <div class="mdc-image-list__image-aspect-container">
-                      <img
-                        class="mdc-image-list__image"
-                        src="./media/logo-002-wolfram.jpg"
-                      />
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <div
+                        class="mdc-card__media mdc-card__media--square"
+                        style="
+                          background-image: url('./media/logo-002-wolfram.jpg');
+                        "
+                      ></div>
                     </div>
                   </a>
-                </li>
+                </div>
 
-                <!-- 3 -->
-                <li class="mdc-image-list__item">
-                  <a href="https://replit.com/" target="_blank">
-                    <div class="mdc-image-list__image-aspect-container">
-                      <img
-                        class="mdc-image-list__image"
-                        src="./media/logo-003-replit.jpg"
-                      />
-                    </div>
-                  </a>
-                </li>
-
-                <!-- 4 -->
-                <li class="mdc-image-list__item">
+                <!-- Replit -->
+                <div
+                  class="
+                    mdc-layout-grid__cell
+                    mdc-layout-grid__cell--span-2-phone
+                    mdc-layout-grid__cell--span-2-tablet
+                    mdc-layout-grid__cell--span-3-desktop
+                    mdc-layout-grid__cell--span-3-desktop-hd
+                  "
+                >
                   <a
+                    class="logo-link"
+                    href="https://replit.com/"
+                    target="_blank"
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <div
+                        class="mdc-card__media mdc-card__media--square"
+                        style="
+                          background-image: url('./media/logo-003-replit.jpg');
+                        "
+                      ></div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Command Tech -->
+                <div
+                  class="
+                    mdc-layout-grid__cell
+                    mdc-layout-grid__cell--span-2-phone
+                    mdc-layout-grid__cell--span-2-tablet
+                    mdc-layout-grid__cell--span-3-desktop
+                    mdc-layout-grid__cell--span-3-desktop-hd
+                  "
+                >
+                  <a
+                    class="logo-link"
+                    href="https://commandtech.codes/"
+                    target="_blank"
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <div
+                        class="mdc-card__media mdc-card__media--square"
+                        style="
+                          background-image: url('./media/logo-006-command-tech.jpg');
+                        "
+                      ></div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- PCC -->
+                <div
+                  class="
+                    mdc-layout-grid__cell
+                    mdc-layout-grid__cell--span-2-phone
+                    mdc-layout-grid__cell--span-2-tablet
+                    mdc-layout-grid__cell--span-3-desktop
+                    mdc-layout-grid__cell--span-3-desktop-hd
+                  "
+                >
+                  <a
+                    class="logo-link"
                     href="https://pasadena.edu/academics/support/mesa/"
                     target="_blank"
                   >
-                    <div class="mdc-image-list__image-aspect-container">
-                      <img
-                        class="mdc-image-list__image"
-                        src="./media/logo-004-pcc.jpg"
-                      />
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <div
+                        class="mdc-card__media mdc-card__media--square"
+                        style="
+                          background-image: url('./media/logo-004-pcc.jpg');
+                        "
+                      ></div>
                     </div>
                   </a>
-                </li>
+                </div>
 
-                <!-- 5 -->
-                <li class="mdc-image-list__item">
-                  <a href="https://www.innovatepasadena.org/" target="_blank">
-                    <div class="mdc-image-list__image-aspect-container">
-                      <img
-                        class="mdc-image-list__image"
-                        src="./media/logo-005-innovate-pasadena.jpg"
-                      />
-                    </div>
-                  </a>
-                </li>
-
-                <!-- 6 -->
-                <li class="mdc-image-list__item">
-                  <a href="https://commandtech.codes/" target="_blank">
-                    <div class="mdc-image-list__image-aspect-container">
-                      <img
-                        class="mdc-image-list__image"
-                        src="./media/logo-006-command-tech.jpg"
-                      />
-                    </div>
-                  </a>
-                </li>
-
-                <!-- 7 -->
-                <li class="mdc-image-list__item">
+                <!-- Innovate Pasadena -->
+                <div
+                  class="
+                    mdc-layout-grid__cell
+                    mdc-layout-grid__cell--span-2-phone
+                    mdc-layout-grid__cell--span-2-tablet
+                    mdc-layout-grid__cell--span-3-desktop
+                    mdc-layout-grid__cell--span-3-desktop-hd
+                  "
+                >
                   <a
+                    class="logo-link"
+                    href="https://www.innovatepasadena.org/"
+                    target="_blank"
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <div
+                        class="mdc-card__media mdc-card__media--square"
+                        style="
+                          background-image: url('./media/logo-005-innovate-pasadena.jpg');
+                        "
+                      ></div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Blaze Pizza -->
+                <div
+                  class="
+                    mdc-layout-grid__cell
+                    mdc-layout-grid__cell--span-2-phone
+                    mdc-layout-grid__cell--span-2-tablet
+                    mdc-layout-grid__cell--span-3-desktop
+                    mdc-layout-grid__cell--span-3-desktop-hd
+                  "
+                >
+                  <a
+                    class="logo-link"
                     href="https://www.blazepizza.com/location/blaze-pizza-pasadena-north-fair-oaks/menu"
                     target="_blank"
                   >
-                    <div class="mdc-image-list__image-aspect-container">
-                      <img
-                        class="mdc-image-list__image"
-                        src="./media/logo-007-blaze-pizza.jpg"
-                      />
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <div
+                        class="mdc-card__media mdc-card__media--square"
+                        style="
+                          background-image: url('./media/logo-007-blaze-pizza.jpg');
+                        "
+                      ></div>
                     </div>
                   </a>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
