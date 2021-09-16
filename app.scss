@@ -176,6 +176,11 @@ figcaption {
   @include theme.property(color, secondary);
   text-decoration: underline;
 }
+/* Additional Colors */
+$neon-blue: #0960e1;
+.collaborator-heading {
+  color: $neon-blue;
+}
 
 * {
   /* Toggle Comment border-style & color (on/off) to see layout border */
@@ -275,13 +280,14 @@ body {
 }
 
 .meet-the-team-section {
-  margin-top: 2rem;
-  border-top: solid 1px;
-  border-bottom: solid 1px;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  border-top: solid 1.5px $neon-blue;
+  border-bottom: solid 1.5px $neon-blue;
+  padding-bottom: 4rem;
 }
 
 /* Meet the team image cards */
-
 .team-card__secondary,
 .team-card__text-label {
   text-align: center;
