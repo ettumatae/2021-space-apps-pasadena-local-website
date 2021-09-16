@@ -2407,9 +2407,9 @@ svg.mdc-button__icon {
   border-color: var(--mdc-theme-primary, #fff);
 }
 .mdc-tab-indicator .mdc-tab-indicator__content--icon {
-  color: #c81628;
+  color: #0960e1;
   /* @alternate */
-  color: var(--mdc-theme-secondary, #c81628);
+  color: var(--mdc-theme-secondary, #0960e1);
 }
 .mdc-tab-indicator .mdc-tab-indicator__content--underline {
   border-top-width: 2px;
@@ -8543,9 +8543,9 @@ p {
 /* Use global Material design color */
 .register-button,
 .mdc-button__label {
-  background: #c81628;
+  background: #0960e1;
   /* @alternate */
-  background: var(--mdc-theme-secondary, #c81628);
+  background: var(--mdc-theme-secondary, #0960e1);
   color: #fff;
   /* @alternate */
   color: var(--mdc-theme-on-secondary, #fff);
@@ -8565,15 +8565,10 @@ p {
 }
 
 .links {
-  color: #c81628;
-  /* @alternate */
-  color: var(--mdc-theme-secondary, #c81628);
-  text-decoration: underline;
-}
-
-/* Additional Colors */
-.collaborator-heading {
   color: #0960e1;
+  /* @alternate */
+  color: var(--mdc-theme-secondary, #0960e1);
+  text-decoration: underline;
 }
 
 * {
@@ -8604,6 +8599,19 @@ body {
   overflow: auto;
   max-width: 1500px;
   margin: 0 auto;
+}
+
+.register-button {
+  position: fixed;
+  bottom: 1.25em;
+  right: 1em;
+  z-index: 1;
+}
+
+/* Site logo */
+.logo {
+  width: 322px;
+  height: 110px;
 }
 
 /* Top app bar */
@@ -8642,8 +8650,8 @@ body {
   display: none;
 }
 
-/* BREAKPOINT for viewport widths <900px */
-@media (max-width: 899px) {
+/* BREAKPOINT for viewport widths <500px */
+@media (max-width: 500px) {
   .mdc-top-app-bar__navigation-icon {
     display: block;
   }
@@ -8651,29 +8659,21 @@ body {
   .mdc-tab-bar {
     display: none;
   }
-
-  .mdc-top-app-bar__title {
-    display: none;
-  }
 }
-/* BREAKPOINT for viewport widths > 500px */
-@media (min-width: 500px) {
-  .mdc-top-app-bar__title {
-    display: block;
-  }
-}
+/* BREAKPOINT for viewport widths <920*/
 /* Subtitle text */
 .subtitle-container {
   margin-top: 2rem;
   max-width: 900px;
 }
 
+/* Color for border */
 .meet-the-team-section {
   margin-top: 8rem;
   margin-bottom: 8rem;
   padding-bottom: 4rem;
-  border-top: solid 1.5px #0960e1;
-  border-bottom: solid 1.5px #0960e1;
+  border-top: solid 1px #0000008a;
+  border-bottom: solid 1px #0000008a;
 }
 
 /* Meet the team image cards */

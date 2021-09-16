@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- TODO: Fix image breakpoint -->
+
   <!-- TODO: Add "alt" for accessibility -->
+  <!-- TODO: Add aria-label="" -->
   <!-- TODO: Test Accessibility -->
-  <!-- TODO: FIx image breakpoint -->
 
   <!-- TODO: Test iframe -->
 
@@ -12,7 +14,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Meta description for SEO -->
     <meta name="description" content="Website for NASA Space Apps Pasadena" />
     <!-- Meta for unicode -->
@@ -63,7 +65,9 @@
     <div class="mdc-drawer-scrim"></div>
     <div class="mdc-drawer-app-content">
       <!-- Top app bar -->
-      <header class="mdc-top-app-bar top-app-bar mdc-elevation--z2">
+      <header
+        class="mdc-top-app-bar mdc-top-app-bar--prominent mdc-elevation--z2"
+      >
         <div class="mdc-top-app-bar__row">
           <section
             class="
@@ -81,85 +85,114 @@
               menu
             </button>
             <a href="/">
-              <span class="mdc-top-app-bar__title"
-                >NASA Space Apps Pasadena 2021</span
-              >
+              <!-- Logo -->
+              <picture>
+                <source
+                  class="logo"
+                  media="(min-width: 800px)"
+                  srcset="
+                    ./media/logo-nasa-space-apps-pasadena-evergreen-black.svg
+                  "
+                />
+                <source
+                  class="logo"
+                  media="(min-width: 450px)"
+                  srcset="
+                    ./media/logo-nasa-space-apps-pasadena-evergreen-black-small.svg
+                  "
+                />
+                <img
+                  class="logo"
+                  src="./media/logo-nasa-space-apps-pasadena-evergreen-black-small.svg"
+                  alt="Space Apps Pasadena 2021 Logo"
+                />
+              </picture>
             </a>
-            <div class="mdc-tab-bar" role="tablist">
-              <div class="mdc-tab-scroller">
-                <div class="mdc-tab-scroller__scroll-area">
-                  <div class="mdc-tab-scroller__scroll-content">
-                    <a class="mdc-list-item" href="#about">
-                      <button
-                        class="mdc-tab mdc-tab--min-width"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        <span class="mdc-tab__content">
-                          <span class="mdc-tab__text-label">About</span>
-                        </span>
+          </section>
+          <section
+            class="
+              mdc-top-app-bar__section
+              mdc-tab-bar
+              mdc-top-app-bar__section--align-end
+            "
+            role="tablist"
+          >
+            <div class="mdc-tab-scroller">
+              <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+                  <a class="mdc-list-item nav-item" href="#about">
+                    <button
+                      class="mdc-tab mdc-tab--min-width"
+                      role="tab"
+                      tabindex="0"
+                    >
+                      <span class="mdc-tab__content">
+                        <span class="mdc-tab__text-label">About</span>
+                      </span>
 
-                        <span class="mdc-tab__ripple"></span>
-                      </button>
-                    </a>
-                    <a class="mdc-list-item" href="#meet-the-team">
-                      <button
-                        class="mdc-tab mdc-tab--min-width"
-                        role="tab"
-                        aria-selected="true"
-                        tabindex="0"
-                      >
-                        <span class="mdc-tab__content">
-                          <span class="mdc-tab__text-label">Meet The Team</span>
-                        </span>
+                      <span class="mdc-tab__ripple"></span>
+                    </button>
+                  </a>
+                  <a class="mdc-list-item nav-item" href="#meet-the-team">
+                    <button
+                      class="mdc-tab mdc-tab--min-width"
+                      role="tab"
+                      aria-selected="true"
+                      tabindex="0"
+                    >
+                      <span class="mdc-tab__content">
+                        <span class="mdc-tab__text-label">Meet The Team</span>
+                      </span>
 
-                        <span class="mdc-tab__ripple"></span>
-                      </button>
-                    </a>
-                    <a class="mdc-list-item" href="#collaborators">
-                      <button
-                        class="mdc-tab mdc-tab--min-width"
-                        role="tab"
-                        aria-selected="true"
-                        tabindex="0"
-                      >
-                        <span class="mdc-tab__content">
-                          <span class="mdc-tab__text-label">Collaborators</span>
-                        </span>
-                        <span class="mdc-tab__ripple"></span>
-                      </button>
-                    </a>
-                  </div>
+                      <span class="mdc-tab__ripple"></span>
+                    </button>
+                  </a>
+                  <a class="mdc-list-item nav-item" href="#collaborators">
+                    <button
+                      class="mdc-tab mdc-tab--min-width"
+                      role="tab"
+                      aria-selected="true"
+                      tabindex="0"
+                    >
+                      <span class="mdc-tab__content">
+                        <span class="mdc-tab__text-label">Collaborators</span>
+                      </span>
+                      <span class="mdc-tab__ripple"></span>
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
           </section>
-          <section
-            class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
-          >
+        </div>
+      </header>
+    </div>
+
+    <main class="mdc-top-app-bar--prominent-fixed-adjust">
+      <!-- Main content -->
+      <div class="homepage-content">
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
             <!-- Register button -->
             <a
               href="https://2021.spaceappschallenge.org/locations/pasadena-ca/event"
               target="_blank"
             >
               <div class="mdc-touch-target-wrapper">
-                <button class="mdc-button register-button mdc-button--touch">
+                <button
+                  class="
+                    mdc-button
+                    register-button
+                    mdc-elevation--z2
+                    mdc-button--touch
+                  "
+                >
                   <span class="mdc-button__ripple"></span>
                   <span class="mdc-button__touch"></span>
                   <span class="mdc-button__label">Register </span>
                 </button>
               </div>
             </a>
-          </section>
-        </div>
-      </header>
-    </div>
-
-    <main class="mdc-top-app-bar--fixed-adjust">
-      <!-- Main content -->
-      <div class="homepage-content">
-        <div class="mdc-layout-grid">
-          <div class="mdc-layout-grid__inner">
             <div
               class="
                 mdc-layout-grid__cell
@@ -447,6 +480,26 @@
 
               <ul class="mdc-image-list my-image-list">
                 <!-- 1 -->
+                <div class="mdc-card mdc-card--outlined">
+                  <div class="mdc-card__primary-action" tabindex="0">
+                    <!-- content within actionable area -->
+
+                    <div
+                      class="
+                        my-card__media
+                        mdc-card__media mdc-card__media--16-9
+                      "
+                      style="
+                        background-image: url('./media/logo-001-echoar.jpg');
+                      "
+                    >
+                      <div class="mdc-card__media-content">Title</div>
+                    </div>
+                    <div class="mdc-card__ripple"></div>
+                  </div>
+                  <!-- ... content ... -->
+                </div>
+
                 <li class="mdc-image-list__item">
                   <a href="https://www.echoar.xyz/" target="_blank">
                     <div class="mdc-image-list__image-aspect-container">
