@@ -4,7 +4,7 @@
   /* Secondary color based on NASA Space Apps 2021 */
   $primary: #fff,
   $on-primary: #000,
-  $secondary: #c81628,
+  $secondary: #0960e1,
   $on-secondary: #fff,
   $surface: #fff,
   $on-surface: #000,
@@ -174,11 +174,6 @@ p {
   @include theme.property(color, secondary);
   text-decoration: underline;
 }
-/* Additional Colors */
-$neon-blue: #0960e1;
-.collaborator-heading {
-  color: $neon-blue;
-}
 
 * {
   /* Toggle Comment border-style & color (on/off) to see layout border */
@@ -207,6 +202,18 @@ body {
   overflow: auto;
   max-width: 1500px;
   margin: 0 auto;
+}
+
+.register-button {
+  position: fixed;
+  bottom: 1.25em;
+  right: 1em;
+  z-index: 1;
+}
+/* Site logo */
+.logo {
+  width: 322px;
+  height: 110px;
 }
 
 /* Top app bar */
@@ -251,23 +258,18 @@ body {
   display: none;
 }
 
-/* BREAKPOINT for viewport widths <900px */
-@media (max-width: 899px) {
+/* BREAKPOINT for viewport widths <500px */
+@media (max-width: 500px) {
   .mdc-top-app-bar__navigation-icon {
     display: block;
   }
   .mdc-tab-bar {
     display: none;
   }
-  .mdc-top-app-bar__title {
-    display: none;
-  }
 }
-
-/* BREAKPOINT for viewport widths > 500px */
-@media (min-width: 500px) {
-  .mdc-top-app-bar__title {
-    display: block;
+/* BREAKPOINT for viewport widths <920*/
+@media screen and (max-width: 920px) {
+  .nav-item {
   }
 }
 
@@ -277,12 +279,14 @@ body {
   max-width: 900px;
 }
 
+/* Color for border */
+$on-surface-medium-emphasis: #0000008a;
 .meet-the-team-section {
   margin-top: 8rem;
   margin-bottom: 8rem;
   padding-bottom: 4rem;
-  border-top: solid 1.5px $neon-blue;
-  border-bottom: solid 1.5px $neon-blue;
+  border-top: solid 1px $on-surface-medium-emphasis;
+  border-bottom: solid 1px $on-surface-medium-emphasis;
 }
 
 /* Meet the team image cards */
@@ -327,7 +331,6 @@ body {
 }
 
 /* BREAKPOINT for viewport widths <500px */
-
 @media (max-width: 800px) {
   .my-image-list {
     @include image-list.standard-columns(4);
