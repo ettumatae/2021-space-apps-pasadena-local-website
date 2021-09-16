@@ -2407,9 +2407,9 @@ svg.mdc-button__icon {
   border-color: var(--mdc-theme-primary, #fff);
 }
 .mdc-tab-indicator .mdc-tab-indicator__content--icon {
-  color: #0042a6;
+  color: #c81628;
   /* @alternate */
-  color: var(--mdc-theme-secondary, #0042a6);
+  color: var(--mdc-theme-secondary, #c81628);
 }
 .mdc-tab-indicator .mdc-tab-indicator__content--underline {
   border-top-width: 2px;
@@ -8376,8 +8376,36 @@ figcaption {
   text-transform: var(--mdc-typography-caption-text-transform, inherit);
 }
 
-@media (max-width: 500px) {
+/* BREAKPOINT for viewport widths <1000px */
+@media (max-width: 1000px) {
   h1 {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: Fira Sans;
+    /* @alternate */
+    font-family: var(--mdc-typography-headline2-font-family, var(--mdc-typography-font-family, Fira Sans));
+    font-size: 3.75rem;
+    /* @alternate */
+    font-size: var(--mdc-typography-headline2-font-size, 3.75rem);
+    line-height: 3.75rem;
+    /* @alternate */
+    line-height: var(--mdc-typography-headline2-line-height, 3.75rem);
+    font-weight: 700;
+    /* @alternate */
+    font-weight: var(--mdc-typography-headline2-font-weight, 700);
+    letter-spacing: -0.0083333333em;
+    /* @alternate */
+    letter-spacing: var(--mdc-typography-headline2-letter-spacing, -0.0083333333em);
+    text-decoration: inherit;
+    /* @alternate */
+    -webkit-text-decoration: var(--mdc-typography-headline2-text-decoration, inherit);
+            text-decoration: var(--mdc-typography-headline2-text-decoration, inherit);
+    text-transform: inherit;
+    /* @alternate */
+    text-transform: var(--mdc-typography-headline2-text-transform, inherit);
+  }
+
+  h2 {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: Fira Sans;
@@ -8404,7 +8432,7 @@ figcaption {
     text-transform: var(--mdc-typography-headline3-text-transform, inherit);
   }
 
-  h2 {
+  h3 {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: Fira Sans;
@@ -8431,7 +8459,7 @@ figcaption {
     text-transform: var(--mdc-typography-headline4-text-transform, inherit);
   }
 
-  h3 {
+  h4 {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: Roboto;
@@ -8458,7 +8486,7 @@ figcaption {
     text-transform: var(--mdc-typography-headline5-text-transform, inherit);
   }
 
-  h4 {
+  h5 {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: Roboto;
@@ -8483,33 +8511,6 @@ figcaption {
     text-transform: inherit;
     /* @alternate */
     text-transform: var(--mdc-typography-headline6-text-transform, inherit);
-  }
-
-  h5 {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-family: Roboto;
-    /* @alternate */
-    font-family: var(--mdc-typography-body1-font-family, var(--mdc-typography-font-family, Roboto));
-    font-size: 1rem;
-    /* @alternate */
-    font-size: var(--mdc-typography-body1-font-size, 1rem);
-    line-height: 1.5rem;
-    /* @alternate */
-    line-height: var(--mdc-typography-body1-line-height, 1.5rem);
-    font-weight: 400;
-    /* @alternate */
-    font-weight: var(--mdc-typography-body1-font-weight, 400);
-    letter-spacing: 0.03125em;
-    /* @alternate */
-    letter-spacing: var(--mdc-typography-body1-letter-spacing, 0.03125em);
-    text-decoration: inherit;
-    /* @alternate */
-    -webkit-text-decoration: var(--mdc-typography-body1-text-decoration, inherit);
-            text-decoration: var(--mdc-typography-body1-text-decoration, inherit);
-    text-transform: inherit;
-    /* @alternate */
-    text-transform: var(--mdc-typography-body1-text-transform, inherit);
   }
 
   h6 {
@@ -8569,9 +8570,9 @@ figcaption {
 /* Use global Material design color */
 .register-button,
 .mdc-button__label {
-  background: #0042a6;
+  background: #c81628;
   /* @alternate */
-  background: var(--mdc-theme-secondary, #0042a6);
+  background: var(--mdc-theme-secondary, #c81628);
   color: #fff;
   /* @alternate */
   color: var(--mdc-theme-on-secondary, #fff);
@@ -8591,9 +8592,9 @@ figcaption {
 }
 
 .links {
-  color: #0042a6;
+  color: #c81628;
   /* @alternate */
-  color: var(--mdc-theme-secondary, #0042a6);
+  color: var(--mdc-theme-secondary, #c81628);
   text-decoration: underline;
 }
 
@@ -8683,17 +8684,16 @@ body {
     display: block;
   }
 }
-/* Hero */
-.hero-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+/* Subtitle text */
+.subtitle-container {
+  margin-top: 2rem;
+  max-width: 900px;
 }
 
-figcaption {
-  text-align: center;
+.meet-the-team-section {
+  margin-top: 2rem;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
 }
 
 /* Meet the team image cards */
@@ -8737,6 +8737,10 @@ figcaption {
   vertical-align: 0;
 }
 
+.meet-the-team-content {
+  margin: 0 30vh;
+}
+
 .mdc-card__actions {
   justify-content: flex-end;
 }
@@ -8746,12 +8750,6 @@ figcaption {
   border-width: 0;
 }
 
-/* BREAKPOINT for viewport widths > 900px */
-@media (min-width: 900px) {
-  .homepage-content {
-    margin: 0 15vh;
-  }
-}
 /* Collaborator image list */
 .my-image-list .mdc-image-list__item {
   width: calc(
