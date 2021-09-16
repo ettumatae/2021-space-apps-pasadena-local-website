@@ -8382,33 +8382,6 @@ figcaption {
     -webkit-font-smoothing: antialiased;
     font-family: Fira Sans;
     /* @alternate */
-    font-family: var(--mdc-typography-headline2-font-family, var(--mdc-typography-font-family, Fira Sans));
-    font-size: 3.75rem;
-    /* @alternate */
-    font-size: var(--mdc-typography-headline2-font-size, 3.75rem);
-    line-height: 3.75rem;
-    /* @alternate */
-    line-height: var(--mdc-typography-headline2-line-height, 3.75rem);
-    font-weight: 700;
-    /* @alternate */
-    font-weight: var(--mdc-typography-headline2-font-weight, 700);
-    letter-spacing: -0.0083333333em;
-    /* @alternate */
-    letter-spacing: var(--mdc-typography-headline2-letter-spacing, -0.0083333333em);
-    text-decoration: inherit;
-    /* @alternate */
-    -webkit-text-decoration: var(--mdc-typography-headline2-text-decoration, inherit);
-            text-decoration: var(--mdc-typography-headline2-text-decoration, inherit);
-    text-transform: inherit;
-    /* @alternate */
-    text-transform: var(--mdc-typography-headline2-text-transform, inherit);
-  }
-
-  h2 {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-family: Fira Sans;
-    /* @alternate */
     font-family: var(--mdc-typography-headline3-font-family, var(--mdc-typography-font-family, Fira Sans));
     font-size: 3rem;
     /* @alternate */
@@ -8431,7 +8404,7 @@ figcaption {
     text-transform: var(--mdc-typography-headline3-text-transform, inherit);
   }
 
-  h3 {
+  h2 {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: Fira Sans;
@@ -8458,7 +8431,7 @@ figcaption {
     text-transform: var(--mdc-typography-headline4-text-transform, inherit);
   }
 
-  h4 {
+  h3 {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: Roboto;
@@ -8485,7 +8458,7 @@ figcaption {
     text-transform: var(--mdc-typography-headline5-text-transform, inherit);
   }
 
-  h5 {
+  h4 {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: Roboto;
@@ -8510,6 +8483,33 @@ figcaption {
     text-transform: inherit;
     /* @alternate */
     text-transform: var(--mdc-typography-headline6-text-transform, inherit);
+  }
+
+  h5 {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto;
+    /* @alternate */
+    font-family: var(--mdc-typography-body1-font-family, var(--mdc-typography-font-family, Roboto));
+    font-size: 1rem;
+    /* @alternate */
+    font-size: var(--mdc-typography-body1-font-size, 1rem);
+    line-height: 1.5rem;
+    /* @alternate */
+    line-height: var(--mdc-typography-body1-line-height, 1.5rem);
+    font-weight: 400;
+    /* @alternate */
+    font-weight: var(--mdc-typography-body1-font-weight, 400);
+    letter-spacing: 0.03125em;
+    /* @alternate */
+    letter-spacing: var(--mdc-typography-body1-letter-spacing, 0.03125em);
+    text-decoration: inherit;
+    /* @alternate */
+    -webkit-text-decoration: var(--mdc-typography-body1-text-decoration, inherit);
+            text-decoration: var(--mdc-typography-body1-text-decoration, inherit);
+    text-transform: inherit;
+    /* @alternate */
+    text-transform: var(--mdc-typography-body1-text-transform, inherit);
   }
 
   h6 {
@@ -8685,7 +8685,7 @@ body {
 }
 /* Hero */
 .hero-image {
-  width: 90%;
+  width: 100%;
   height: auto;
   display: block;
   margin-left: auto;
@@ -8748,8 +8748,8 @@ figcaption {
 
 /* BREAKPOINT for viewport widths > 900px */
 @media (min-width: 900px) {
-  .meet-the-team-content {
-    margin: 0 45vh;
+  .homepage-content {
+    margin: 0 15vh;
   }
 }
 /* Collaborator image list */
@@ -8761,7 +8761,7 @@ figcaption {
 }
 
 /* BREAKPOINT for viewport widths <900px */
-@media (max-width: 900px) {
+@media (max-width: 899px) {
   .my-image-list .mdc-image-list__item {
     width: calc(
         100% / 3 - 4.3333333333px
