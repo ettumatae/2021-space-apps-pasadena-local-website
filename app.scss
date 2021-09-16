@@ -131,9 +131,7 @@ h6 {
 p {
   @include typography.typography(body1);
 }
-figcaption {
-  @include typography.typography(caption);
-}
+
 /* BREAKPOINT for viewport widths <1000px */
 @media (max-width: 1000px) {
   h1 {
