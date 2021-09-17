@@ -8349,8 +8349,43 @@ p {
   text-transform: var(--mdc-typography-body1-text-transform, inherit);
 }
 
-/* BREAKPOINT for viewport widths <1000px */
-@media (max-width: 1000px) {
+.team-card__text-label {
+  margin: 0 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Fira Sans;
+  /* @alternate */
+  font-family: var(--mdc-typography-subtitle1-font-family, var(--mdc-typography-font-family, Fira Sans));
+  font-size: 1rem;
+  /* @alternate */
+  font-size: var(--mdc-typography-subtitle1-font-size, 1rem);
+  line-height: 1.75rem;
+  /* @alternate */
+  line-height: var(--mdc-typography-subtitle1-line-height, 1.75rem);
+  font-weight: 400;
+  /* @alternate */
+  font-weight: var(--mdc-typography-subtitle1-font-weight, 400);
+  letter-spacing: 0.009375em;
+  /* @alternate */
+  letter-spacing: var(--mdc-typography-subtitle1-letter-spacing, 0.009375em);
+  text-decoration: inherit;
+  /* @alternate */
+  -webkit-text-decoration: var(--mdc-typography-subtitle1-text-decoration, inherit);
+          text-decoration: var(--mdc-typography-subtitle1-text-decoration, inherit);
+  text-transform: inherit;
+  /* @alternate */
+  text-transform: var(--mdc-typography-subtitle1-text-transform, inherit);
+}
+.team-card__text-label::before {
+  display: inline-block;
+  width: 0;
+  height: 32px;
+  content: "";
+  vertical-align: 0;
+}
+
+/* BREAKPOINT for viewport widths <1025px */
+@media (max-width: 1025px) {
   h1 {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -8539,6 +8574,33 @@ p {
     /* @alternate */
     text-transform: var(--mdc-typography-body2-text-transform, inherit);
   }
+
+  .team-card__text-label {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: Fira Sans;
+    /* @alternate */
+    font-family: var(--mdc-typography-subtitle2-font-family, var(--mdc-typography-font-family, Fira Sans));
+    font-size: 0.875rem;
+    /* @alternate */
+    font-size: var(--mdc-typography-subtitle2-font-size, 0.875rem);
+    line-height: 1.375rem;
+    /* @alternate */
+    line-height: var(--mdc-typography-subtitle2-line-height, 1.375rem);
+    font-weight: 500;
+    /* @alternate */
+    font-weight: var(--mdc-typography-subtitle2-font-weight, 500);
+    letter-spacing: 0.0071428571em;
+    /* @alternate */
+    letter-spacing: var(--mdc-typography-subtitle2-letter-spacing, 0.0071428571em);
+    text-decoration: inherit;
+    /* @alternate */
+    -webkit-text-decoration: var(--mdc-typography-subtitle2-text-decoration, inherit);
+            text-decoration: var(--mdc-typography-subtitle2-text-decoration, inherit);
+    text-transform: inherit;
+    /* @alternate */
+    text-transform: var(--mdc-typography-subtitle2-text-transform, inherit);
+  }
 }
 /* Use global Material design color */
 .register-button-fixed,
@@ -8585,27 +8647,27 @@ p {
 }
 
 html {
-  scroll-behavior: smooth;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-  word-break: normal;
+  display: block;
 }
 
 body,
 html {
-  width: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
   margin: 0;
-  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-body {
-  display: flex;
+.homepage-section {
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
   overflow: auto;
-  max-width: 1500px;
   margin: 0 auto;
+  max-width: 1500px;
 }
 
 /* Site logo */
@@ -8622,14 +8684,14 @@ body {
   display: flex;
   flex-direction: row;
   margin: 0;
-  padding: 0rem;
+  padding: 0em;
 }
 
 /* Style the list items side by side */
 .nav-list-item {
   list-style-type: none;
   position: relative;
-  padding: 0.5rem;
+  padding: 0.5em;
 }
 
 /* Fill the height of the top app bar with the tab bar */
@@ -8669,8 +8731,8 @@ body {
 @media screen and (min-width: 920px) {
   .register-button-fixed {
     position: fixed;
-    bottom: 1.25em;
-    right: 1em;
+    bottom: 2em;
+    right: 3em;
     z-index: 1;
     display: block;
   }
@@ -8691,30 +8753,49 @@ body {
 }
 /* Subtitle text */
 .subtitle-container {
-  margin-top: 2rem;
-  max-width: 900px;
+  margin-top: 2em;
+}
+
+/* BREAKPOINT*/
+@media screen and (min-width: 920px) {
+  .subtitle-container {
+    max-width: 700px;
+  }
+}
+.meet-the-team-section {
+  margin-top: 8em;
+  margin-bottom: 8em;
 }
 
 /* Color for border */
-.meet-the-team-section {
-  margin-top: 8rem;
-  margin-bottom: 8rem;
-  padding-bottom: 4rem;
-  border-top: solid 1px #0000008a;
-  border-bottom: solid 1px #0000008a;
+hr {
+  border: solid 2px #ee293d;
+  margin-right: 18vh;
 }
 
-/* Meet the team image cards */
+/* BREAKPOINT for viewport widths >920 */
+@media screen and (max-width: 920px) {
+  hr {
+    margin-right: 0;
+  }
+}
+/* Meet the team  */
 .meet-the-team-grid {
-  margin-top: 3rem;
-  margin: 8rem 45vh 0 0;
+  margin: 3em 45vh 3em 0;
+}
+
+.meet-the-team-heading {
+  padding-top: 0.5em;
+}
+
+.meet-the-team-cards {
+  padding: 2em 0;
 }
 
 /* BREAKPOINT for viewport widths >920*/
 @media screen and (max-width: 920px) {
   .meet-the-team-grid,
 .collaborator-logo-grid {
-    margin-top: 3rem;
     margin: 0;
   }
 }
@@ -8723,46 +8804,11 @@ body {
   text-align: center;
 }
 
-.team-card__text-label {
-  margin: 0 16px;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: Roboto;
-  /* @alternate */
-  font-family: var(--mdc-typography-headline6-font-family, var(--mdc-typography-font-family, Roboto));
-  font-size: 1.25rem;
-  /* @alternate */
-  font-size: var(--mdc-typography-headline6-font-size, 1.25rem);
-  line-height: 2rem;
-  /* @alternate */
-  line-height: var(--mdc-typography-headline6-line-height, 2rem);
-  font-weight: 500;
-  /* @alternate */
-  font-weight: var(--mdc-typography-headline6-font-weight, 500);
-  letter-spacing: 0.0125em;
-  /* @alternate */
-  letter-spacing: var(--mdc-typography-headline6-letter-spacing, 0.0125em);
-  text-decoration: inherit;
-  /* @alternate */
-  -webkit-text-decoration: var(--mdc-typography-headline6-text-decoration, inherit);
-          text-decoration: var(--mdc-typography-headline6-text-decoration, inherit);
-  text-transform: inherit;
-  /* @alternate */
-  text-transform: var(--mdc-typography-headline6-text-transform, inherit);
-}
-.team-card__text-label::before {
-  display: inline-block;
-  width: 0;
-  height: 32px;
-  content: "";
-  vertical-align: 0;
-}
-
 .mdc-card__actions {
   justify-content: flex-end;
 }
 
-/* Remove card outline */
+/* Emove card outline */
 .mdc-card--outlined {
   border-width: 0;
 }
