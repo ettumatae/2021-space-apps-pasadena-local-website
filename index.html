@@ -1,14 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- TODO: Test Accessibility -->
-  <!-- TODO: Add "alt" for accessibility -->
-  <!-- TODO: Add aria-label="" tabindex="0"-->
-
-  <!-- TODO: Test iframe -->
-
-  <!-- TODO: Fix SEO -->
-  <!-- TODO: Set up older browser compatibility -->
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -74,6 +65,16 @@
             >
               <span class="mdc-list-item__text">Collaborators</span>
             </a>
+            <a
+              class="mdc-list-item"
+              href="#whatsnext"
+              role="tab"
+              aria-label="What's next?"
+              aria-controls="tab-3-pane"
+              tabindex="0"
+            >
+              <span class="mdc-list-item__text">What's next?</span>
+            </a>
           </div>
         </nav>
       </div>
@@ -91,6 +92,7 @@
               mdc-top-app-bar__section mdc-top-app-bar__section--align-start
             "
           >
+            <!-- Nav button -->
             <button
               class="
                 material-icons
@@ -126,6 +128,8 @@
               </picture>
             </a>
           </section>
+
+          <!-- Tabs -->
           <section
             class="
               mdc-top-app-bar__section
@@ -178,11 +182,25 @@
                         <span class="mdc-tab__ripple"></span>
                       </button>
                     </a>
+                    <a class="mdc-list-item nav-item" href="#whatsnext">
+                      <button
+                        class="mdc-tab mdc-tab--min-width"
+                        role="tab"
+                        aria-selected="true"
+                        tabindex="0"
+                      >
+                        <span class="mdc-tab__content">
+                          <span class="mdc-tab__text-label">What's next?</span>
+                        </span>
+                        <span class="mdc-tab__ripple"></span>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Register button -->
+
+            <!-- Top App bar register button on medium screens -->
             <a
               href="https://2021.spaceappschallenge.org/locations/pasadena-ca/event"
               target="_blank"
@@ -207,45 +225,45 @@
       </header>
     </div>
 
+    <!-- Main content -->
     <main class="mdc-top-app-bar--prominent-fixed-adjust">
-      <!-- Main content -->
-      <div class="homepage-content">
-        <div class="mdc-layout-grid">
-          <div class="mdc-layout-grid__inner">
-            <!-- Register button -->
-            <a
-              href="https://2021.spaceappschallenge.org/locations/pasadena-ca/event"
-              target="_blank"
-            >
-              <div class="mdc-touch-target-wrapper">
-                <button
-                  class="
-                    mdc-button
-                    register-button-fixed
-                    mdc-elevation--z2
-                    mdc-button--touch
-                  "
-                >
-                  <span class="mdc-button__ripple"></span>
-                  <span class="mdc-button__touch"></span>
-                  <span class="mdc-button__label">Register </span>
-                </button>
-              </div>
-            </a>
-            <div
-              class="
-                mdc-layout-grid__cell
-                mdc-layout-grid__cell--span-4-phone
-                mdc-layout-grid__cell--span-8-tablet
-                mdc-layout-grid__cell--span-12-desktop
-                mdc-layout-grid__cell--span-12-desktop-hd
-              "
-            >
-              <!-- Hero -->
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <!-- Fixed register button on large screen-->
+          <a
+            href="https://2021.spaceappschallenge.org/locations/pasadena-ca/event"
+            target="_blank"
+          >
+            <div class="mdc-touch-target-wrapper">
+              <button
+                class="
+                  mdc-button
+                  register-button-fixed
+                  mdc-elevation--z2
+                  mdc-button--touch
+                "
+              >
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__touch"></span>
+                <span class="mdc-button__label">Register </span>
+              </button>
+            </div>
+          </a>
+          <div
+            class="
+              mdc-layout-grid__cell
+              mdc-layout-grid__cell--span-4-phone
+              mdc-layout-grid__cell--span-8-tablet
+              mdc-layout-grid__cell--span-12-desktop
+              mdc-layout-grid__cell--span-12-desktop-hd
+            "
+          >
+            <!-- Hero -->
+            <div class="home-page-section">
               <div id="about"></div>
               <h1>Registration is open</h1>
               <div class="subtitle-container">
-                <h5>
+                <h6>
                   The NASA International Space Apps Challenge (Space Apps) is an
                   international
                   <span>
@@ -259,262 +277,259 @@
                   for students of all levels in cities around the world, where
                   teams use NASA's free and open data to address real-world
                   problems on Earth and in space.
-                </h5>
-                <h5>
+                </h6>
+                <h6>
                   On October 2-3, participants will form teams of 2-6 and solve
                   challenges submitted by NASA personnel over a 48-hour period.
                   Project submissions are judged by space agency experts and
                   winners are selected for one of 10 Global Awards!
-                </h5>
+                </h6>
+              </div>
+            </div>
+            <hr />
+
+            <!-- Meet the team -->
+            <div class="home-page-section">
+              <div id="meet-the-team"></div>
+              <h2 class="meet-the-team-heading">Meet The Team</h2>
+              <div class="subtitle-container">
+                <h6>
+                  Space Apps Pasadena is hosted by the
+                  <span
+                    ><a
+                      class="links"
+                      href="https://lancerlife.pasadena.edu/organization/shecodes"
+                      target="_blank"
+                      >She.Codes</a
+                    >
+                  </span>
+                  student club at Pasadena City College! She.Codes seeks to
+                  bridge the gender gap in STEM, with an emphasis on Computer
+                  Science and Engineering.
+                </h6>
+                <h6>
+                  We support and encourage our fellow students in engineering,
+                  providing a sense of community, work to dismantle the untrue
+                  stereotype that engineering is not a career for women, and
+                  advocate to have all genders more equally represented in the
+                  field of technology.
+                </h6>
+                <h6>We're your local host for Space Apps Pasadena. 🙂</h6>
               </div>
 
-              <!-- Meet the team -->
-              <div class="meet-the-team-section">
-                <div id="meet-the-team"></div>
-                <hr />
-                <h2 class="meet-the-team-heading">Meet The Team</h2>
-                <div class="subtitle-container">
-                  <h5>
-                    Space Apps Pasadena is hosted by the
-                    <span
-                      ><a
-                        class="links"
-                        href="https://lancerlife.pasadena.edu/organization/shecodes"
-                        target="_blank"
-                        >She.Codes club</a
-                      >
-                    </span>
-                    at Pasadena City College! She.Codes seek to bridge the
-                    gender gap in STEM, with an emphasis on Computer Science and
-                    Engineering.
-                  </h5>
-                  <h5>
-                    We're here to help,
-                    <span>
-                      <a
-                        class="links"
-                        href="https://discord.gg/XTwnNFyNZv"
-                        target="_blank"
-                        >join our discord server</a
-                      >.
-                    </span>
-                  </h5>
-                </div>
-
-                <div class="meet-the-team-cards">
-                  <!-- Team Image Grid -->
-                  <div class="mdc-layout-grid__inner meet-the-team-grid">
-                    <!-- Trinity -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-3-desktop
-                        mdc-layout-grid__cell--span-3-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/001-team-image-trinity-chung-200.jpg"
-                          srcset="
-                            ./media/001-team-image-trinity-chung-100.jpg   100w,
-                            ./media/001-team-image-trinity-chung-200.jpg   200w,
-                            ./media/001-team-image-trinity-chung-400.jpg   400w,
-                            ./media/001-team-image-trinity-chung-800.jpg   800w,
-                            ./media/001-team-image-trinity-chung-1000.jpg 1000w,
-                            ./media/001-team-image-trinity-chung-1400.jpg 1400w,
-                            ./media/001-team-image-trinity-chung-1800.jpg 1800w
-                          "
-                          alt="image of Trinity Chung"
-                        />
-                        <div class="team-card__text-label">Trinity Chung</div>
-                      </div>
+              <div class="meet-the-team-cards">
+                <!-- Team Image Grid -->
+                <div class="mdc-layout-grid__inner meet-the-team-grid">
+                  <!-- Trinity -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/001-team-image-trinity-chung-200.jpg"
+                        srcset="
+                          ./media/001-team-image-trinity-chung-100.jpg   100w,
+                          ./media/001-team-image-trinity-chung-200.jpg   200w,
+                          ./media/001-team-image-trinity-chung-400.jpg   400w,
+                          ./media/001-team-image-trinity-chung-800.jpg   800w,
+                          ./media/001-team-image-trinity-chung-1000.jpg 1000w,
+                          ./media/001-team-image-trinity-chung-1400.jpg 1400w,
+                          ./media/001-team-image-trinity-chung-1800.jpg 1800w
+                        "
+                        alt="image of Trinity Chung"
+                      />
+                      <div class="team-card__text-label">Trinity Chung</div>
                     </div>
+                  </div>
 
-                    <!-- Janet -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-3-desktop
-                        mdc-layout-grid__cell--span-3-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/002-team-image-janet-teng-200.jpg"
-                          srcset="
-                            ./media/002-team-image-janet-teng-100.jpg   100w,
-                            ./media/002-team-image-janet-teng-200.jpg   200w,
-                            ./media/002-team-image-janet-teng-400.jpg   400w,
-                            ./media/002-team-image-janet-teng-800.jpg   800w,
-                            ./media/002-team-image-janet-teng-1000.jpg 1000w,
-                            ./media/002-team-image-janet-teng-1400.jpg 1400w,
-                            ./media/002-team-image-janet-teng-1800.jpg 1800w
-                          "
-                          alt="image of Janet Teng"
-                        />
-                        <div class="team-card__text-label">Janet Teng</div>
-                      </div>
+                  <!-- Janet -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/002-team-image-janet-teng-200.jpg"
+                        srcset="
+                          ./media/002-team-image-janet-teng-100.jpg   100w,
+                          ./media/002-team-image-janet-teng-200.jpg   200w,
+                          ./media/002-team-image-janet-teng-400.jpg   400w,
+                          ./media/002-team-image-janet-teng-800.jpg   800w,
+                          ./media/002-team-image-janet-teng-1000.jpg 1000w,
+                          ./media/002-team-image-janet-teng-1400.jpg 1400w,
+                          ./media/002-team-image-janet-teng-1800.jpg 1800w
+                        "
+                        alt="image of Janet Teng"
+                      />
+                      <div class="team-card__text-label">Janet Teng</div>
                     </div>
+                  </div>
 
-                    <!-- Jacqueline -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-3-desktop
-                        mdc-layout-grid__cell--span-3-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/003-team-image-jacqueline-friedberg-200.jpg"
-                          srcset="
-                            ./media/003-team-image-jacqueline-friedberg-100.jpg   100w,
-                            ./media/003-team-image-jacqueline-friedberg-200.jpg   200w,
-                            ./media/003-team-image-jacqueline-friedberg-400.jpg   400w,
-                            ./media/003-team-image-jacqueline-friedberg-800.jpg   800w,
-                            ./media/003-team-image-jacqueline-friedberg-1000.jpg 1000w,
-                            ./media/003-team-image-jacqueline-friedberg-1400.jpg 1400w,
-                            ./media/003-team-image-jacqueline-friedberg-1800.jpg 1800w
-                          "
-                          alt="image of Jacqueline Friedberg"
-                        />
-                        <div class="team-card__text-label">
-                          Jacqueline Friedberg
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Pranav -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-3-desktop
-                        mdc-layout-grid__cell--span-3-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/004-team-image-pranav-patel-200.jpg"
-                          srcset="
-                            ./media/004-team-image-pranav-patel-100.jpg   100w,
-                            ./media/004-team-image-pranav-patel-200.jpg   200w,
-                            ./media/004-team-image-pranav-patel-400.jpg   400w,
-                            ./media/004-team-image-pranav-patel-800.jpg   800w,
-                            ./media/004-team-image-pranav-patel-1000.jpg 1000w,
-                            ./media/004-team-image-pranav-patel-1400.jpg 1400w,
-                            ./media/004-team-image-pranav-patel-1800.jpg 1800w
-                          "
-                          alt="image of Pranav Patel"
-                        />
-                        <div class="team-card__text-label">Pranav Patel</div>
-                      </div>
-                    </div>
-
-                    <!-- Anthony -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-3-desktop
-                        mdc-layout-grid__cell--span-3-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/005-team-image-anthony-ko-200.jpg"
-                          srcset="
-                            ./media/005-team-image-anthony-ko-100.jpg   100w,
-                            ./media/005-team-image-anthony-ko-200.jpg   200w,
-                            ./media/005-team-image-anthony-ko-400.jpg   400w,
-                            ./media/005-team-image-anthony-ko-800.jpg   800w,
-                            ./media/005-team-image-anthony-ko-1000.jpg 1000w,
-                            ./media/005-team-image-anthony-ko-1400.jpg 1400w,
-                            ./media/005-team-image-anthony-ko-1800.jpg 1800w
-                          "
-                          alt="image of Anthony Ko"
-                        />
-                        <div class="team-card__text-label">Anthony Ko</div>
-                      </div>
-                    </div>
-
-                    <!-- Oneal -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-3-desktop
-                        mdc-layout-grid__cell--span-3-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/006-team-image-oneal-douglin-200.jpg"
-                          srcset="
-                            ./media/006-team-image-oneal-douglin-100.jpg   100w,
-                            ./media/006-team-image-oneal-douglin-200.jpg   200w,
-                            ./media/006-team-image-oneal-douglin-400.jpg   400w,
-                            ./media/006-team-image-oneal-douglin-800.jpg   800w,
-                            ./media/006-team-image-oneal-douglin-1000.jpg 1000w,
-                            ./media/006-team-image-oneal-douglin-1400.jpg 1400w,
-                            ./media/006-team-image-oneal-douglin-1800.jpg 1800w
-                          "
-                          alt="image of Oneal Douglin"
-                        />
-                        <div class="team-card__text-label">Oneal Douglin</div>
-                      </div>
-                    </div>
-
-                    <!-- Nicolas -->
-                    <div
-                      class="
-                        mdc-layout-grid__cell
-                        mdc-layout-grid__cell--span-2-phone
-                        mdc-layout-grid__cell--span-2-tablet
-                        mdc-layout-grid__cell--span-3-desktop
-                        mdc-layout-grid__cell--span-3-desktop-hd
-                      "
-                    >
-                      <div class="mdc-card mdc-card--outlined team-card">
-                        <img
-                          src="./media/007-team-image-nicolas-hernandez-200.jpg"
-                          srcset="
-                            ./media/007-team-image-nicolas-hernandez-100.jpg   100w,
-                            ./media/007-team-image-nicolas-hernandez-200.jpg   200w,
-                            ./media/007-team-image-nicolas-hernandez-400.jpg   400w,
-                            ./media/007-team-image-nicolas-hernandez-800.jpg   800w,
-                            ./media/007-team-image-nicolas-hernandez-1000.jpg 1000w,
-                            ./media/007-team-image-nicolas-hernandez-1400.jpg 1400w,
-                            ./media/007-team-image-nicolas-hernandez-1800.jpg 1800w
-                          "
-                          alt="image of Nicolas Hernandez"
-                        />
-                        <div class="team-card__text-label">
-                          Nicolas Hernandez
-                        </div>
+                  <!-- Jacqueline -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/003-team-image-jacqueline-friedberg-200.jpg"
+                        srcset="
+                          ./media/003-team-image-jacqueline-friedberg-100.jpg   100w,
+                          ./media/003-team-image-jacqueline-friedberg-200.jpg   200w,
+                          ./media/003-team-image-jacqueline-friedberg-400.jpg   400w,
+                          ./media/003-team-image-jacqueline-friedberg-800.jpg   800w,
+                          ./media/003-team-image-jacqueline-friedberg-1000.jpg 1000w,
+                          ./media/003-team-image-jacqueline-friedberg-1400.jpg 1400w,
+                          ./media/003-team-image-jacqueline-friedberg-1800.jpg 1800w
+                        "
+                        alt="image of Jacqueline Friedberg"
+                      />
+                      <div class="team-card__text-label">
+                        Jacqueline Friedberg
                       </div>
                     </div>
                   </div>
-                </div>
-                <hr />
-              </div>
 
-              <!-- Collaborators -->
+                  <!-- Pranav -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/004-team-image-pranav-patel-200.jpg"
+                        srcset="
+                          ./media/004-team-image-pranav-patel-100.jpg   100w,
+                          ./media/004-team-image-pranav-patel-200.jpg   200w,
+                          ./media/004-team-image-pranav-patel-400.jpg   400w,
+                          ./media/004-team-image-pranav-patel-800.jpg   800w,
+                          ./media/004-team-image-pranav-patel-1000.jpg 1000w,
+                          ./media/004-team-image-pranav-patel-1400.jpg 1400w,
+                          ./media/004-team-image-pranav-patel-1800.jpg 1800w
+                        "
+                        alt="image of Pranav Patel"
+                      />
+                      <div class="team-card__text-label">Pranav Patel</div>
+                    </div>
+                  </div>
+
+                  <!-- Anthony -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/005-team-image-anthony-ko-200.jpg"
+                        srcset="
+                          ./media/005-team-image-anthony-ko-100.jpg   100w,
+                          ./media/005-team-image-anthony-ko-200.jpg   200w,
+                          ./media/005-team-image-anthony-ko-400.jpg   400w,
+                          ./media/005-team-image-anthony-ko-800.jpg   800w,
+                          ./media/005-team-image-anthony-ko-1000.jpg 1000w,
+                          ./media/005-team-image-anthony-ko-1400.jpg 1400w,
+                          ./media/005-team-image-anthony-ko-1800.jpg 1800w
+                        "
+                        alt="image of Anthony Ko"
+                      />
+                      <div class="team-card__text-label">Anthony Ko</div>
+                    </div>
+                  </div>
+
+                  <!-- Oneal -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/006-team-image-oneal-douglin-200.jpg"
+                        srcset="
+                          ./media/006-team-image-oneal-douglin-100.jpg   100w,
+                          ./media/006-team-image-oneal-douglin-200.jpg   200w,
+                          ./media/006-team-image-oneal-douglin-400.jpg   400w,
+                          ./media/006-team-image-oneal-douglin-800.jpg   800w,
+                          ./media/006-team-image-oneal-douglin-1000.jpg 1000w,
+                          ./media/006-team-image-oneal-douglin-1400.jpg 1400w,
+                          ./media/006-team-image-oneal-douglin-1800.jpg 1800w
+                        "
+                        alt="image of Oneal Douglin"
+                      />
+                      <div class="team-card__text-label">Oneal Douglin</div>
+                    </div>
+                  </div>
+
+                  <!-- Nicolas -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined team-card">
+                      <img
+                        src="./media/007-team-image-nicolas-hernandez-200.jpg"
+                        srcset="
+                          ./media/007-team-image-nicolas-hernandez-100.jpg   100w,
+                          ./media/007-team-image-nicolas-hernandez-200.jpg   200w,
+                          ./media/007-team-image-nicolas-hernandez-400.jpg   400w,
+                          ./media/007-team-image-nicolas-hernandez-800.jpg   800w,
+                          ./media/007-team-image-nicolas-hernandez-1000.jpg 1000w,
+                          ./media/007-team-image-nicolas-hernandez-1400.jpg 1400w,
+                          ./media/007-team-image-nicolas-hernandez-1800.jpg 1800w
+                        "
+                        alt="image of Nicolas Hernandez"
+                      />
+                      <div class="team-card__text-label">Nicolas Hernandez</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+
+            <!-- Collaborators -->
+            <div class="home-page-section">
               <div id="collaborators"></div>
               <h2 class="collaborator-heading">Local Collaborators</h2>
               <div class="subtitle-container">
-                <h5>
+                <h6>
                   Thank you so much for contributing to Space Apps Pasadena! ❤️
-                </h5>
+                </h6>
               </div>
 
               <!-- Logo Image Grid -->
@@ -704,10 +719,57 @@
             </div>
           </div>
         </div>
+
+        <!-- What's next? -->
+        <hr />
+        <div class="home-page-section">
+          <h2 class="whats-next-heading">What's next?</h2>
+          <div class="subtitle-container">
+            <h6>
+              If you're interested in participating in the NASA Space Apps
+              Pasadena
+              <span>
+                <a
+                  class="links"
+                  href="https://2021.spaceappschallenge.org/locations/pasadena-ca/event"
+                  target="_blank"
+                  >hackathon</a
+                ></span
+              >, the next step is to register.
+            </h6>
+            <h6>
+              Then, join our
+              <span>
+                <a
+                  class="links"
+                  href="https://discord.gg/XTwnNFyNZv"
+                  target="_blank"
+                  >Discord</a
+                >
+              </span>
+              where you can ask questions, join a team, and more.
+            </h6>
+            <h6>
+              We look forward to see all your great work at Space Apps Pasadena
+              on October 2-3!
+            </h6>
+          </div>
+        </div>
       </div>
     </main>
 
     <!-- Material JavaScript -->
     <script src="./dist/bundle.js" async></script>
   </body>
+  <!-- TODO: Test Accessibility -->
+  <!-- TODO: Add "alt" for accessibility -->
+  <!-- TODO: Add aria-label="" tabindex="0"-->
+  <!-- TODO: Make register button on small screens in drawer -->
+  <!-- TODO: Fix SEO -->
+  <!-- TODO: Set up older browser compatibility -->
+
+  <!-- TODO: Reduce image size -->
+  <!-- TODO: Add outlines to collaborator cards -->
+
+  <!-- TODO: Test iframe -->
 </html>
