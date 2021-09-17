@@ -2407,9 +2407,9 @@ svg.mdc-button__icon {
   border-color: var(--mdc-theme-primary, #fff);
 }
 .mdc-tab-indicator .mdc-tab-indicator__content--icon {
-  color: #0960e1;
+  color: #ee293d;
   /* @alternate */
-  color: var(--mdc-theme-secondary, #0960e1);
+  color: var(--mdc-theme-secondary, #ee293d);
 }
 .mdc-tab-indicator .mdc-tab-indicator__content--underline {
   border-top-width: 2px;
@@ -8602,35 +8602,27 @@ p {
     text-transform: var(--mdc-typography-subtitle2-text-transform, inherit);
   }
 }
-/* Use global Material design color */
+/* Use global color */
 .register-button-fixed,
-.register-button-top-app-bar,
-.mdc-button__label {
-  background: #0960e1;
-  /* @alternate */
-  background: var(--mdc-theme-secondary, #0960e1);
-  color: #fff;
-  /* @alternate */
-  color: var(--mdc-theme-on-secondary, #fff);
+.register-button-top-app-bar {
+  background: #c81628;
 }
 
-.hero-container {
-  background: #fff;
-  /* @alternate */
-  background: var(--mdc-theme-primary, #fff);
+.mdc-button__label {
+  color: #fff;
 }
 
 .mdc-top-app-bar__title {
-  color: #000;
+  color: #ee293d;
   /* @alternate */
-  color: var(--mdc-theme-on-primary, #000);
+  color: var(--mdc-theme-secondary, #ee293d);
   text-decoration: none;
 }
 
 .links {
-  color: #0960e1;
+  color: #ee293d;
   /* @alternate */
-  color: var(--mdc-theme-secondary, #0960e1);
+  color: var(--mdc-theme-secondary, #ee293d);
   text-decoration: underline;
 }
 
@@ -8756,20 +8748,19 @@ html {
   margin-top: 2em;
 }
 
-/* BREAKPOINT*/
+/* BREAKPOINT for viewport widths >920* */
 @media screen and (min-width: 920px) {
   .subtitle-container {
     max-width: 700px;
   }
 }
 .meet-the-team-section {
-  margin-top: 8em;
-  margin-bottom: 8em;
+  margin-top: 6em;
 }
 
 /* Color for border */
 hr {
-  border: solid 2px #ee293d;
+  border: solid 2px #0960e1;
   margin-right: 18vh;
 }
 
@@ -8781,10 +8772,11 @@ hr {
 }
 /* Meet the team  */
 .meet-the-team-grid {
-  margin: 3em 45vh 3em 0;
+  margin: 2em 45vh 6em 0;
 }
 
-.meet-the-team-heading {
+.meet-the-team-heading,
+.collaborator-heading {
   padding-top: 0.5em;
 }
 

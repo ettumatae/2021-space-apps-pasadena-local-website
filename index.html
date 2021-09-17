@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- TODO: Fix image breakpoint -->
-
-  <!-- TODO: Add "alt" for accessibility -->
-  <!-- TODO: Add aria-label="" -->
   <!-- TODO: Test Accessibility -->
+  <!-- TODO: Add "alt" for accessibility -->
+  <!-- TODO: Add aria-label="" tabindex="0"-->
 
   <!-- TODO: Test iframe -->
 
   <!-- TODO: Fix SEO -->
-  <!-- TODO: Finish older browser compatibility -->
+  <!-- TODO: Set up older browser compatibility -->
 
   <head>
     <meta charset="UTF-8" />
@@ -45,19 +43,38 @@
     <aside class="mdc-drawer mdc-drawer--modal">
       <div class="mdc-drawer__content">
         <nav class="mdc-list">
-          <a
-            class="mdc-list-item mdc-list-item--activated"
-            href="#about"
-            aria-selected="true"
-          >
-            <span class="mdc-list-item__text">About</span>
-          </a>
-          <a class="mdc-list-item" href="#meet-the-team">
-            <span class="mdc-list-item__text">Meet The Team</span>
-          </a>
-          <a class="mdc-list-item" href="#collaborators" title>
-            <span class="mdc-list-item__text">Collaborators</span>
-          </a>
+          <div class="tablist">
+            <a
+              class="mdc-list-item mdc-list-item--activated"
+              href="#about"
+              role="tab"
+              aria-label="About"
+              aria-controls="tab-1-pane"
+              tabindex="0"
+            >
+              <span class="mdc-list-item__text">About</span>
+            </a>
+            <a
+              class="mdc-list-item"
+              href="#meet-the-team"
+              role="tab"
+              aria-label="Meet The Team"
+              aria-controls="tab-2-pane"
+              tabindex="0"
+            >
+              <span class="mdc-list-item__text">Meet The Team</span>
+            </a>
+            <a
+              class="mdc-list-item"
+              href="#collaborators"
+              role="tab"
+              aria-label="Collaborators"
+              aria-controls="tab-3-pane"
+              tabindex="0"
+            >
+              <span class="mdc-list-item__text">Collaborators</span>
+            </a>
+          </div>
         </nav>
       </div>
     </aside>
@@ -283,6 +300,7 @@
                     </span>
                   </h5>
                 </div>
+
                 <div class="meet-the-team-cards">
                   <!-- Team Image Grid -->
                   <div class="mdc-layout-grid__inner meet-the-team-grid">
@@ -691,8 +709,5 @@
 
     <!-- Material JavaScript -->
     <script src="./dist/bundle.js" async></script>
-
-    <!-- Add support for Web Components to IE11. -->
-    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
   </body>
 </html>
