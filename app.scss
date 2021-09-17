@@ -131,9 +131,14 @@ h6 {
 p {
   @include typography.typography(body1);
 }
+.team-card__text-label {
+  margin: 0 16px;
+  @include typography.typography(subtitle1);
+  @include mdc-typography-baseline-top(32px);
+}
 
-/* BREAKPOINT for viewport widths <1000px */
-@media (max-width: 1000px) {
+/* BREAKPOINT for viewport widths <1025px */
+@media (max-width: 1025px) {
   h1 {
     @include typography.typography(headline2);
   }
@@ -154,6 +159,9 @@ p {
   }
   p {
     @include typography.typography(body2);
+  }
+  .team-card__text-label {
+    @include typography.typography(subtitle2);
   }
 }
 
@@ -189,23 +197,24 @@ p {
 }
 
 html {
-  scroll-behavior: smooth;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-  word-break: normal;
+  display: block;
 }
 body,
 html {
-  width: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
   margin: 0;
-  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
-body {
-  display: flex;
+
+.homepage-section {
   text-size-adjust: 100%;
   overflow: auto;
-  max-width: 1500px;
   margin: 0 auto;
+  max-width: 1500px;
 }
 
 /* Site logo */
@@ -229,14 +238,14 @@ body {
   -ms-flex-direction: row;
   flex-direction: row;
   margin: 0;
-  padding: 0rem;
+  padding: 0em;
 }
 
 /* Style the list items side by side */
 .nav-list-item {
   list-style-type: none;
   position: relative;
-  padding: 0.5rem;
+  padding: 0.5em;
 }
 
 /* Fill the height of the top app bar with the tab bar */
@@ -275,8 +284,8 @@ body {
 @media screen and (min-width: 920px) {
   .register-button-fixed {
     position: fixed;
-    bottom: 1.25em;
-    right: 1em;
+    bottom: 2em;
+    right: 3em;
     z-index: 1;
     display: block;
   }
@@ -297,31 +306,52 @@ body {
 
 /* Subtitle text */
 .subtitle-container {
-  margin-top: 2rem;
-  max-width: 900px;
+  margin-top: 2em;
+}
+
+/* BREAKPOINT*/
+@media screen and (min-width: 920px) {
+  .subtitle-container {
+    max-width: 700px;
+  }
+}
+
+.meet-the-team-section {
+  margin-top: 8em;
+  margin-bottom: 8em;
 }
 
 /* Color for border */
-$on-surface-medium-emphasis: #0000008a;
-.meet-the-team-section {
-  margin-top: 8rem;
-  margin-bottom: 8rem;
-  padding-bottom: 4rem;
-  border-top: solid 1px $on-surface-medium-emphasis;
-  border-bottom: solid 1px $on-surface-medium-emphasis;
+$logo-red: #ee293d;
+hr {
+  border: solid 2px $logo-red;
+  margin-right: 18vh;
 }
 
-/* Meet the team image cards */
+/* BREAKPOINT for viewport widths >920 */
+@media screen and (max-width: 920px) {
+  hr {
+    margin-right: 0;
+  }
+}
+
+/* Meet the team  */
 .meet-the-team-grid {
-  margin-top: 3rem;
-  margin: 8rem 45vh 0 0;
+  margin: 3em 45vh 3em 0;
+}
+
+.meet-the-team-heading {
+  padding-top: 0.5em;
+}
+
+.meet-the-team-cards {
+  padding: 2em 0;
 }
 
 /* BREAKPOINT for viewport widths >920*/
 @media screen and (max-width: 920px) {
   .meet-the-team-grid,
   .collaborator-logo-grid {
-    margin-top: 3rem;
     margin: 0;
   }
 }
@@ -331,17 +361,11 @@ $on-surface-medium-emphasis: #0000008a;
   text-align: center;
 }
 
-.team-card__text-label {
-  margin: 0 16px;
-  @include typography.typography(headline6);
-  @include mdc-typography-baseline-top(32px);
-}
-
 .mdc-card__actions {
   justify-content: flex-end;
 }
 
-/* Remove card outline */
+/* Emove card outline */
 .mdc-card--outlined {
   border-width: 0;
 }
