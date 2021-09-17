@@ -4,8 +4,8 @@
   /* Secondary color based on NASA Space Apps 2021 */
   $primary: #fff,
   $on-primary: #000,
-  $secondary: #0960e1,
-  $on-secondary: #fff,
+  $secondary:   #ee293d,
+  $on-secondary: #000,
   $surface: #fff,
   $on-surface: #000,
   $background: #fff,
@@ -165,18 +165,20 @@ p {
   }
 }
 
-/* Use global Material design color */
+/* Use global color */
+$alternate-secondary: #c81628;
+$alternate-on-secondary: #fff;
+
 .register-button-fixed,
-.register-button-top-app-bar,
+.register-button-top-app-bar {
+  background: $alternate-secondary;
+}
 .mdc-button__label {
-  @include theme.property(background, secondary);
-  @include theme.property(color, on-secondary);
+  color: $alternate-on-secondary;
 }
-.hero-container {
-  @include theme.property(background, primary);
-}
+
 .mdc-top-app-bar__title {
-  @include theme.property(color, on-primary);
+  @include theme.property(color, secondary);
   text-decoration: none;
 }
 .links {
@@ -309,7 +311,7 @@ html {
   margin-top: 2em;
 }
 
-/* BREAKPOINT*/
+/* BREAKPOINT for viewport widths >920* */
 @media screen and (min-width: 920px) {
   .subtitle-container {
     max-width: 700px;
@@ -317,12 +319,11 @@ html {
 }
 
 .meet-the-team-section {
-  margin-top: 8em;
-  margin-bottom: 8em;
+  margin-top: 6em;
 }
 
 /* Color for border */
-$logo-red: #ee293d;
+$logo-red: #0960e1;
 hr {
   border: solid 2px $logo-red;
   margin-right: 18vh;
@@ -337,10 +338,11 @@ hr {
 
 /* Meet the team  */
 .meet-the-team-grid {
-  margin: 3em 45vh 3em 0;
+  margin: 2em 45vh 6em 0;
 }
 
-.meet-the-team-heading {
+.meet-the-team-heading,
+.collaborator-heading {
   padding-top: 0.5em;
 }
 
