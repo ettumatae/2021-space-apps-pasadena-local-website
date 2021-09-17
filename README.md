@@ -1,13 +1,14 @@
 # Space Apps Pasadena Website
 
-Website for NASA Space Apps in Pasadena
+Website for NASA Space Apps in Pasadena </br> <a
+href="https://spaceapps-pasadena.netlify.app/" target="_blank">View the live site</a>
 
 <br>
 
 ## Steps for contributors
 
-Hi! Here are some steps that will help you set up your environment.
-Hope you have fun!
+Hi! Here are some steps that will help you set up your environment. Hope you
+have fun!
 
 Note: This assumes you have Node.js and npm installed locally.
 
@@ -47,14 +48,12 @@ You’ll need all of these Node dependencies:
 - postcss-loader: Loader for Webpack used in conjunction with autoprefixer
 - @babel/core
 - babel-loader: Compiles JavaScript files using babel
-- @babel/preset-env: Preset for compiling es2015
-  <br>
-  https://material.io/develop/web/getting-started
-  <br>
+- @babel/preset-env: Preset for compiling es2015 <br>
+  https://material.io/develop/web/getting-started <br>
 - @watch: watches for changes in files then runs 'npm run build'
-  https://www.npmjs.com/package/watch
-  <br>
-- @webcomponents/webcomponentsjs & @rollup/plugin-node-resolve: To support Web Components in IE11 and other older browsers
+  https://www.npmjs.com/package/watch <br>
+- @webcomponents/webcomponentsjs & @rollup/plugin-node-resolve: To support Web
+  Components in IE11 and other older browsers
   https://github.com/material-components/material-web/blob/master/README.md#supporting-older-browsers
 
 You can install these Node dependencies by running this command:
@@ -67,10 +66,9 @@ npm install --save-dev && npm update
 
 ### 4) Run spaceapps-pasadena:
 
-Start the server. Run `npm start` and open http://localhost:8080.
-<br>
-Note: The server needs to continue running in your terminal.
-<br>
+Start the server. Run `npm start` and open http://localhost:8080 to view the
+site in a browser. <br>
+Note: The server needs to continue running in your terminal. <br>
 You should see the website.
 
 <br>
@@ -79,15 +77,15 @@ You should see the website.
 
 View updates in your browser by opening a new terminal tab (command/ctrl t).
 <br>
-Make sure you're in the spaceapps-pasadena folder
-<br>
+Make sure you're in the spaceapps-pasadena folder <br>
 
 ```
 npm run watch
 ```
 
 Wait a few seconds, and refresh your browser page. You should see the updates.
-Note: Every update you make should be auto-updated. If there are issues, check your terminal for errors.
+Note: Every update you make should be auto-updated. If there are issues, check
+your terminal for errors.
 
 <br>
 
@@ -105,12 +103,16 @@ ctrl + c
 
 ## Resources:
 
-Help with <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request" target="_blank">creating a pull request.</a>
+Help with <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request"
+target="_blank">creating a pull request.</a>
 
-Help with <a href="https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository#pulling-changes-from-a-remote-repository" target="_blank"> pulling updates from repo.
+Help with <a href="https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository#pulling-changes-from-a-remote-repository"
+target="_blank"> pulling updates from repo.
 
-Material Web Components on<a href="https://github.com/material-components/material-web" target="_blank"> Github. </a>
+Material Web Components on<a href="https://github.com/material-components/material-web" target="_blank">
+Github. </a>
 
 List of <a href="https://material.io/components?platform=web" target="_blank">Material Web Components</a>
 
-See how material code works with <a href="https://glitch.com/~material-theme-builder" target="_blank">Material theme examples.</a>
+See how material code works with <a href="https://glitch.com/~material-theme-builder" target="_blank">Material theme
+examples.</a>
