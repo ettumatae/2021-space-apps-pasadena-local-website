@@ -8603,8 +8603,9 @@ p {
   }
 }
 /* Use global colors */
-.register-button-fixed,
-.register-button-top-app-bar {
+.register-button-large-screen,
+.register-button-medium-screen,
+.register-button-small-screen {
   background: #c81628;
 }
 
@@ -8666,7 +8667,7 @@ html {
 
 /* Site logo */
 .logo {
-  width: 322px;
+  width: 330px;
   height: 110px;
 }
 
@@ -8717,13 +8718,14 @@ html {
   }
 }
 /* Register button */
-.register-button-fixed {
+.register-button-large-screen,
+.register-button-small-screen {
   display: none;
 }
 
 /* BREAKPOINT for viewport widths >1024*/
 @media screen and (min-width: 1024px) {
-  .register-button-fixed {
+  .register-button-large-screen {
     position: fixed;
     bottom: 2em;
     right: 3em;
@@ -8731,18 +8733,22 @@ html {
     display: block;
   }
 
-  .register-button-top-app-bar {
+  .register-button-medium-screen {
     display: none;
   }
 }
 /* BREAKPOINT for viewport widths <500*/
 @media screen and (max-width: 500px) {
-  .register-button-fixed {
+  .register-button-large-screen {
     display: none;
   }
 
-  .register-button-top-app-bar {
+  .register-button-medium-screen {
     display: none;
+  }
+
+  .register-button-small-screen {
+    display: block;
   }
 }
 /* Subtitle text */

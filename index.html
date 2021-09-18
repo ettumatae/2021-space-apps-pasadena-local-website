@@ -10,7 +10,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title>NASA Space Apps Pasadena 2021 Website</title>
-
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,13 +17,11 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;600;700;900&family=Roboto:wght@100;300;400;600;700;900&display=swap"
       rel="stylesheet"
     />
-
     <!-- Material Icons -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./dist/bundle.css" />
   </head>
@@ -67,7 +64,7 @@
             </a>
             <a
               class="mdc-list-item"
-              href="#whatsnext"
+              href="#whats-next"
               role="tab"
               aria-label="What's next?"
               aria-controls="tab-3-pane"
@@ -182,7 +179,7 @@
                         <span class="mdc-tab__ripple"></span>
                       </button>
                     </a>
-                    <a class="mdc-list-item nav-item" href="#whatsnext">
+                    <a class="mdc-list-item nav-item" href="#whats-next">
                       <button
                         class="mdc-tab mdc-tab--min-width"
                         role="tab"
@@ -209,9 +206,9 @@
                 <button
                   class="
                     mdc-button
-                    register-button-top-app-bar
                     mdc-elevation--z2
                     mdc-button--touch
+                    register-button-medium-screen
                   "
                 >
                   <span class="mdc-button__ripple"></span>
@@ -238,9 +235,9 @@
               <button
                 class="
                   mdc-button
-                  register-button-fixed
                   mdc-elevation--z2
                   mdc-button--touch
+                  register-button-large-screen
                 "
               >
                 <span class="mdc-button__ripple"></span>
@@ -677,25 +674,15 @@
             </div>
           </div>
         </div>
-
         <!-- What's next? -->
         <hr />
         <div class="home-page-section">
-          <div id="whatsnext"></div>
-
+          <div id="whats-next"></div>
           <h2 class="whats-next-heading">What's next?</h2>
           <div class="subtitle-container">
             <h6>
               If you're interested in participating in the NASA Space Apps
-              Pasadena
-              <span>
-                <a
-                  class="links"
-                  href="https://2021.spaceappschallenge.org/locations/pasadena-ca/event"
-                  target="_blank"
-                  >hackathon</a
-                ></span
-              >, the next step is to register.
+              Pasadena hackathon, the next step is to register.
             </h6>
             <h6>
               Then, join our
@@ -710,26 +697,42 @@
               where you can ask questions, join a team, and more.
             </h6>
             <h6>
-              We look forward to see all your great work at Space Apps Pasadena
-              on October 2-3!
+              We look forward to seeing all of your great work at NASA Space
+              Apps Pasadena on October 2-3!
             </h6>
           </div>
+
+          <!-- Fixed register on small screen-->
+          <a
+            href="https://2021.spaceappschallenge.org/locations/pasadena-ca/event"
+            target="_blank"
+          >
+            <div class="mdc-touch-target-wrapper">
+              <button
+                class="
+                  mdc-button
+                  mdc-elevation--z2
+                  mdc-button--touch
+                  register-button-small-screen
+                "
+              >
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__touch"></span>
+                <span class="mdc-button__label">Register </span>
+              </button>
+            </div>
+          </a>
         </div>
       </div>
     </main>
-
     <!-- Material JavaScript -->
     <script src="./dist/bundle.js" async></script>
   </body>
   <!-- TODO: Test Accessibility -->
   <!-- TODO: Add "alt" for accessibility -->
   <!-- TODO: Add aria-label="" tabindex="0"-->
-  <!-- TODO: Make register button on small screens in drawer -->
   <!-- TODO: Fix SEO -->
   <!-- TODO: Set up older browser compatibility -->
-
-  <!-- TODO: Reduce image size -->
   <!-- TODO: Add outlines to collaborator cards -->
-
   <!-- TODO: Test iframe -->
 </html>
