@@ -8604,8 +8604,7 @@ p {
 }
 /* Use global colors */
 .register-button-large-screen,
-.register-button-medium-screen,
-.register-button-small-screen {
+.register-button-small-medium-screen {
   background: #c81628;
 }
 
@@ -8713,9 +8712,12 @@ html {
   }
 }
 /* Register button */
-.register-button-large-screen,
-.register-button-small-screen {
+.register-button-large-screen {
   display: none;
+}
+
+.register-button-small-medium-screen {
+  display: block;
 }
 
 /* BREAKPOINT for viewport widths >1024*/
@@ -8728,22 +8730,8 @@ html {
     display: block;
   }
 
-  .register-button-medium-screen {
+  .register-button-small-medium-screen {
     display: none;
-  }
-}
-/* BREAKPOINT for viewport widths <500*/
-@media screen and (max-width: 500px) {
-  .register-button-large-screen {
-    display: none;
-  }
-
-  .register-button-medium-screen {
-    display: none;
-  }
-
-  .register-button-small-screen {
-    display: block;
   }
 }
 /* Subtitle text */
