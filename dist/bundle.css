@@ -8613,6 +8613,7 @@ p {
   color: #fff;
 }
 
+/* Material Design Global Color */
 .mdc-top-app-bar__title {
   color: #ee293d;
   /* @alternate */
@@ -8665,13 +8666,13 @@ html {
   max-width: 1500px;
 }
 
-/* Site logo */
+/* Top app bar */
+/* Logo */
 .logo {
-  width: 330px;
-  height: 110px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-/* Top app bar */
 /* Reset List Styles */
 .nav-list {
   list-style: none;
@@ -8680,6 +8681,7 @@ html {
   flex-direction: row;
   margin: 0;
   padding: 0em;
+  height: 100%;
 }
 
 /* Style the list items side by side */
@@ -8693,13 +8695,6 @@ html {
 .mdc-top-app-bar__section {
   padding-top: 0;
   padding-bottom: 0;
-}
-
-.mdc-tab-bar,
-.mdc-tab-scroller,
-.mdc-tab-scroller__scroll-area,
-.mdc-tab {
-  height: 100%;
 }
 
 /* Hide top bar navigation icon */

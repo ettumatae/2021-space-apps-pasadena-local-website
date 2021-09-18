@@ -89,7 +89,6 @@
 @use "@material/tab-scroller/mdc-tab-scroller";
 @use "@material/tab-indicator/mdc-tab-indicator";
 @use "@material/tab/mdc-tab";
-
 /* Drawer*/
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
@@ -176,6 +175,7 @@ $alternate-on-secondary: #fff;
 .mdc-button__label {
   color: $alternate-on-secondary;
 }
+/* Material Design Global Color */
 .mdc-top-app-bar__title {
   @include theme.property(color, secondary);
   text-decoration: none;
@@ -187,8 +187,6 @@ $alternate-on-secondary: #fff;
 .logo-link {
   @include theme.property(color, on-surface);
 }
-
-$alternate-background: rgba(0, 0, 0, 0.548);
 
 * {
   /* Toggle Comment border-style & color (on/off) to see layout border */
@@ -222,13 +220,14 @@ html {
   max-width: 1500px;
 }
 
-/* Site logo */
+/* Top app bar */
+
+/* Logo */
 .logo {
-  width: 330px;
-  height: 110px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-/* Top app bar */
 /* Reset List Styles */
 .nav-list {
   list-style: none;
@@ -244,6 +243,7 @@ html {
   flex-direction: row;
   margin: 0;
   padding: 0em;
+  height: 100%;
 }
 
 /* Style the list items side by side */
@@ -257,12 +257,6 @@ html {
 .mdc-top-app-bar__section {
   padding-top: 0;
   padding-bottom: 0;
-}
-.mdc-tab-bar,
-.mdc-tab-scroller,
-.mdc-tab-scroller__scroll-area,
-.mdc-tab {
-  height: 100%;
 }
 
 /* Hide top bar navigation icon */
@@ -330,9 +324,9 @@ html {
 }
 
 /* Color for border */
-$logo-red: #0960e1;
+$logo-neonblue: #0960e1;
 hr {
-  border: solid 2px $logo-red;
+  border: solid 2px $logo-neonblue;
   margin-right: 18vh;
 }
 

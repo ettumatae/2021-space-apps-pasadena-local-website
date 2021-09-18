@@ -80,9 +80,7 @@
     <div class="mdc-drawer-scrim"></div>
     <div class="mdc-drawer-app-content">
       <!-- Top app bar -->
-      <header
-        class="mdc-top-app-bar mdc-top-app-bar--prominent mdc-elevation--z2"
-      >
+      <header class="mdc-top-app-bar mdc-elevation--z2">
         <div class="mdc-top-app-bar__row">
           <section
             class="
@@ -100,104 +98,118 @@
             >
               menu
             </button>
-            <a href="/">
-              <!-- Logo -->
-              <picture>
-                <source
-                  class="logo"
-                  media="(min-width: 800px)"
-                  srcset="
-                    ./media/logo-nasa-space-apps-pasadena-evergreen-black.svg
-                  "
-                />
-                <source
-                  class="logo"
-                  media="(min-width: 450px)"
-                  srcset="
-                    ./media/logo-nasa-space-apps-pasadena-evergreen-black-small.svg
-                  "
-                />
-                <img
-                  class="logo"
-                  src="./media/logo-nasa-space-apps-pasadena-evergreen-black-small.svg"
-                  alt="Space Apps Pasadena 2021 Logo"
-                />
-              </picture>
-            </a>
+            <span class="mdc-top-app-bar__title"
+              ><a href="/">
+                <picture>
+                  <source
+                    class="logo"
+                    media="(min-width: 800px)"
+                    style="width: auto; height: 48px"
+                    srcset="
+                      ./media/logo-nasa-space-apps-pasadena-evergreen-black.png,
+                      ./media/logo-nasa-space-apps-pasadena-evergreen-black-2x.png 2x
+                    "
+                  />
+                  <source
+                    class="logo"
+                    media="(min-width: 450px)"
+                    style="width: auto; height: 48px"
+                    srcset="
+                      ./media/logo-nasa-space-apps-pasadena-evergreen-black-small.png,
+                      ./media/logo-nasa-space-apps-pasadena-evergreen-black-small-2x.png 2x
+                    "
+                  />
+                  <img
+                    class="logo"
+                    style="width: auto; height: 48px"
+                    src="./media/logo-nasa-space-apps-pasadena-evergreen-black-small.png"
+                    alt="Space Apps Pasadena 2021 Logo"
+                  />
+                </picture> </a
+            ></span>
           </section>
 
-          <!-- Tabs -->
           <section
-            class="
-              mdc-top-app-bar__section
-              mdc-tab-bar
-              mdc-top-app-bar__section--align-end
-            "
-            role="tablist"
+            class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+            role="toolbar"
           >
-            <div class="tab-list">
-              <div class="mdc-tab-scroller">
-                <div class="mdc-tab-scroller__scroll-area">
-                  <div class="mdc-tab-scroller__scroll-content">
-                    <a class="mdc-list-item nav-item" href="#about">
-                      <button
-                        class="mdc-tab mdc-tab--min-width"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        <span class="mdc-tab__content">
-                          <span class="mdc-tab__text-label">About</span>
-                        </span>
-
-                        <span class="mdc-tab__ripple"></span>
-                      </button>
-                    </a>
-                    <a class="mdc-list-item nav-item" href="#meet-the-team">
-                      <button
-                        class="mdc-tab mdc-tab--min-width"
-                        role="tab"
-                        aria-selected="true"
-                        tabindex="0"
-                      >
-                        <span class="mdc-tab__content">
-                          <span class="mdc-tab__text-label">Meet The Team</span>
-                        </span>
-
-                        <span class="mdc-tab__ripple"></span>
-                      </button>
-                    </a>
-                    <a class="mdc-list-item nav-item" href="#collaborators">
-                      <button
-                        class="mdc-tab mdc-tab--min-width"
-                        role="tab"
-                        aria-selected="true"
-                        tabindex="0"
-                      >
-                        <span class="mdc-tab__content">
-                          <span class="mdc-tab__text-label">Collaborators</span>
-                        </span>
-                        <span class="mdc-tab__ripple"></span>
-                      </button>
-                    </a>
-                    <a class="mdc-list-item nav-item" href="#whats-next">
-                      <button
-                        class="mdc-tab mdc-tab--min-width"
-                        role="tab"
-                        aria-selected="true"
-                        tabindex="0"
-                      >
-                        <span class="mdc-tab__content">
-                          <span class="mdc-tab__text-label">What's next?</span>
-                        </span>
-                        <span class="mdc-tab__ripple"></span>
-                      </button>
-                    </a>
-                  </div>
+            <div
+              class="mdc-tab-scroller mdc-tab-scroller--align-center tab-list"
+            >
+              <div
+                class="
+                  mdc-tab-scroller__scroll-area
+                  mdc-tab-scroller__scroll-area--scroll
+                "
+                style="margin-bottom: 0px"
+              >
+                <div class="mdc-tab-scroller__scroll-content">
+                  <a href="#about" class="mdc-tab" role="menuitem"
+                    ><span class="mdc-tab__content"
+                      ><span class="mdc-tab__text-label">About</span></span
+                    >
+                    <span class="mdc-tab-indicator"
+                      ><span
+                        class="
+                          mdc-tab-indicator__content
+                          mdc-tab-indicator__content--underline
+                        "
+                      ></span
+                    ></span>
+                    <span class="mdc-tab__ripple"></span
+                  ></a>
+                  <a href="#meet-the-team" class="mdc-tab" role="menuitem"
+                    ><span class="mdc-tab__content"
+                      ><span class="mdc-tab__text-label"
+                        >Meet The Team</span
+                      ></span
+                    >
+                    <span class="mdc-tab-indicator"
+                      ><span
+                        class="
+                          mdc-tab-indicator__content
+                          mdc-tab-indicator__content--underline
+                        "
+                      ></span
+                    ></span>
+                    <span class="mdc-tab__ripple"></span
+                  ></a>
+                  <a href="#collaborators" class="mdc-tab" role="menuitem"
+                    ><span class="mdc-tab__content"
+                      ><span class="mdc-tab__text-label"
+                        >Collaborators</span
+                      ></span
+                    >
+                    <span class="mdc-tab-indicator"
+                      ><span
+                        class="
+                          mdc-tab-indicator__content
+                          mdc-tab-indicator__content--underline
+                        "
+                      ></span
+                    ></span>
+                    <span class="mdc-tab__ripple"></span
+                  ></a>
+                  <a href="#whats-next" class="mdc-tab" role="menuitem"
+                    ><span class="mdc-tab__content"
+                      ><span class="mdc-tab__text-label"
+                        >What's Next?</span
+                      ></span
+                    >
+                    <span class="mdc-tab-indicator"
+                      ><span
+                        class="
+                          mdc-tab-indicator__content
+                          mdc-tab-indicator__content--underline
+                        "
+                      ></span
+                    ></span>
+                    <span class="mdc-tab__ripple"></span
+                  ></a>
                 </div>
               </div>
             </div>
-
-            <!-- Top App bar register button on medium screens -->
+            <!-- Register Button on medium and small screens -->
             <a
               href="https://2021.spaceappschallenge.org/locations/pasadena-ca/event"
               target="_blank"
@@ -208,7 +220,7 @@
                     mdc-button
                     mdc-elevation--z2
                     mdc-button--touch
-                    register-button-medium-screen
+                    register-button-medium-screen register-button-small-screen
                   "
                 >
                   <span class="mdc-button__ripple"></span>
@@ -223,7 +235,7 @@
     </div>
 
     <!-- Main content -->
-    <main class="mdc-top-app-bar--prominent-fixed-adjust">
+    <main class="mdc-top-app-bar--fixed-adjust">
       <div class="mdc-layout-grid">
         <div class="mdc-layout-grid__inner">
           <!-- Fixed register button on large screen-->
@@ -674,6 +686,7 @@
             </div>
           </div>
         </div>
+
         <!-- What's next? -->
         <hr />
         <div class="home-page-section">
@@ -701,27 +714,6 @@
               Apps Pasadena on October 2-3!
             </h6>
           </div>
-
-          <!-- Fixed register on small screen-->
-          <a
-            href="https://2021.spaceappschallenge.org/locations/pasadena-ca/event"
-            target="_blank"
-          >
-            <div class="mdc-touch-target-wrapper">
-              <button
-                class="
-                  mdc-button
-                  mdc-elevation--z2
-                  mdc-button--touch
-                  register-button-small-screen
-                "
-              >
-                <span class="mdc-button__ripple"></span>
-                <span class="mdc-button__touch"></span>
-                <span class="mdc-button__label">Register </span>
-              </button>
-            </div>
-          </a>
         </div>
       </div>
     </main>
