@@ -12,16 +12,23 @@ have fun!
 
 Note: This assumes you have Node.js and npm installed locally.
 
-### 1) Clone repo:
+### 1) Fork repo:
+
+Click on the fork icon on this page.
+Fork the repo to your github account.
+
+<br>
+
+### 2) Clone repo from your account:
 
 ```
-git clone https://github.com/SheCodes-PCC/spaceapps-pasadena.git
-cd spaceapps-pasadena
+git clone "your fork's clone ssh or https code"
+cd 2021-space-apps-pasadena-local-website
 ```
 
 <br>
 
-### 2) Install material components:
+### 3) Install material components:
 
 https://material.io/components?platform=web
 
@@ -33,7 +40,7 @@ npm i material-components-web
 
 <br>
 
-### 3) Install project dependencies:
+### 4) Install project dependencies:
 
 You’ll need all of these Node dependencies:
 
@@ -64,7 +71,7 @@ npm install --save-dev && npm update
 
 <br>
 
-### 4) Run spaceapps-pasadena:
+### 5) Run spaceapps-pasadena:
 
 Start the server. Run `npm start` and open http://localhost:8080 to view the
 site in a browser. <br>
@@ -73,7 +80,7 @@ You should see the website.
 
 <br>
 
-### 5) View your updates:
+### 6) View your updates:
 
 View updates in your browser by opening a new terminal tab (command/ctrl t).
 <br>
@@ -89,7 +96,7 @@ your terminal for errors.
 
 <br>
 
-### 6) When you're finished:
+### 7) When you're finished:
 
 Open the terminal that has your server running, and close the server with
 
