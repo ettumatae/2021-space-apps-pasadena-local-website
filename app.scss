@@ -319,12 +319,6 @@ html {
     max-width: 600px;
   }
 }
-/* BREAKPOINT for viewport widths >920* */
-// @media screen and (max-width: 1040px) {
-//   .subtitle-container {
-//     max-width: 600px;
-//   }
-// }
 
 .home-page-section {
   margin-bottom: 6em;
@@ -372,10 +366,6 @@ hr {
   text-align: center;
 }
 
-.mdc-card__actions {
-  justify-content: flex-end;
-}
-
 /* Remove card outline */
 .mdc-card--outlined {
   border-width: 0;
@@ -383,7 +373,7 @@ hr {
 
 /* Collaborator image grid */
 .collaborator-logo-grid {
-  margin: 0 50vh 0 0;
+  margin-right: 50vh;
 }
 
 /* BREAKPOINT for viewport widths >920*/
