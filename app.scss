@@ -4,8 +4,8 @@
   /* Secondary color based on NASA Space Apps 2021 */
   $primary: #fff,
   $on-primary: #000,
-  $secondary:   #ee293d,
-  $on-secondary: #000,
+  $secondary: #0960e1,
+  $on-secondary: #fff,
   $surface: #fff,
   $on-surface: #000,
   $background: #fff,
@@ -89,6 +89,7 @@
 @use "@material/tab-scroller/mdc-tab-scroller";
 @use "@material/tab-indicator/mdc-tab-indicator";
 @use "@material/tab/mdc-tab";
+
 /* Drawer*/
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
@@ -127,7 +128,8 @@ h5 {
 h6 {
   @include typography.typography(headline6);
 }
-p {
+p,
+.open-in-new-icon {
   @include typography.typography(body1);
 }
 .team-card__text-label {
@@ -156,7 +158,8 @@ p {
   h6 {
     @include typography.typography(body1);
   }
-  p {
+  p,
+  .open-in-new-icon {
     @include typography.typography(body2);
   }
   .team-card__text-label {
@@ -164,27 +167,21 @@ p {
   }
 }
 
-/* Use global colors */
+/* Use global color */
 $alternate-secondary: #c81628;
-$alternate-on-secondary: #fff;
-.register-button-large-screen,
-.register-button-small-medium-screen {
-  background: $alternate-secondary;
+.links:hover {
+  color: $alternate-secondary;
 }
-.mdc-button__label {
-  color: $alternate-on-secondary;
-}
+
 /* Material Design Global Color */
-.mdc-top-app-bar__title {
-  @include theme.property(color, secondary);
-  text-decoration: none;
-}
+.mdc-top-app-bar__title,
 .links {
   @include theme.property(color, secondary);
-  text-decoration: underline;
 }
-.logo-link {
-  @include theme.property(color, on-surface);
+hr,
+.register-button-large-screen,
+.register-button-small-medium-screen {
+  @include theme.property(background, secondary);
 }
 
 * {
@@ -220,7 +217,6 @@ html {
 }
 
 /* Top app bar */
-
 /* Logo */
 .logo {
   margin-top: auto;
@@ -280,7 +276,6 @@ html {
 .register-button-small-medium-screen {
   display: block;
 }
-
 /* BREAKPOINT for viewport widths >1024*/
 @media screen and (min-width: 1024px) {
   .register-button-large-screen {
@@ -299,7 +294,6 @@ html {
 .subtitle-container {
   margin-top: 2em;
 }
-
 /* BREAKPOINT for viewport widths >920* */
 @media screen and (min-width: 920px) {
   .subtitle-container {
@@ -307,17 +301,35 @@ html {
   }
 }
 
+/* Spacing between sections */
 .home-page-section {
   margin-bottom: 6em;
 }
 
-/* Color for border */
-$logo-neonblue: #0960e1;
-hr {
-  border: solid 2px $logo-neonblue;
-  margin-right: 18vh;
+/* Add link dectoration */
+.links {
+  text-decoration: underline;
+}
+.open-in-new-window {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+/* BREAKPOINT for viewport widths <1025px */
+.open-in-new-window {
+  @media (max-width: 1025px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
 }
 
+/* <hr> */
+hr {
+  height: 4px;
+  border: 0;
+  margin-right: 20vh;
+}
 /* BREAKPOINT for viewport widths >920 */
 @media screen and (max-width: 920px) {
   hr {
@@ -325,7 +337,7 @@ hr {
   }
 }
 
-/* Meet the team  */
+/* Meet the team */
 .meet-the-team-grid {
   margin-right: 45vh;
 }
@@ -348,7 +360,6 @@ hr {
   }
 }
 
-.team-card__secondary,
 .team-card__text-label {
   text-align: center;
 }
