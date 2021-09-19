@@ -16,14 +16,13 @@ const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
 //
 // Drawer
 //
-
 // Select DOM elements
 const topAppBarElement = document.querySelector(".mdc-top-app-bar");
 const listEl = document.querySelector(".mdc-drawer .mdc-list");
 const drawerElement = document.querySelector(".mdc-drawer");
 const mainContentEl = document.querySelector(".main-content");
 
-// Initialize either modal or permanent drawer
+// Initialize modal drawer
 const initModalDrawer = () => {
   drawerElement.classList.add("mdc-drawer--modal");
   const drawer = MDCDrawer.attachTo(document.querySelector(".mdc-drawer"));
