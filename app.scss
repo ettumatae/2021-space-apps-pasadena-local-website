@@ -116,18 +116,6 @@ h1 {
 h2 {
   @include typography.typography(headline2);
 }
-h3 {
-  @include typography.typography(headline3);
-}
-h4 {
-  @include typography.typography(headline4);
-}
-h5 {
-  @include typography.typography(headline5);
-}
-h6 {
-  @include typography.typography(headline6);
-}
 p {
   @include typography.typography(body1);
 }
@@ -144,18 +132,6 @@ p {
   }
   h2 {
     @include typography.typography(headline3);
-  }
-  h3 {
-    @include typography.typography(headline4);
-  }
-  h4 {
-    @include typography.typography(headline5);
-  }
-  h5 {
-    @include typography.typography(headline6);
-  }
-  h6 {
-    @include typography.typography(body1);
   }
   p {
     @include typography.typography(body2);
@@ -177,9 +153,11 @@ $alternate-secondary: #c81628;
   @include theme.property(color, secondary);
 }
 hr,
-.register-button-large-screen,
-.register-button-small-medium-screen {
+.hero-button {
   @include theme.property(background, secondary);
+}
+.mdc-button--outlined:not(:disabled) {
+  @include theme.property(color, secondary);
 }
 
 * {
@@ -256,34 +234,12 @@ html {
 .mdc-top-app-bar__navigation-icon {
   display: none;
 }
-
 /* BREAKPOINT for viewport widths <1024x */
 @media (max-width: 1024px) {
   .mdc-top-app-bar__navigation-icon {
     display: block;
   }
   .tab-list {
-    display: none;
-  }
-}
-
-/* Register button */
-.register-button-large-screen {
-  display: none;
-}
-.register-button-small-medium-screen {
-  display: block;
-}
-/* BREAKPOINT for viewport widths >1024*/
-@media screen and (min-width: 1024px) {
-  .register-button-large-screen {
-    position: fixed;
-    bottom: 2em;
-    right: 3em;
-    z-index: 1;
-    display: block;
-  }
-  .register-button-small-medium-screen {
     display: none;
   }
 }
@@ -376,22 +332,4 @@ hr {
   .collaborator-logo-grid {
     margin: 0;
   }
-}
-
-/* iframe */
-.iframe-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-}
-/* Style iframe to fit in grid */
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
 }
