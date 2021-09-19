@@ -114,7 +114,7 @@ Help with <a href="https://docs.github.com/en/github/collaborating-with-pull-req
 target="_blank">creating a pull request.</a>
 
 Help with <a href="https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository#pulling-changes-from-a-remote-repository"
-target="_blank"> pulling updates from repo.
+target="_blank"> pulling updates from repo.</a>
 
 Material Web Components on<a href="https://github.com/material-components/material-web" target="_blank">
 Github. </a>
