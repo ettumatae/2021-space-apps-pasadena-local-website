@@ -25,7 +25,7 @@ const mainContentEl = document.querySelector(".main-content");
 // Initialize modal drawer
 const initModalDrawer = () => {
   drawerElement.classList.add("mdc-drawer--modal");
-  const drawer = MDCDrawer.attachTo(document.querySelector(".mdc-drawer"));
+  const drawer = MDCDrawer.attachTo(drawerElement);
   drawer.open = false;
 
   const topAppBar = MDCTopAppBar.attachTo(topAppBarElement);
@@ -33,8 +33,23 @@ const initModalDrawer = () => {
     drawer.open = !drawer.open;
   });
 
+  listEl.addEventListener('click', (event) => {
+    drawer.open = false;
+  });
+
   return drawer;
 };
 
 let drawer = window.matchMedia("(max-width: 900px)").matches;
 initModalDrawer();
+
+const resizeHandler = () => { 
+  if (window.matchMedia("(max-width: 900px)").matches && drawer instanceof MDCList) {
+    drawer.destroy();
+    drawer = initModalDrawer();
+  } else if (window.matchMedia("(min-width: 900px)").matches && drawer instanceof MDCDrawer) {
+    drawer.destroy();
+    drawer = initPermanentDrawer();
+  }
+}
+window.addEventListener('resize', resizeHandler);
