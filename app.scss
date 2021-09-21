@@ -1,81 +1,52 @@
 /* All Use components */
 /* Set Global Material Color */
-@use '@material/theme' with (
-  /* Secondary color based on NASA Space Apps 2021 */
-  $primary: #fff,
-  $on-primary: #000,
-  $secondary: #0960e1,
-  $on-secondary: #fff,
-  $surface: #fff,
-  $on-surface: #000,
-  $background: #fff,
-);
+@use "@material/theme" with
+  (
+    /* Secondary color based on NASA Space Apps 2021 */ $primary: #fff,
+    $on-primary: #000,
+    $secondary: #0960e1,
+    $on-secondary: #fff,
+    $surface: #fff,
+    $on-surface: #000,
+    $background: #fff
+  );
 
 /* Set Global Material Typography */
-@use "@material/typography" with (
-  /* Fonts based on NASA Space Apps 2021 */
-  $font-family: unquote('"Fira Sans", Helvetica, sans-serif'),
-  $styles-headline1: (
-    font-family: unquote('Fira Sans'),
-    font-weight: 700
-  ),
-  $styles-headline2: (
-    font-family: unquote('Fira Sans'),
-    font-weight: 700
-  ),
-  $styles-headline3: (
-    font-family: unquote('Fira Sans'),
-    font-weight: 700
-  ),
-  $styles-headline4: (
-    font-family: unquote('Fira Sans'),
-    font-weight: 700
-  ),
-  $styles-headline5: (
-    font-family: unquote('Roboto'),
-  ),
-  $styles-headline6: (
-    font-family: unquote('Roboto'),
-  ),
-  $styles-body1: (
-    font-family: unquote('Roboto'),
-  ),
-  $styles-body2: (
-    font-family: unquote('Roboto'),
-  ),
-  $styles-subtitle1: (
-    font-family: unquote('Fira Sans'),
-  ),
-  $styles-subtitle2: (
-    font-family: unquote('Fira Sans'),
-  ),
-  $styles-button: (
-    font-family: unquote('Roboto'),
-  ),
-  $styles-overline: (
-    font-family: unquote('Roboto'),
-  ),
-  $styles-caption: (
-    font-family: unquote('Roboto'),
-  ),
-);
+@use "@material/typography" with
+  (
+    /* Fonts based on NASA Space Apps 2021 */ $font-family:
+      unquote('"Fira Sans", Helvetica, sans-serif'),
+    $styles-headline1: (font-family: unquote("Fira Sans"), font-weight: 700),
+    $styles-headline2: (font-family: unquote("Fira Sans"), font-weight: 700),
+    $styles-headline3: (font-family: unquote("Fira Sans"), font-weight: 700),
+    $styles-headline4: (font-family: unquote("Fira Sans"), font-weight: 700),
+    $styles-headline5: (font-family: unquote("Roboto")),
+    $styles-headline6: (font-family: unquote("Roboto")),
+    $styles-body1: (font-family: unquote("Roboto")),
+    $styles-body2: (font-family: unquote("Roboto")),
+    $styles-subtitle1: (font-family: unquote("Fira Sans")),
+    $styles-subtitle2: (font-family: unquote("Fira Sans")),
+    $styles-button: (font-family: unquote("Roboto")),
+    $styles-overline: (font-family: unquote("Roboto")),
+    $styles-caption: (font-family: unquote("Roboto"))
+  );
 
 /* Must be configured before any other use/import that imports MDC styles */
-@use '@material/button/styles';
+@use "@material/button/styles";
 /* Theme */
-@use '@material/theme/custom-properties';
+@use "@material/theme/custom-properties";
 /* Customize button */
-@use '@material/button';
+@use "@material/button";
 /* Top app bar */
-@use '@material/icon-button';
-@use '@material/top-app-bar/mdc-top-app-bar';
+@use "@material/icon-button";
+@use "@material/top-app-bar/mdc-top-app-bar";
 /* Typography */
 /* Grid */
-@use '@material/layout-grid/mdc-layout-grid';
+@use "@material/layout-grid/mdc-layout-grid";
 /* Shape */
-@use '@material/shape';
+@use "@material/shape";
 /* Typography */
-@use '@material/typography/mdc-typography';
+@use "@material/typography/mdc-typography";
 /* Card */
 @use "@material/card";
 /* Image List */
@@ -116,12 +87,12 @@ h1 {
 h2 {
   @include typography.typography(headline2);
 }
-p {
-  @include typography.typography(body1);
+h6 {
+  @include typography.typography(headline6);
 }
 .team-card__text-label {
   margin: 0 16px;
-  @include typography.typography(subtitle1);
+  @include typography.typography(body1);
   @include mdc-typography-baseline-top(32px);
 }
 
@@ -132,12 +103,6 @@ p {
   }
   h2 {
     @include typography.typography(headline3);
-  }
-  p {
-    @include typography.typography(body2);
-  }
-  .team-card__text-label {
-    @include typography.typography(subtitle2);
   }
 }
 
@@ -193,11 +158,10 @@ html {
 }
 
 /* Top app bar */
-/* Logo */
-.logo {
-  margin-top: auto;
-  margin-bottom: auto;
-}
+/* Add padding to small logo */
+// .logo-small {
+//   padding-top: 4px;
+// }
 
 /* Reset List Styles */
 .nav-list {
@@ -251,7 +215,7 @@ html {
 /* BREAKPOINT for viewport widths >920* */
 @media screen and (min-width: 920px) {
   .subtitle-container {
-    max-width: 800px;
+    max-width: 900px;
   }
 }
 
@@ -325,7 +289,7 @@ hr {
 
 /* Collaborator image grid */
 .collaborator-logo-grid {
-  margin-right: 50vh;
+  margin-right: 60vh;
 }
 /* BREAKPOINT for viewport widths >920*/
 @media screen and (max-width: 920px) {

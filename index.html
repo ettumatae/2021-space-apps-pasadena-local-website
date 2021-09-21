@@ -28,11 +28,12 @@
 
   <body class="mdc-typography">
     <!-- Drawer -->
-    <aside class="mdc-drawer">
+    <aside class="mdc-drawer mdc-drawer--modal">
       <div class="mdc-drawer__content">
         <nav class="mdc-list">
+          <div class="tablist">
             <a
-              class="mdc-list-item mdc-list-item--selected"
+              class="mdc-list-item mdc-list-item--activated"
               href="#about"
               role="tab"
               aria-label="About"
@@ -71,6 +72,7 @@
             >
               <span class="mdc-list-item__text">What's next?</span>
             </a>
+          </div>
         </nav>
       </div>
     </aside>
@@ -78,7 +80,7 @@
     <div class="mdc-drawer-scrim"></div>
     <div class="mdc-drawer-app-content">
       <!-- Top app bar -->
-      <header class="mdc-top-app-bar mdc-elevation--z1">
+      <header class="mdc-top-app-bar mdc-elevation--z2">
         <div class="mdc-top-app-bar__row">
           <section
             class="
@@ -90,27 +92,24 @@
               ><a href="/" aria-label="Navigate to the top of the page">
                 <picture>
                   <source
-                    class="logo"
                     media="(min-width: 800px)"
                     style="height: 48px; width: auto"
                     srcset="
-                      ./media/logo-nasa-space-apps-pasadena-evergreen-black.png,
-                      ./media/logo-nasa-space-apps-pasadena-evergreen-black-2x.png 2x
+                      ./media/logo-nasa-space-apps-pasadena-evergreen-black-1x.webp,
+                      ./media/logo-nasa-space-apps-pasadena-evergreen-black-2x.webp 2x
                     "
                   />
                   <source
-                    class="logo"
                     media="(min-width: 450px)"
                     style="height: 48px; width: auto"
                     srcset="
-                      ./media/logo-nasa-space-apps-pasadena-evergreen-black-small.png,
-                      ./media/logo-nasa-space-apps-pasadena-evergreen-black-small-2x.png 2x
+                      ./media/logo-nasa-space-apps-pasadena-evergreen-black-small-1x.webp
+                      ./media/logo-nasa-space-apps-pasadena-evergreen-black-small-2x.webp 2x
                     "
                   />
                   <img
-                    class="logo"
                     style="height: 48px; width: auto"
-                    src="./media/logo-nasa-space-apps-pasadena-evergreen-black-small.png"
+                    src="./media/logo-nasa-space-apps-pasadena-evergreen-black-small-1x.png"
                     alt="Space Apps Pasadena 2021 Logo"
                   />
                 </picture> </a
@@ -214,6 +213,7 @@
                 </div>
               </div>
             </div>
+
             <!-- Nav button -->
             <button
               class="
@@ -249,7 +249,7 @@
             <div class="home-page-section">
               <h1>Registration is open</h1>
               <div class="subtitle-container">
-                <p>
+                <h6>
                   The NASA International Space Apps Challenge (Space Apps) is an
                   international hackathon for students of all levels in cities
                   around the world, where teams use NASA's free and open data to
@@ -258,13 +258,13 @@
                   submitted by NASA personnel over a 48-hour period. Project
                   submissions are judged by space agency experts and winners are
                   selected for one of 10 Global Awards!
-                </p>
+                </h6>
               </div>
 
               <a
                 href="https://docs.google.com/presentation/d/e/2PACX-1vSjmz2aytVRv5QylndsiDlKySEK9SfeEE332eidWRXawXU07JqfCAqoZW5u_JZSAhEZmb1nOepovi5c/embed?start=false&loop=false&delayms=3000&slide=id.ged826f7f96_0_210"
                 target="_blank"
-                aria-label="Google Slide Show of Participant Information"
+                aria-label="Open slide show of participant information"
               >
                 <div class="mdc-touch-target-wrapper">
                   <button
@@ -295,7 +295,7 @@
                     class="
                       mdc-button mdc-button--icon-trailing mdc-button--touch
                       hero-button
-                      mdc-elevation--z1
+                      mdc-elevation--z2
                     "
                   >
                     <span class="mdc-button__ripple"></span>
@@ -317,7 +317,7 @@
             <div class="home-page-section">
               <h2 class="meet-the-team-heading">Meet The Team</h2>
               <div class="subtitle-container">
-                <p>
+                <h6>
                   Space Apps Pasadena is hosted by the
                   <span
                     ><a
@@ -337,7 +337,7 @@
                   to dismantle the untrue stereotype that engineering is not a
                   career for women, and advocate to have all genders more
                   equally represented in the field of technology.
-                </p>
+                </h6>
               </div>
 
               <!-- Team Image Grid -->
@@ -347,17 +347,25 @@
                   <div
                     class="
                       mdc-layout-grid__cell
-                      mdc-layout-grid__cell--span-1-phone
+                      mdc-layout-grid__cell--span-2-phone
                       mdc-layout-grid__cell--span-2-tablet
                       mdc-layout-grid__cell--span-3-desktop
                       mdc-layout-grid__cell--span-3-desktop-hd
                     "
                   >
-                    <div class="mdc-card mdc-card--outlined team-card">
+                    <div class="mdc-card mdc-card--outlined">
                       <div
                         class="mdc-card__media mdc-card__media--square"
                         style="
-                          background-image: url('./media/001-team-image-trinity-chung.jpg');
+                          background-image: url(./media/001-team-image-trinity-chung-1x.png);
+                          background-image: -webkit-image-set(
+                            url(./media/001-team-image-trinity-chung-1x.webp) 1x,
+                            url(./media/001-team-image-trinity-chung-2x.webp) 2x
+                          );
+                          background-image: image-set(
+                            url(./media/001-team-image-trinity-chung-1x.webp) 1x,
+                            url(./media/001-team-image-trinity-chung-2x.webp) 2x
+                          );
                         "
                         alt="image of Trinity Chung"
                       ></div>
@@ -369,17 +377,25 @@
                   <div
                     class="
                       mdc-layout-grid__cell
-                      mdc-layout-grid__cell--span-1-phone
+                      mdc-layout-grid__cell--span-2-phone
                       mdc-layout-grid__cell--span-2-tablet
                       mdc-layout-grid__cell--span-3-desktop
                       mdc-layout-grid__cell--span-3-desktop-hd
                     "
                   >
-                    <div class="mdc-card mdc-card--outlined team-card">
+                    <div class="mdc-card mdc-card--outlined">
                       <div
                         class="mdc-card__media mdc-card__media--square"
                         style="
-                          background-image: url('./media/002-team-image-janet-teng.jpg');
+                          background-image: url(./media/002-team-image-janet-teng-1x.png);
+                          background-image: -webkit-image-set(
+                            url(./media/002-team-image-janet-teng-1x.webp) 1x,
+                            url(./media/002-team-image-janet-teng-2x.webp) 2x
+                          );
+                          background-image: image-set(
+                            url(./media/002-team-image-janet-teng-1x.webp) 1x,
+                            url(./media/002-team-image-janet-teng-2x.webp) 2x
+                          );
                         "
                         alt="image of Janet Teng"
                       ></div>
@@ -391,17 +407,29 @@
                   <div
                     class="
                       mdc-layout-grid__cell
-                      mdc-layout-grid__cell--span-1-phone
+                      mdc-layout-grid__cell--span-2-phone
                       mdc-layout-grid__cell--span-2-tablet
                       mdc-layout-grid__cell--span-3-desktop
                       mdc-layout-grid__cell--span-3-desktop-hd
                     "
                   >
-                    <div class="mdc-card mdc-card--outlined team-card">
+                    <div class="mdc-card mdc-card--outlined">
                       <div
                         class="mdc-card__media mdc-card__media--square"
                         style="
-                          background-image: url('./media/003-team-image-jacqueline-friedberg.jpg');
+                          background-image: url(./media/003-team-image-jacqueline-friedberg-1x.png);
+                          background-image: -webkit-image-set(
+                            url(./media/003-team-image-jacqueline-friedberg-1x.webp)
+                              1x,
+                            url(./media/003-team-image-jacqueline-friedberg-2x.webp)
+                              2x
+                          );
+                          background-image: image-set(
+                            url(./media/003-team-image-jacqueline-friedberg-1x.webp)
+                              1x,
+                            url(./media/003-team-image-jacqueline-friedberg-2x.webp)
+                              2x
+                          );
                         "
                         alt="image of Jacqueline Friedberg"
                       ></div>
@@ -415,17 +443,25 @@
                   <div
                     class="
                       mdc-layout-grid__cell
-                      mdc-layout-grid__cell--span-1-phone
+                      mdc-layout-grid__cell--span-2-phone
                       mdc-layout-grid__cell--span-2-tablet
                       mdc-layout-grid__cell--span-3-desktop
                       mdc-layout-grid__cell--span-3-desktop-hd
                     "
                   >
-                    <div class="mdc-card mdc-card--outlined team-card">
+                    <div class="mdc-card mdc-card--outlined">
                       <div
                         class="mdc-card__media mdc-card__media--square"
                         style="
-                          background-image: url('./media/004-team-image-pranav-patel.jpg');
+                          background-image: url(./media/004-team-image-pranav-patel-1x.png);
+                          background-image: -webkit-image-set(
+                            url(./media/004-team-image-pranav-patel-1x.webp) 1x,
+                            url(./media/004-team-image-pranav-patel-2x.webp) 2x
+                          );
+                          background-image: image-set(
+                            url(./media/004-team-image-pranav-patel-1x.webp) 1x,
+                            url(./media/004-team-image-pranav-patel-2x.webp) 2x
+                          );
                         "
                         alt="image of Pranav Patel"
                       ></div>
@@ -433,43 +469,29 @@
                     </div>
                   </div>
 
-                  <!-- Anthony -->
-                  <div
-                    class="
-                      mdc-layout-grid__cell
-                      mdc-layout-grid__cell--span-1-phone
-                      mdc-layout-grid__cell--span-2-tablet
-                      mdc-layout-grid__cell--span-3-desktop
-                      mdc-layout-grid__cell--span-3-desktop-hd
-                    "
-                  >
-                    <div class="mdc-card mdc-card--outlined team-card">
-                      <div
-                        class="mdc-card__media mdc-card__media--square"
-                        style="
-                          background-image: url('./media/005-team-image-anthony-ko.jpg');
-                        "
-                        alt="image of Anthony Ko"
-                      ></div>
-                      <div class="team-card__text-label">Anthony Ko</div>
-                    </div>
-                  </div>
-
                   <!-- Oneal -->
                   <div
                     class="
                       mdc-layout-grid__cell
-                      mdc-layout-grid__cell--span-1-phone
+                      mdc-layout-grid__cell--span-2-phone
                       mdc-layout-grid__cell--span-2-tablet
                       mdc-layout-grid__cell--span-3-desktop
                       mdc-layout-grid__cell--span-3-desktop-hd
                     "
                   >
-                    <div class="mdc-card mdc-card--outlined team-card">
+                    <div class="mdc-card mdc-card--outlined">
                       <div
                         class="mdc-card__media mdc-card__media--square"
                         style="
-                          background-image: url('./media/006-team-image-oneal-douglin.jpg');
+                          background-image: url(./media/005-team-image-oneal-douglin-1x.png);
+                          background-image: -webkit-image-set(
+                            url(./media/005-team-image-oneal-douglin-1x.webp) 1x,
+                            url(./media/005-team-image-oneal-douglin-2x.webp) 2x
+                          );
+                          background-image: image-set(
+                            url(./media/005-team-image-oneal-douglin-1x.webp) 1x,
+                            url(./media/005-team-image-oneal-douglin-2x.webp) 2x
+                          );
                         "
                         alt="image of Oneal Douglin"
                       ></div>
@@ -477,25 +499,161 @@
                     </div>
                   </div>
 
-                  <!-- Nicolas -->
+                  <!-- Yi -->
                   <div
                     class="
                       mdc-layout-grid__cell
-                      mdc-layout-grid__cell--span-1-phone
+                      mdc-layout-grid__cell--span-2-phone
                       mdc-layout-grid__cell--span-2-tablet
                       mdc-layout-grid__cell--span-3-desktop
                       mdc-layout-grid__cell--span-3-desktop-hd
                     "
                   >
-                    <div class="mdc-card mdc-card--outlined team-card">
+                    <div class="mdc-card mdc-card--outlined">
                       <div
                         class="mdc-card__media mdc-card__media--square"
                         style="
-                          background-image: url('./media/007-team-image-nicolas-hernandez.jpg');
+                          background-image: url(./media/006-team-image-yi-zhuang-1x.png);
+                          background-image: -webkit-image-set(
+                            url(./media/006-team-image-yi-zhuang-1x.webp) 1x,
+                            url(./media/006-team-image-yi-zhuang-2x.webp) 2x
+                          );
+                          background-image: image-set(
+                            url(./media/006-team-image-yi-zhuang-1x.webp) 1x,
+                            url(./media/006-team-image-yi-zhuang-2x.webp) 2x
+                          );
+                        "
+                        alt="image of Yi Zhuang"
+                      ></div>
+                      <div class="team-card__text-label">Yi Zhuang</div>
+                    </div>
+                  </div>
+
+                  <!-- Anthony -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined">
+                      <div
+                        class="mdc-card__media mdc-card__media--square"
+                        style="
+                          background-image: url(./media/007-team-image-anthony-ko-1x.png);
+                          background-image: -webkit-image-set(
+                            url(./media/007-team-image-anthony-ko-1x.webp) 1x,
+                            url(./media/007-team-image-anthony-ko-2x.webp) 2x
+                          );
+                          background-image: image-set(
+                            url(./media/007-team-image-anthony-ko-1x.webp) 1x,
+                            url(./media/007-team-image-anthony-ko-2x.webp) 2x
+                          );
+                        "
+                        alt="image of Anthony Ko"
+                      ></div>
+                      <div class="team-card__text-label">Anthony Ko</div>
+                    </div>
+                  </div>
+
+                  <!-- Luciano -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined">
+                      <div
+                        class="mdc-card__media mdc-card__media--square"
+                        style="
+                          background-image: url(./media/008-team-image-luciano-kholos-1x.png);
+                          background-image: -webkit-image-set(
+                            url(./media/008-team-image-luciano-kholos-1x.webp)
+                              1x,
+                            url(./media/008-team-image-luciano-kholos-2x.webp)
+                              2x
+                          );
+                          background-image: image-set(
+                            url(./media/008-team-image-luciano-kholos-1x.webp)
+                              1x,
+                            url(./media/008-team-image-luciano-kholos-2x.webp)
+                              2x
+                          );
+                        "
+                        alt="image of Luciano Kholos"
+                      ></div>
+                      <div class="team-card__text-label">Luciano Kholos</div>
+                    </div>
+                  </div>
+
+                  <!-- Nicolas -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined">
+                      <div
+                        class="mdc-card__media mdc-card__media--square"
+                        style="
+                          background-image: url(./media/009-team-image-nicolas-hernandez-1x.png);
+                          background-image: -webkit-image-set(
+                            url(./media/009-team-image-nicolas-hernandez-1x.webp)
+                              1x,
+                            url(./media/009-team-image-nicolas-hernandez-2x.webp)
+                              2x
+                          );
+                          background-image: image-set(
+                            url(./media/009-team-image-nicolas-hernandez-1x.webp)
+                              1x,
+                            url(./media/009-team-image-nicolas-hernandez-2x.webp)
+                              2x
+                          );
                         "
                         alt="image of Nicolas Hernandez"
                       ></div>
                       <div class="team-card__text-label">Nicolas Hernandez</div>
+                    </div>
+                  </div>
+
+                  <!-- Jesse -->
+                  <div
+                    class="
+                      mdc-layout-grid__cell
+                      mdc-layout-grid__cell--span-2-phone
+                      mdc-layout-grid__cell--span-2-tablet
+                      mdc-layout-grid__cell--span-3-desktop
+                      mdc-layout-grid__cell--span-3-desktop-hd
+                    "
+                  >
+                    <div class="mdc-card mdc-card--outlined">
+                      <div
+                        class="mdc-card__media mdc-card__media--square"
+                        style="
+                          background-image: url(./media/010-team-image-jesse-tzo-1x.png);
+                          background-image: -webkit-image-set(
+                            url(./media/010-team-image-jesse-tzo-1x.webp) 1x,
+                            url(./media/010-team-image-jesse-tzo-2x.webp) 2x
+                          );
+                          background-image: image-set(
+                            url(./media/010-team-image-jesse-tzo-1x.webp) 1x,
+                            url(./media/010-team-image-jesse-tzo-2x.webp) 2x
+                          );
+                        "
+                        alt="image of Jesse Tzo"
+                      ></div>
+                      <div class="team-card__text-label">Jesse Tzo</div>
                     </div>
                   </div>
                 </div>
@@ -508,18 +666,57 @@
             <div class="home-page-section">
               <h2 class="collaborator-heading">Local Collaborators</h2>
               <div class="subtitle-container">
-                <p>
+                <h6>
                   Thank you so much for contributing to Space Apps Pasadena! ❤️
-                </p>
+                </h6>
               </div>
 
               <!-- Logo Image Grid -->
               <div class="mdc-layout-grid__inner collaborator-logo-grid">
+                <!-- Supplyframe -->
+                <div
+                  class="
+                    mdc-layout-grid__cell
+                    mdc-layout-grid__cell--span-2-phone
+                    mdc-layout-grid__cell--span-2-tablet
+                    mdc-layout-grid__cell--span-3-desktop
+                    mdc-layout-grid__cell--span-3-desktop-hd
+                  "
+                >
+                  <a
+                    class="logo-link"
+                    href="https://supplyframe.com/"
+                    target="_blank"
+                    aria-label="Supplyframe website"
+                  >
+                    <div class="mdc-card mdc-card--outlined">
+                      <div class="mdc-card__primary-action" tabindex="0">
+                        <div
+                          class="mdc-card__media mdc-card__media--square"
+                          style="
+                            background-image: url(./media/logo-001-supplyframe-1x.png);
+                            background-image: -webkit-image-set(
+                              url(./media/logo-001-supplyframe-1x.webp) 1x,
+                              url(./media/logo-001-supplyframe-2x.webp) 2x
+                            );
+                            background-image: image-set(
+                              url(./media/logo-001-supplyframe-1x.webp) 1x,
+                              url(./media/logo-001-supplyframe-2x.webp) 2x
+                            );
+                          "
+                          alt="Supplyframe logo"
+                        ></div>
+                        <div class="mdc-card__ripple"></div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
                 <!-- echoAR -->
                 <div
                   class="
                     mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-1-phone
+                    mdc-layout-grid__cell--span-2-phone
                     mdc-layout-grid__cell--span-2-tablet
                     mdc-layout-grid__cell--span-3-desktop
                     mdc-layout-grid__cell--span-3-desktop-hd
@@ -532,41 +729,24 @@
                     aria-label="echoAR website"
                   >
                     <div class="mdc-card mdc-card--outlined">
-                      <div
-                        class="mdc-card__media mdc-card__media--square"
-                        style="
-                          background-image: url('./media/logo-001-echoar.jpg');
-                        "
-                        alt="echoAR logo"
-                      ></div>
-                    </div>
-                  </a>
-                </div>
-
-                <!-- Wolfram -->
-                <div
-                  class="
-                    mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-1-phone
-                    mdc-layout-grid__cell--span-2-tablet
-                    mdc-layout-grid__cell--span-3-desktop
-                    mdc-layout-grid__cell--span-3-desktop-hd
-                  "
-                >
-                  <a
-                    class="logo-link"
-                    href="https://www.wolfram.com/wolfram-one/"
-                    target="_blank"
-                    aria-label="Wolfram website"
-                  >
-                    <div class="mdc-card mdc-card--outlined">
-                      <div
-                        class="mdc-card__media mdc-card__media--square"
-                        style="
-                          background-image: url('./media/logo-002-wolfram.jpg');
-                        "
-                        alt="Wolfram logo"
-                      ></div>
+                      <div class="mdc-card__primary-action" tabindex="0">
+                        <div
+                          class="mdc-card__media mdc-card__media--square"
+                          style="
+                            background-image: url(./media/logo-002-echoar-1x.png);
+                            background-image: -webkit-image-set(
+                              url(./media/logo-002-echoar-1x.webp) 1x,
+                              url(./media/logo-002-echoar-2x.webp) 2x
+                            );
+                            background-image: image-set(
+                              url(./media/logo-002-echoar-1x.webp) 1x,
+                              url(./media/logo-002-echoar-2x.webp) 2x
+                            );
+                          "
+                          alt="echoAR logo"
+                        ></div>
+                        <div class="mdc-card__ripple"></div>
+                      </div>
                     </div>
                   </a>
                 </div>
@@ -575,7 +755,7 @@
                 <div
                   class="
                     mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-1-phone
+                    mdc-layout-grid__cell--span-2-phone
                     mdc-layout-grid__cell--span-2-tablet
                     mdc-layout-grid__cell--span-3-desktop
                     mdc-layout-grid__cell--span-3-desktop-hd
@@ -588,13 +768,63 @@
                     aria-label="Replit website"
                   >
                     <div class="mdc-card mdc-card--outlined">
-                      <div
-                        class="mdc-card__media mdc-card__media--square"
-                        style="
-                          background-image: url('./media/logo-003-replit.jpg');
-                        "
-                        alt="Replit logo"
-                      ></div>
+                      <div class="mdc-card__primary-action" tabindex="0">
+                        <div
+                          class="mdc-card__media mdc-card__media--square"
+                          style="
+                            background-image: url(./media/logo-003-replit-1x.png);
+                            background-image: -webkit-image-set(
+                              url(./media/logo-003-replit-1x.webp) 1x,
+                              url(./media/logo-003-replit-2x.webp) 2x
+                            );
+                            background-image: image-set(
+                              url(./media/logo-003-replit-1x.webp) 1x,
+                              url(./media/logo-003-replit-2x.webp) 2x
+                            );
+                          "
+                          alt="Replit logo"
+                        ></div>
+                        <div class="mdc-card__ripple"></div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Wolfram -->
+                <div
+                  class="
+                    mdc-layout-grid__cell
+                    mdc-layout-grid__cell--span-2-phone
+                    mdc-layout-grid__cell--span-2-tablet
+                    mdc-layout-grid__cell--span-3-desktop
+                    mdc-layout-grid__cell--span-3-desktop-hd
+                  "
+                >
+                  <a
+                    class="logo-link"
+                    href="https://www.wolfram.com/wolfram-one/"
+                    target="_blank"
+                    aria-label="Wolfram website"
+                  >
+                    <div class="mdc-card mdc-card--outlined">
+                      <div class="mdc-card__primary-action" tabindex="0">
+                        <div
+                          class="mdc-card__media mdc-card__media--square"
+                          style="
+                            background-image: url(./media/logo-004-wolfram-1x.png);
+                            background-image: -webkit-image-set(
+                              url(./media/logo-004-wolfram-1x.webp) 1x,
+                              url(./media/logo-004-wolfram-2x.webp) 2x
+                            );
+                            background-image: image-set(
+                              url(./media/logo-004-wolfram-1x.webp) 1x,
+                              url(./media/logo-004-wolfram-2x.webp) 2x
+                            );
+                          "
+                          alt="Wolfram logo"
+                        ></div>
+                        <div class="mdc-card__ripple"></div>
+                      </div>
                     </div>
                   </a>
                 </div>
@@ -603,7 +833,7 @@
                 <div
                   class="
                     mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-1-phone
+                    mdc-layout-grid__cell--span-2-phone
                     mdc-layout-grid__cell--span-2-tablet
                     mdc-layout-grid__cell--span-3-desktop
                     mdc-layout-grid__cell--span-3-desktop-hd
@@ -616,13 +846,24 @@
                     aria-label="Command Tech website"
                   >
                     <div class="mdc-card mdc-card--outlined">
-                      <div
-                        class="mdc-card__media mdc-card__media--square"
-                        style="
-                          background-image: url('./media/logo-006-command-tech.jpg');
-                        "
-                        alt="Command Tech logo"
-                      ></div>
+                      <div class="mdc-card__primary-action" tabindex="0">
+                        <div
+                          class="mdc-card__media mdc-card__media--square"
+                          style="
+                            background-image: url(./media/logo-005-command-tech-1x.png);
+                            background-image: -webkit-image-set(
+                              url(./media/logo-005-command-tech-1x.webp) 1x,
+                              url(./media/logo-005-command-tech-2x.webp) 2x
+                            );
+                            background-image: image-set(
+                              url(./media/logo-005-command-tech-1x.webp) 1x,
+                              url(./media/logo-005-command-tech-2x.webp) 2x
+                            );
+                          "
+                          alt="Command Tech logo"
+                        ></div>
+                        <div class="mdc-card__ripple"></div>
+                      </div>
                     </div>
                   </a>
                 </div>
@@ -631,7 +872,7 @@
                 <div
                   class="
                     mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-1-phone
+                    mdc-layout-grid__cell--span-2-phone
                     mdc-layout-grid__cell--span-2-tablet
                     mdc-layout-grid__cell--span-3-desktop
                     mdc-layout-grid__cell--span-3-desktop-hd
@@ -644,13 +885,24 @@
                     aria-label="Pasadena City College MESA website"
                   >
                     <div class="mdc-card mdc-card--outlined">
-                      <div
-                        class="mdc-card__media mdc-card__media--square"
-                        style="
-                          background-image: url('./media/logo-004-pcc.jpg');
-                        "
-                        alt="Pasadena City College logo"
-                      ></div>
+                      <div class="mdc-card__primary-action" tabindex="0">
+                        <div
+                          class="mdc-card__media mdc-card__media--square"
+                          style="
+                            background-image: url(./media/logo-006-pcc-1x.png);
+                            background-image: -webkit-image-set(
+                              url(./media/logo-006-pcc-1x.webp) 1x,
+                              url(./media/logo-006-pcc-2x.webp) 2x
+                            );
+                            background-image: image-set(
+                              url(./media/logo-006-pcc-1x.webp) 1x,
+                              url(./media/logo-006-pcc-2x.webp) 2x
+                            );
+                          "
+                          alt="Pasadena City College logo"
+                        ></div>
+                        <div class="mdc-card__ripple"></div>
+                      </div>
                     </div>
                   </a>
                 </div>
@@ -659,7 +911,7 @@
                 <div
                   class="
                     mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-1-phone
+                    mdc-layout-grid__cell--span-2-phone
                     mdc-layout-grid__cell--span-2-tablet
                     mdc-layout-grid__cell--span-3-desktop
                     mdc-layout-grid__cell--span-3-desktop-hd
@@ -672,13 +924,24 @@
                     aria-label="Innovate Pasadena website"
                   >
                     <div class="mdc-card mdc-card--outlined">
-                      <div
-                        class="mdc-card__media mdc-card__media--square"
-                        style="
-                          background-image: url('./media/logo-005-innovate-pasadena.jpg');
-                        "
-                        alt="Innovate Pasadena logo"
-                      ></div>
+                      <div class="mdc-card__primary-action" tabindex="0">
+                        <div
+                          class="mdc-card__media mdc-card__media--square"
+                          style="
+                            background-image: url(./media/logo-007-innovate-pasadena-1x.png);
+                            background-image: -webkit-image-set(
+                              url(./media/logo-007-innovate-pasadena-1x.webp) 1x,
+                              url(./media/logo-007-innovate-pasadena-2x.webp) 2x
+                            );
+                            background-image: image-set(
+                              url(./media/logo-007-innovate-pasadena-1x.webp) 1x,
+                              url(./media/logo-007-innovate-pasadena-2x.webp) 2x
+                            );
+                          "
+                          alt="Innovate Pasadena logo"
+                        ></div>
+                        <div class="mdc-card__ripple"></div>
+                      </div>
                     </div>
                   </a>
                 </div>
@@ -687,7 +950,7 @@
                 <div
                   class="
                     mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-1-phone
+                    mdc-layout-grid__cell--span-2-phone
                     mdc-layout-grid__cell--span-2-tablet
                     mdc-layout-grid__cell--span-3-desktop
                     mdc-layout-grid__cell--span-3-desktop-hd
@@ -700,13 +963,24 @@
                     aria-label="Blaze Pizza website"
                   >
                     <div class="mdc-card mdc-card--outlined">
-                      <div
-                        class="mdc-card__media mdc-card__media--square"
-                        style="
-                          background-image: url('./media/logo-007-blaze-pizza.jpg');
-                        "
-                        alt="Blaze Pizza logo"
-                      ></div>
+                      <div class="mdc-card__primary-action" tabindex="0">
+                        <div
+                          class="mdc-card__media mdc-card__media--square"
+                          style="
+                            background-image: url(./media/logo-008-blaze-pizza-1x.png);
+                            background-image: -webkit-image-set(
+                              url(./media/logo-008-blaze-pizza-1x.webp) 1x,
+                              url(./media/logo-008-blaze-pizza-2x.webp) 2x
+                            );
+                            background-image: image-set(
+                              url(./media/logo-008-blaze-pizza-1x.webp) 1x,
+                              url(./media/logo-008-blaze-pizza-2x.webp) 2x
+                            );
+                          "
+                          alt="Blaze Pizza logo"
+                        ></div>
+                        <div class="mdc-card__ripple"></div>
+                      </div>
                     </div>
                   </a>
                 </div>
@@ -720,7 +994,7 @@
               <h2 class="whats-next-heading">What's next?</h2>
 
               <div class="subtitle-container">
-                <p>
+                <h6>
                   If you're interested in participating in the NASA Space Apps
                   Pasadena hackathon, the next step is to
                   <span>
@@ -734,8 +1008,8 @@
                       ></a
                     >
                   </span>
-                </p>
-                <p>
+                </h6>
+                <h6>
                   Then, join our
                   <span>
                     <a
@@ -751,7 +1025,7 @@
                   where you can ask questions, join a team, and more. We look
                   forward to seeing all of your great work at NASA Space Apps
                   Pasadena on October 2-3!
-                </p>
+                </h6>
               </div>
             </div>
           </div>
@@ -761,9 +1035,9 @@
 
     <!-- Material JavaScript -->
     <script src="./dist/bundle.js" async></script>
+    <!-- Add support for Web Components to IE11. -->
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
   </body>
 
-  <!-- TODO: Test mobile -->
-  <!-- TODO: Test Chromebook -->
   <!-- TODO: Set up older browser compatibility -->
 </html>

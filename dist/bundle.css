@@ -8214,7 +8214,35 @@ h2 {
   text-transform: var(--mdc-typography-headline2-text-transform, inherit);
 }
 
-p {
+h6 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Roboto;
+  /* @alternate */
+  font-family: var(--mdc-typography-headline6-font-family, var(--mdc-typography-font-family, Roboto));
+  font-size: 1.25rem;
+  /* @alternate */
+  font-size: var(--mdc-typography-headline6-font-size, 1.25rem);
+  line-height: 2rem;
+  /* @alternate */
+  line-height: var(--mdc-typography-headline6-line-height, 2rem);
+  font-weight: 500;
+  /* @alternate */
+  font-weight: var(--mdc-typography-headline6-font-weight, 500);
+  letter-spacing: 0.0125em;
+  /* @alternate */
+  letter-spacing: var(--mdc-typography-headline6-letter-spacing, 0.0125em);
+  text-decoration: inherit;
+  /* @alternate */
+  -webkit-text-decoration: var(--mdc-typography-headline6-text-decoration, inherit);
+          text-decoration: var(--mdc-typography-headline6-text-decoration, inherit);
+  text-transform: inherit;
+  /* @alternate */
+  text-transform: var(--mdc-typography-headline6-text-transform, inherit);
+}
+
+.team-card__text-label {
+  margin: 0 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: Roboto;
@@ -8239,34 +8267,6 @@ p {
   text-transform: inherit;
   /* @alternate */
   text-transform: var(--mdc-typography-body1-text-transform, inherit);
-}
-
-.team-card__text-label {
-  margin: 0 16px;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: Fira Sans;
-  /* @alternate */
-  font-family: var(--mdc-typography-subtitle1-font-family, var(--mdc-typography-font-family, Fira Sans));
-  font-size: 1rem;
-  /* @alternate */
-  font-size: var(--mdc-typography-subtitle1-font-size, 1rem);
-  line-height: 1.75rem;
-  /* @alternate */
-  line-height: var(--mdc-typography-subtitle1-line-height, 1.75rem);
-  font-weight: 400;
-  /* @alternate */
-  font-weight: var(--mdc-typography-subtitle1-font-weight, 400);
-  letter-spacing: 0.009375em;
-  /* @alternate */
-  letter-spacing: var(--mdc-typography-subtitle1-letter-spacing, 0.009375em);
-  text-decoration: inherit;
-  /* @alternate */
-  -webkit-text-decoration: var(--mdc-typography-subtitle1-text-decoration, inherit);
-          text-decoration: var(--mdc-typography-subtitle1-text-decoration, inherit);
-  text-transform: inherit;
-  /* @alternate */
-  text-transform: var(--mdc-typography-subtitle1-text-transform, inherit);
 }
 .team-card__text-label::before {
   display: inline-block;
@@ -8331,60 +8331,6 @@ p {
     /* @alternate */
     text-transform: var(--mdc-typography-headline3-text-transform, inherit);
   }
-
-  p {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-family: Roboto;
-    /* @alternate */
-    font-family: var(--mdc-typography-body2-font-family, var(--mdc-typography-font-family, Roboto));
-    font-size: 0.875rem;
-    /* @alternate */
-    font-size: var(--mdc-typography-body2-font-size, 0.875rem);
-    line-height: 1.25rem;
-    /* @alternate */
-    line-height: var(--mdc-typography-body2-line-height, 1.25rem);
-    font-weight: 400;
-    /* @alternate */
-    font-weight: var(--mdc-typography-body2-font-weight, 400);
-    letter-spacing: 0.0178571429em;
-    /* @alternate */
-    letter-spacing: var(--mdc-typography-body2-letter-spacing, 0.0178571429em);
-    text-decoration: inherit;
-    /* @alternate */
-    -webkit-text-decoration: var(--mdc-typography-body2-text-decoration, inherit);
-            text-decoration: var(--mdc-typography-body2-text-decoration, inherit);
-    text-transform: inherit;
-    /* @alternate */
-    text-transform: var(--mdc-typography-body2-text-transform, inherit);
-  }
-
-  .team-card__text-label {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-family: Fira Sans;
-    /* @alternate */
-    font-family: var(--mdc-typography-subtitle2-font-family, var(--mdc-typography-font-family, Fira Sans));
-    font-size: 0.875rem;
-    /* @alternate */
-    font-size: var(--mdc-typography-subtitle2-font-size, 0.875rem);
-    line-height: 1.375rem;
-    /* @alternate */
-    line-height: var(--mdc-typography-subtitle2-line-height, 1.375rem);
-    font-weight: 500;
-    /* @alternate */
-    font-weight: var(--mdc-typography-subtitle2-font-weight, 500);
-    letter-spacing: 0.0071428571em;
-    /* @alternate */
-    letter-spacing: var(--mdc-typography-subtitle2-letter-spacing, 0.0071428571em);
-    text-decoration: inherit;
-    /* @alternate */
-    -webkit-text-decoration: var(--mdc-typography-subtitle2-text-decoration, inherit);
-            text-decoration: var(--mdc-typography-subtitle2-text-decoration, inherit);
-    text-transform: inherit;
-    /* @alternate */
-    text-transform: var(--mdc-typography-subtitle2-text-transform, inherit);
-  }
 }
 /* Use global color */
 .links:hover {
@@ -8445,12 +8391,7 @@ html {
 }
 
 /* Top app bar */
-/* Logo */
-.logo {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
+/* Add padding to small logo */
 /* Reset List Styles */
 .nav-list {
   list-style: none;
@@ -8498,7 +8439,7 @@ html {
 /* BREAKPOINT for viewport widths >920* */
 @media screen and (min-width: 920px) {
   .subtitle-container {
-    max-width: 800px;
+    max-width: 900px;
   }
 }
 /* Spacing between sections */
@@ -8574,7 +8515,7 @@ hr {
 
 /* Collaborator image grid */
 .collaborator-logo-grid {
-  margin-right: 50vh;
+  margin-right: 60vh;
 }
 
 /* BREAKPOINT for viewport widths >920*/
