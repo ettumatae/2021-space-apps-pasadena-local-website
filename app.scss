@@ -12,23 +12,53 @@
   );
 
 /* Set Global Material Typography */
+/* Fonts based on NASA Space Apps 2021 */
 @use "@material/typography" with
   (
-    /* Fonts based on NASA Space Apps 2021 */ $font-family:
-      unquote('"Fira Sans", Helvetica, sans-serif'),
-    $styles-headline1: (font-family: unquote("Fira Sans"), font-weight: 700),
-    $styles-headline2: (font-family: unquote("Fira Sans"), font-weight: 700),
-    $styles-headline3: (font-family: unquote("Fira Sans"), font-weight: 700),
-    $styles-headline4: (font-family: unquote("Fira Sans"), font-weight: 700),
-    $styles-headline5: (font-family: unquote("Roboto")),
-    $styles-headline6: (font-family: unquote("Roboto")),
-    $styles-body1: (font-family: unquote("Roboto")),
-    $styles-body2: (font-family: unquote("Roboto")),
-    $styles-subtitle1: (font-family: unquote("Fira Sans")),
-    $styles-subtitle2: (font-family: unquote("Fira Sans")),
-    $styles-button: (font-family: unquote("Roboto")),
-    $styles-overline: (font-family: unquote("Roboto")),
-    $styles-caption: (font-family: unquote("Roboto"))
+    $styles-headline1: (
+      font-family: unquote("Fira Sans"),
+      font-weight: 700,
+    ),
+    $styles-headline2: (
+      font-family: unquote("Fira Sans"),
+      font-weight: 700,
+    ),
+    $styles-headline3: (
+      font-family: unquote("Fira Sans"),
+      font-weight: 700,
+    ),
+    $styles-headline4: (
+      font-family: unquote("Fira Sans"),
+      font-weight: 700,
+    ),
+    $styles-headline5: (
+      font-family: unquote("Roboto"),
+    ),
+    $styles-headline6: (
+      font-family: unquote("Roboto"),
+      font-weight: 400,
+    ),
+    $styles-body1: (
+      font-family: unquote("Roboto"),
+    ),
+    $styles-body2: (
+      font-family: unquote("Roboto"),
+    ),
+    $styles-subtitle1: (
+      font-family: unquote("Roboto"),
+    ),
+    $styles-subtitle2: (
+      font-family: unquote("Roboto"),
+    ),
+    $styles-button: (
+      font-family: unquote("Roboto"),
+    ),
+    $styles-overline: (
+      font-family: unquote("Roboto"),
+    ),
+    $styles-caption: (
+      font-family: unquote("Roboto"),
+    )
   );
 
 /* Must be configured before any other use/import that imports MDC styles */
@@ -40,13 +70,10 @@
 /* Top app bar */
 @use "@material/icon-button";
 @use "@material/top-app-bar/mdc-top-app-bar";
-/* Typography */
 /* Grid */
 @use "@material/layout-grid/mdc-layout-grid";
 /* Shape */
 @use "@material/shape";
-/* Typography */
-@use "@material/typography/mdc-typography";
 /* Card */
 @use "@material/card";
 /* Image List */
@@ -60,51 +87,23 @@
 @use "@material/tab-scroller/mdc-tab-scroller";
 @use "@material/tab-indicator/mdc-tab-indicator";
 @use "@material/tab/mdc-tab";
-
+/* Typography */
+@use "@material/typography/mdc-typography";
+/* All include components */
 /* Drawer*/
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
 /* Cards */
 @include card.core-styles;
-
-/* All include components */
 /* Top app bar */
 @include icon-button.core-styles;
 /* Cards */
 @include card.core-styles;
-
 /* Tabs */
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/icon-button/mdc-icon-button";
 
-/* 
-Use Global set to Material typography. individual sets can also be changed w/ 
-ex: class="mdc-typography-headline4"
-*/
-h1 {
-  @include typography.typography(headline1);
-}
-h2 {
-  @include typography.typography(headline2);
-}
-h6 {
-  @include typography.typography(headline6);
-}
-.team-card__text-label {
-  margin: 0 16px;
-  @include typography.typography(body1);
-  @include mdc-typography-baseline-top(32px);
-}
-
-/* BREAKPOINT for viewport widths <1025px */
-@media (max-width: 1025px) {
-  h1 {
-    @include typography.typography(headline2);
-  }
-  h2 {
-    @include typography.typography(headline3);
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Roboto:wght@300;400;500&display=swap");
 
 /* Use global color */
 $alternate-secondary: #c81628;
@@ -112,7 +111,7 @@ $alternate-secondary: #c81628;
   color: $alternate-secondary;
 }
 
-/* Material Design Global Color */
+/* Material Design global color */
 .mdc-top-app-bar__title,
 .links {
   @include theme.property(color, secondary);
@@ -126,42 +125,28 @@ hr,
 }
 
 * {
-  /* Toggle Comment border-style & color (on/off) to see layout border */
-  // border-style: solid;
-  // border-color: #c22b10;
-
   text-decoration: none;
-  box-sizing: border-box;
 }
 
-html {
-  display: block;
-}
-body,
-html {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  margin: 0;
+body {
   width: 100%;
   height: 100vh;
-  overflow: auto;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-.homepage-section {
-  text-size-adjust: 100%;
-  overflow: auto;
+  padding: 0;
   margin: 0 auto;
   max-width: 1500px;
 }
 
-/* Top app bar */
-/* Add padding to small logo */
-// .logo-small {
-//   padding-top: 4px;
-// }
+/* Spacing between sections */
+.section-container {
+  margin-bottom: 6em;
+}
+
+/* Padding headings */
+.meet-the-team-heading,
+.collaborator-heading,
+.whats-next-heading {
+  padding-top: 0.5em;
+}
 
 /* Reset List Styles */
 .nav-list {
@@ -208,41 +193,28 @@ html {
   }
 }
 
-/* Subtitle text */
-.subtitle-container {
-  margin-top: 2em;
+/* Body text */
+.body-text-container {
+  max-width: 700px;
 }
-/* BREAKPOINT for viewport widths >920* */
-@media screen and (min-width: 920px) {
-  .subtitle-container {
-    max-width: 900px;
-  }
-}
-
-/* Spacing between sections */
-.home-page-section {
-  margin-bottom: 6em;
-}
-
-/* Add link dectoration */
-.links {
-  text-decoration: underline;
-}
-
-/* same measurements as body1 */
+/* Size link open in new window icon */
 .open-in-new-window {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
 }
-/* BREAKPOINT for viewport widths <1025px
-   same measurements as body2  */
+/* BREAKPOINT for viewport widths <1025px */
 .open-in-new-window {
   @media (max-width: 1025px) {
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
   }
+}
+
+/* Add link dectoration */
+.links {
+  text-decoration: underline;
 }
 
 /* <hr> */
@@ -258,38 +230,31 @@ hr {
   }
 }
 
-/* Meet the team */
-.meet-the-team-grid {
-  margin-right: 60vh;
-}
-.meet-the-team-heading,
-.collaborator-heading,
-.whats-next-heading {
-  padding-top: 0.5em;
-}
-.meet-the-team-cards {
-  padding: 2em 0;
-}
-
-/* BREAKPOINT for viewport widths >920*/
-@media screen and (max-width: 920px) {
-  .meet-the-team-grid,
-  .collaborator-logo-grid {
-    margin: 0;
-  }
-}
-.team-card__text-label {
-  text-align: center;
-}
-
 /* Remove card outline */
 .mdc-card--outlined {
   border-width: 0;
 }
 
+/* Meet the team */
+.team-card__text-label {
+  text-align: center;
+}
+.meet-the-team-cards {
+  padding: 2em 0;
+}
+.meet-the-team-grid {
+  margin-right: 80vh;
+}
+/* BREAKPOINT for viewport widths >920*/
+@media screen and (max-width: 920px) {
+  .meet-the-team-grid {
+    margin: 0;
+  }
+}
+
 /* Collaborator image grid */
 .collaborator-logo-grid {
-  margin-right: 60vh;
+  margin-right: 80vh;
 }
 /* BREAKPOINT for viewport widths >920*/
 @media screen and (max-width: 920px) {
