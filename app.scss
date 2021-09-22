@@ -1,18 +1,7 @@
 /* All Use components */
-/* Set Global Material Color */
-@use "@material/theme" with
-  (
-    /* Secondary color based on NASA Space Apps 2021 */ $primary: #fff,
-    $on-primary: #000,
-    $secondary: #0960e1,
-    $on-secondary: #fff,
-    $surface: #fff,
-    $on-surface: #000,
-    $background: #fff
-  );
 
 /* Set Global Material Typography */
-/* Fonts based on NASA Space Apps 2021 */
+/* Headline font based on NASA Space Apps 2021 */
 @use "@material/typography" with
   (
     $styles-headline1: (
@@ -89,41 +78,82 @@
 @use "@material/tab/mdc-tab";
 /* Typography */
 @use "@material/typography/mdc-typography";
-/* All include components */
-/* Drawer*/
-@import "@material/drawer/mdc-drawer";
-@import "@material/list/mdc-list";
+/* Ripple*/
+@use "@material/ripple";
+
 /* Cards */
 @include card.core-styles;
 /* Top app bar */
 @include icon-button.core-styles;
 /* Cards */
 @include card.core-styles;
+
+/* Drawer*/
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
 /* Tabs */
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/icon-button/mdc-icon-button";
-
+/* Font*/
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Roboto:wght@300;400;500&display=swap");
 
-/* Use global color */
-$alternate-secondary: #c81628;
-.links:hover {
-  color: $alternate-secondary;
+/* Set theme */
+/* Color based on NASA Space Apps 2021 */
+:root {
+  --mdc-theme-primary: #0960e1;
+  --mdc-theme-on-primary: #ffffff;
+  --mdc-theme-secondary: #166ef1;
+  --mdc-theme-on-secondary: #ffffff;
+  --mdc-theme-on-error: #000000;
+  --mdc-theme-surface: #ffffff;
+  --mdc-theme-on-surface: #000000;
+  --mdc-theme-background: #ffffff;
+  --mdc-shape-small: 4px;
+  --mdc-shape-medium: 4px;
+  --mdc-shape-large: 0px;
+  --mdc-typography--font-family: "FiraSans+Roboto";
 }
 
-/* Material Design global color */
-.mdc-top-app-bar__title,
+/* Shape */
+.mdc-button,
+.mdc-text-field {
+  border-radius: var(--mdc-shape-small);
+}
+
+.mdc-drawer {
+  border-radius: 0 var(--mdc-shape-large) var(--mdc-shape-large) 0;
+}
+
+/* Color */
+/* Top app bar*/
+.mdc-top-app-bar .mdc-top-app-bar__action-item,
+.mdc-top-app-bar .mdc-top-app-bar__navigation-icon {
+  color: var(--mdc-theme-on-surface);
+}
+.mdc-top-app-bar,
+.mdc-top-app-bar__navigation-icon {
+  background: var(--mdc-theme-surface);
+  color: var(--mdc-theme-on-surface);
+}
+
+/* Drawer */
+.mdc-drawer .mdc-list-item--activated,
+.mdc-drawer .mdc-list-item--selected {
+  color: var(--mdc-theme-primary);
+}
+.mdc-drawer .mdc-list-item--hover {
+  color: var(--mdc-theme-secondary);
+}
+
 .links {
-  @include theme.property(color, secondary);
-}
-hr,
-.hero-button {
-  @include theme.property(background, secondary);
-}
-.mdc-button--outlined:not(:disabled) {
-  @include theme.property(color, secondary);
+  color: var(--mdc-theme-primary);
 }
 
+hr {
+  background: var(--mdc-theme-primary);
+}
+
+// Styles
 * {
   text-decoration: none;
 }
@@ -148,31 +178,6 @@ body {
   padding-top: 0.5em;
 }
 
-/* Reset List Styles */
-.nav-list {
-  list-style: none;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin: 0;
-  padding: 0em;
-  height: 100%;
-}
-
-/* Style the list items side by side */
-.nav-list-item {
-  list-style-type: none;
-  position: relative;
-  padding: 0.5em;
-}
-
 /* Fill the height of the top app bar with the tab bar */
 .mdc-top-app-bar__section {
   padding-top: 0;
@@ -188,22 +193,24 @@ body {
   .mdc-top-app-bar__navigation-icon {
     display: block;
   }
-  .tab-list {
+  .mdc-tab-bar {
     display: none;
   }
 }
 
 /* Body text */
 .body-text-container {
-  max-width: 700px;
+  max-width: 800px;
 }
-/* Size link open in new window icon */
+/* Size link open in new window icon 
+sizing same as mdc-typography--body1 */
 .open-in-new-window {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
 }
-/* BREAKPOINT for viewport widths <1025px */
+/* BREAKPOINT for viewport widths <1025px 
+sizing same as mdc-typography--body2 */
 .open-in-new-window {
   @media (max-width: 1025px) {
     font-size: 0.875rem;
@@ -230,35 +237,28 @@ hr {
   }
 }
 
-/* Remove card outline */
-.mdc-card--outlined {
+/* Meet the team */
+/* Style team member's name*/
+.team-card__text-label {
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+/* Hide outlines on team cards */
+.team-card-outline {
   border-width: 0;
 }
 
-/* Meet the team */
-.team-card__text-label {
-  text-align: center;
+/* Size and padd image grids */
+.meet-the-team-grid-container {
+  max-width: 900px;
 }
-.meet-the-team-cards {
-  padding: 2em 0;
-}
-.meet-the-team-grid {
-  margin-right: 80vh;
-}
-/* BREAKPOINT for viewport widths >920*/
-@media screen and (max-width: 920px) {
-  .meet-the-team-grid {
-    margin: 0;
-  }
+.collaborator-logo-grid-container {
+  max-width: 800px;
 }
 
-/* Collaborator image grid */
-.collaborator-logo-grid {
-  margin-right: 80vh;
-}
-/* BREAKPOINT for viewport widths >920*/
-@media screen and (max-width: 920px) {
-  .collaborator-logo-grid {
-    margin: 0;
-  }
+/* Add padding to image grids */
+.collaborator-logo-grid-container,
+.meet-the-team-grid-container {
+  padding-top: 1.5em;
 }

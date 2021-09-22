@@ -76,16 +76,27 @@
     <div class="mdc-drawer-scrim"></div>
     <div class="mdc-drawer-app-content">
       <!-- Top app bar -->
-      <header class="mdc-top-app-bar mdc-elevation--z2">
+      <header class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-elevation--z3">
         <div class="mdc-top-app-bar__row">
           <section
             class="
               mdc-top-app-bar__section mdc-top-app-bar__section--align-start
             "
           >
+            <!-- Nav button -->
+            <button
+              class="
+                material-icons
+                mdc-top-app-bar__navigation-icon
+                mdc-icon-button
+              "
+              aria-label="Open navigation menu"
+            >
+              menu
+            </button>
             <!-- Logo -->
             <span class="mdc-top-app-bar__title"
-              ><a href="/" aria-label="Navigate to the top of the page">
+              ><a href="#" aria-label="Navigate to the top of the page">
                 <picture>
                   <source
                     media="(min-width: 800px)"
@@ -106,6 +117,9 @@
                   <img
                     style="height: 48px; width: auto"
                     src="./media/logo-nasa-space-apps-pasadena-evergreen-black-small-1x.png"
+                    srcset="
+                      ./media/logo-nasa-space-apps-pasadena-evergreen-black-small-2x.png 2x
+                    "
                     alt="Space Apps Pasadena 2021 Logo"
                   />
                 </picture> </a
@@ -117,119 +131,109 @@
             role="toolbar"
           >
             <!-- Tabs -->
-            <div
-              class="mdc-tab-scroller mdc-tab-scroller--align-center tab-list"
-            >
-              <div
-                class="
-                  mdc-tab-scroller__scroll-area
-                  mdc-tab-scroller__scroll-area--scroll
-                "
-                style="margin-bottom: 0px"
-              >
-                <div class="mdc-tab-scroller__scroll-content">
-                  <a
-                    href="#about"
-                    class="mdc-tab"
-                    role="menuitem"
-                    aria-label="About"
-                    ><span class="mdc-tab__content"
-                      ><span class="mdc-tab__text-label">About</span></span
-                    >
-                    <span class="mdc-tab-indicator"
-                      ><span
-                        class="
-                          mdc-tab-indicator__content
-                          mdc-tab-indicator__content--underline
-                        "
-                      ></span
-                    ></span>
-                    <span class="mdc-tab__ripple"></span
-                  ></a>
-                  <a
-                    href="#meet-the-team"
-                    class="mdc-tab"
-                    role="menuitem"
-                    aria-label="Collaborators"
-                    ><span class="mdc-tab__content"
-                      ><span class="mdc-tab__text-label"
-                        >Meet The Team</span
-                      ></span
-                    >
-                    <span class="mdc-tab-indicator"
-                      ><span
-                        class="
-                          mdc-tab-indicator__content
-                          mdc-tab-indicator__content--underline
-                        "
-                      ></span
-                    ></span>
-                    <span class="mdc-tab__ripple"></span
-                  ></a>
-                  <a
-                    href="#collaborators"
-                    class="mdc-tab"
-                    role="menuitem"
-                    aria-label="Collaborators"
-                    ><span class="mdc-tab__content"
-                      ><span class="mdc-tab__text-label"
-                        >Collaborators</span
-                      ></span
-                    >
-                    <span class="mdc-tab-indicator"
-                      ><span
-                        class="
-                          mdc-tab-indicator__content
-                          mdc-tab-indicator__content--underline
-                        "
-                      ></span
-                    ></span>
-                    <span class="mdc-tab__ripple"></span
-                  ></a>
-                  <a
-                    href="#whats-next"
-                    class="mdc-tab"
-                    role="menuitem"
-                    aria-label="What's Next?"
-                    ><span class="mdc-tab__content"
-                      ><span class="mdc-tab__text-label"
-                        >What's Next?</span
-                      ></span
-                    >
-                    <span class="mdc-tab-indicator"
-                      ><span
-                        class="
-                          mdc-tab-indicator__content
-                          mdc-tab-indicator__content--underline
-                        "
-                      ></span
-                    ></span>
-                    <span class="mdc-tab__ripple"></span
-                  ></a>
+            <div class="mdc-tab-bar" role="tablist">
+              <div class="mdc-tab-scroller mdc-tab-scroller--align-end">
+                <div class="mdc-tab-scroller__scroll-area">
+                  <div class="mdc-tab-scroller__scroll-content">
+                    <a href="#about" role="tab" aria-selected="true">
+                      <button
+                        class="mdc-tab mdc-tab--min-width mdc-tab--active"
+                        aria-label="About"
+                        tabindex="0"
+                      >
+                        <span class="mdc-tab__content">
+                          <span class="mdc-tab__text-label">About</span>
+                        </span>
+                        <span
+                          class="mdc-tab-indicator mdc-tab-indicator--active"
+                        >
+                          <span
+                            class="
+                              mdc-tab-indicator__content
+                              mdc-tab-indicator__content--underline
+                            "
+                          ></span>
+                        </span>
+                        <span class="mdc-tab__ripple"></span>
+                      </button>
+                    </a>
+
+                    <a href="#meet-the-team" role="tab">
+                      <button
+                        class="mdc-tab mdc-tab--min-width"
+                        aria-label="Meet The Team"
+                        tabindex="0"
+                      >
+                        <span class="mdc-tab__content">
+                          <span class="mdc-tab__text-label">Meet The Team</span>
+                        </span>
+                        <span class="mdc-tab-indicator">
+                          <span
+                            class="
+                              mdc-tab-indicator__content
+                              mdc-tab-indicator__content--underline
+                            "
+                          ></span>
+                        </span>
+                        <span class="mdc-tab__ripple"></span>
+                      </button>
+                    </a>
+
+                    <a href="#collaborators" role="tab">
+                      <button
+                        class="mdc-tab mdc-tab--min-width"
+                        aria-label="Collaborators"
+                        tabindex="0"
+                      >
+                        <span class="mdc-tab__content">
+                          <span class="mdc-tab__text-label">Collaborators</span>
+                        </span>
+                        <span class="mdc-tab-indicator">
+                          <span
+                            class="
+                              mdc-tab-indicator__content
+                              mdc-tab-indicator__content--underline
+                            "
+                          ></span>
+                        </span>
+                        <span class="mdc-tab__ripple"></span>
+                      </button>
+                    </a>
+
+                    <a href="#whats-next" role="tab">
+                      <button
+                        class="mdc-tab mdc-tab--min-width"
+                        aria-label="What's Next?"
+                        tabindex="0"
+                      >
+                        <span class="mdc-tab__content">
+                          <span class="mdc-tab__text-label">What's Next?</span>
+                        </span>
+                        <span class="mdc-tab-indicator">
+                          <span
+                            class="
+                              mdc-tab-indicator__content
+                              mdc-tab-indicator__content--underline
+                            "
+                          ></span>
+                        </span>
+                        <span class="mdc-tab__ripple"></span>
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <!-- Nav button -->
-            <button
-              class="
-                material-icons
-                mdc-top-app-bar__navigation-icon
-                mdc-icon-button
-              "
-              aria-label="Open navigation menu"
-            >
-              menu
-            </button>
           </section>
         </div>
       </header>
     </div>
 
     <!-- Main content -->
+    <!-- About id so tab starts at the right spot on the page -->
+    <div id="about"></div>
     <main class="mdc-top-app-bar--fixed-adjust">
       <div class="mdc-layout-grid">
-        <div id="about"></div>
         <div class="homepage-container">
           <!-- Hero -->
           <div class="section-container">
@@ -248,7 +252,6 @@
                 winners are selected for one of 10 Global Awards!
               </h2>
             </div>
-
             <a
               href="https://docs.google.com/presentation/d/e/2PACX-1vSjmz2aytVRv5QylndsiDlKySEK9SfeEE332eidWRXawXU07JqfCAqoZW5u_JZSAhEZmb1nOepovi5c/embed?start=false&loop=false&delayms=3000&slide=id.ged826f7f96_0_210"
               target="_blank"
@@ -272,6 +275,7 @@
                 </button>
               </div>
             </a>
+
             <a
               href="https://2021.spaceappschallenge.org/locations/pasadena-ca/event"
               target="_blank"
@@ -279,17 +283,11 @@
               aria-label="Register on the NASA Space Apps Pasadena event page"
             >
               <div class="mdc-touch-target-wrapper">
-                <button
-                  class="
-                    mdc-button mdc-button--icon-trailing mdc-button--touch
-                    hero-button
-                    mdc-elevation--z2
-                  "
-                >
+                <button class="mdc-button mdc-button--raised">
                   <span class="mdc-button__ripple"></span>
                   <span class="mdc-button__touch"></span>
-                  <span class="mdc-button__label">Register Now</span
-                  ><i class="material-icons mdc-button__icon" aria-hidden="true"
+                  <span class="mdc-button__label">Register Now</span>
+                  <i class="material-icons mdc-button__icon" aria-hidden="true"
                     >open_in_new</i
                   >
                 </button>
@@ -333,316 +331,309 @@
             </div>
 
             <!-- Team Image Grid -->
-            <div class="meet-the-team-cards">
-              <div class="mdc-layout-grid__inner meet-the-team-grid">
-                <!-- Trinity -->
-                <div
-                  class="
-                    mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-2-phone
-                    mdc-layout-grid__cell--span-2-tablet
-                    mdc-layout-grid__cell--span-3-desktop
-                    mdc-layout-grid__cell--span-3-desktop-hd
-                  "
-                >
-                  <div class="mdc-card mdc-card--outlined">
-                    <div
-                      class="mdc-card__media mdc-card__media--square"
-                      style="
-                        background-image: url(./media/001-team-image-trinity-chung-1x.png);
-                        background-image: -webkit-image-set(
-                          url(./media/001-team-image-trinity-chung-1x.webp) 1x,
-                          url(./media/001-team-image-trinity-chung-2x.webp) 2x
-                        );
-                        background-image: image-set(
-                          url(./media/001-team-image-trinity-chung-1x.webp) 1x,
-                          url(./media/001-team-image-trinity-chung-2x.webp) 2x
-                        );
-                      "
-                      alt="image of Trinity Chung"
-                    ></div>
-                    <div class="team-card__text-label">Trinity Chung</div>
-                  </div>
+            <div class="mdc-layout-grid__inner meet-the-team-grid-container">
+              <!-- Trinity -->
+              <div
+                class="
+                  team-card
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-2-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card-outline">
+                  <div
+                    class="mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url(./media/001-team-image-trinity-chung-1x.png);
+                      background-image: -webkit-image-set(
+                        url(./media/001-team-image-trinity-chung-1x.webp) 1x,
+                        url(./media/001-team-image-trinity-chung-2x.webp) 2x
+                      );
+                      background-image: image-set(
+                        url(./media/001-team-image-trinity-chung-1x.webp) 1x,
+                        url(./media/001-team-image-trinity-chung-2x.webp) 2x
+                      );
+                    "
+                    alt="image of Trinity Chung"
+                  ></div>
+                  <div class="team-card__text-label">Trinity Chung</div>
                 </div>
+              </div>
 
-                <!-- Janet -->
-                <div
-                  class="
-                    mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-2-phone
-                    mdc-layout-grid__cell--span-2-tablet
-                    mdc-layout-grid__cell--span-3-desktop
-                    mdc-layout-grid__cell--span-3-desktop-hd
-                  "
-                >
-                  <div class="mdc-card mdc-card--outlined">
-                    <div
-                      class="mdc-card__media mdc-card__media--square"
-                      style="
-                        background-image: url(./media/002-team-image-janet-teng-1x.png);
-                        background-image: -webkit-image-set(
-                          url(./media/002-team-image-janet-teng-1x.webp) 1x,
-                          url(./media/002-team-image-janet-teng-2x.webp) 2x
-                        );
-                        background-image: image-set(
-                          url(./media/002-team-image-janet-teng-1x.webp) 1x,
-                          url(./media/002-team-image-janet-teng-2x.webp) 2x
-                        );
-                      "
-                      alt="image of Janet Teng"
-                    ></div>
-                    <div class="team-card__text-label">Janet Teng</div>
-                  </div>
+              <!-- Janet -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-2-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card-outline">
+                  <div
+                    class="mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url(./media/002-team-image-janet-teng-1x.png);
+                      background-image: -webkit-image-set(
+                        url(./media/002-team-image-janet-teng-1x.webp) 1x,
+                        url(./media/002-team-image-janet-teng-2x.webp) 2x
+                      );
+                      background-image: image-set(
+                        url(./media/002-team-image-janet-teng-1x.webp) 1x,
+                        url(./media/002-team-image-janet-teng-2x.webp) 2x
+                      );
+                    "
+                    alt="image of Janet Teng"
+                  ></div>
+                  <div class="team-card__text-label">Janet Teng</div>
                 </div>
+              </div>
 
-                <!-- Jacqueline -->
-                <div
-                  class="
-                    mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-2-phone
-                    mdc-layout-grid__cell--span-2-tablet
-                    mdc-layout-grid__cell--span-3-desktop
-                    mdc-layout-grid__cell--span-3-desktop-hd
-                  "
-                >
-                  <div class="mdc-card mdc-card--outlined">
-                    <div
-                      class="mdc-card__media mdc-card__media--square"
-                      style="
-                        background-image: url(./media/003-team-image-jacqueline-friedberg-1x.png);
-                        background-image: -webkit-image-set(
-                          url(./media/003-team-image-jacqueline-friedberg-1x.webp)
-                            1x,
-                          url(./media/003-team-image-jacqueline-friedberg-2x.webp)
-                            2x
-                        );
-                        background-image: image-set(
-                          url(./media/003-team-image-jacqueline-friedberg-1x.webp)
-                            1x,
-                          url(./media/003-team-image-jacqueline-friedberg-2x.webp)
-                            2x
-                        );
-                      "
-                      alt="image of Jacqueline Friedberg"
-                    ></div>
-                    <div class="team-card__text-label">
-                      Jacqueline Friedberg
-                    </div>
-                  </div>
+              <!-- Jacqueline -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-2-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card-outline">
+                  <div
+                    class="mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url(./media/003-team-image-jacqueline-friedberg-1x.png);
+                      background-image: -webkit-image-set(
+                        url(./media/003-team-image-jacqueline-friedberg-1x.webp)
+                          1x,
+                        url(./media/003-team-image-jacqueline-friedberg-2x.webp)
+                          2x
+                      );
+                      background-image: image-set(
+                        url(./media/003-team-image-jacqueline-friedberg-1x.webp)
+                          1x,
+                        url(./media/003-team-image-jacqueline-friedberg-2x.webp)
+                          2x
+                      );
+                    "
+                    alt="image of Jacqueline Friedberg"
+                  ></div>
+                  <div class="team-card__text-label">Jacqueline Friedberg</div>
                 </div>
+              </div>
 
-                <!-- Pranav -->
-                <div
-                  class="
-                    mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-2-phone
-                    mdc-layout-grid__cell--span-2-tablet
-                    mdc-layout-grid__cell--span-3-desktop
-                    mdc-layout-grid__cell--span-3-desktop-hd
-                  "
-                >
-                  <div class="mdc-card mdc-card--outlined">
-                    <div
-                      class="mdc-card__media mdc-card__media--square"
-                      style="
-                        background-image: url(./media/004-team-image-pranav-patel-1x.png);
-                        background-image: -webkit-image-set(
-                          url(./media/004-team-image-pranav-patel-1x.webp) 1x,
-                          url(./media/004-team-image-pranav-patel-2x.webp) 2x
-                        );
-                        background-image: image-set(
-                          url(./media/004-team-image-pranav-patel-1x.webp) 1x,
-                          url(./media/004-team-image-pranav-patel-2x.webp) 2x
-                        );
-                      "
-                      alt="image of Pranav Patel"
-                    ></div>
-                    <div class="team-card__text-label">Pranav Patel</div>
-                  </div>
+              <!-- Pranav -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-2-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card-outline">
+                  <div
+                    class="mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url(./media/004-team-image-pranav-patel-1x.png);
+                      background-image: -webkit-image-set(
+                        url(./media/004-team-image-pranav-patel-1x.webp) 1x,
+                        url(./media/004-team-image-pranav-patel-2x.webp) 2x
+                      );
+                      background-image: image-set(
+                        url(./media/004-team-image-pranav-patel-1x.webp) 1x,
+                        url(./media/004-team-image-pranav-patel-2x.webp) 2x
+                      );
+                    "
+                    alt="image of Pranav Patel"
+                  ></div>
+                  <div class="team-card__text-label">Pranav Patel</div>
                 </div>
+              </div>
 
-                <!-- Oneal -->
-                <div
-                  class="
-                    mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-2-phone
-                    mdc-layout-grid__cell--span-2-tablet
-                    mdc-layout-grid__cell--span-3-desktop
-                    mdc-layout-grid__cell--span-3-desktop-hd
-                  "
-                >
-                  <div class="mdc-card mdc-card--outlined">
-                    <div
-                      class="mdc-card__media mdc-card__media--square"
-                      style="
-                        background-image: url(./media/005-team-image-oneal-douglin-1x.png);
-                        background-image: -webkit-image-set(
-                          url(./media/005-team-image-oneal-douglin-1x.webp) 1x,
-                          url(./media/005-team-image-oneal-douglin-2x.webp) 2x
-                        );
-                        background-image: image-set(
-                          url(./media/005-team-image-oneal-douglin-1x.webp) 1x,
-                          url(./media/005-team-image-oneal-douglin-2x.webp) 2x
-                        );
-                      "
-                      alt="image of Oneal Douglin"
-                    ></div>
-                    <div class="team-card__text-label">Oneal Douglin</div>
-                  </div>
+              <!-- Oneal -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-2-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card-outline">
+                  <div
+                    class="mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url(./media/005-team-image-oneal-douglin-1x.png);
+                      background-image: -webkit-image-set(
+                        url(./media/005-team-image-oneal-douglin-1x.webp) 1x,
+                        url(./media/005-team-image-oneal-douglin-2x.webp) 2x
+                      );
+                      background-image: image-set(
+                        url(./media/005-team-image-oneal-douglin-1x.webp) 1x,
+                        url(./media/005-team-image-oneal-douglin-2x.webp) 2x
+                      );
+                    "
+                    alt="image of Oneal Douglin"
+                  ></div>
+                  <div class="team-card__text-label">Oneal Douglin</div>
                 </div>
+              </div>
 
-                <!-- Yi -->
-                <div
-                  class="
-                    mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-2-phone
-                    mdc-layout-grid__cell--span-2-tablet
-                    mdc-layout-grid__cell--span-3-desktop
-                    mdc-layout-grid__cell--span-3-desktop-hd
-                  "
-                >
-                  <div class="mdc-card mdc-card--outlined">
-                    <div
-                      class="mdc-card__media mdc-card__media--square"
-                      style="
-                        background-image: url(./media/006-team-image-yi-zhuang-1x.png);
-                        background-image: -webkit-image-set(
-                          url(./media/006-team-image-yi-zhuang-1x.webp) 1x,
-                          url(./media/006-team-image-yi-zhuang-2x.webp) 2x
-                        );
-                        background-image: image-set(
-                          url(./media/006-team-image-yi-zhuang-1x.webp) 1x,
-                          url(./media/006-team-image-yi-zhuang-2x.webp) 2x
-                        );
-                      "
-                      alt="image of Yi Zhuang"
-                    ></div>
-                    <div class="team-card__text-label">Yi Zhuang</div>
-                  </div>
+              <!-- Yi -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-2-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card-outline">
+                  <div
+                    class="mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url(./media/006-team-image-yi-zhuang-1x.png);
+                      background-image: -webkit-image-set(
+                        url(./media/006-team-image-yi-zhuang-1x.webp) 1x,
+                        url(./media/006-team-image-yi-zhuang-2x.webp) 2x
+                      );
+                      background-image: image-set(
+                        url(./media/006-team-image-yi-zhuang-1x.webp) 1x,
+                        url(./media/006-team-image-yi-zhuang-2x.webp) 2x
+                      );
+                    "
+                    alt="image of Yi Zhuang"
+                  ></div>
+                  <div class="team-card__text-label">Yi Zhuang</div>
                 </div>
+              </div>
 
-                <!-- Anthony -->
-                <div
-                  class="
-                    mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-2-phone
-                    mdc-layout-grid__cell--span-2-tablet
-                    mdc-layout-grid__cell--span-3-desktop
-                    mdc-layout-grid__cell--span-3-desktop-hd
-                  "
-                >
-                  <div class="mdc-card mdc-card--outlined">
-                    <div
-                      class="mdc-card__media mdc-card__media--square"
-                      style="
-                        background-image: url(./media/007-team-image-anthony-ko-1x.png);
-                        background-image: -webkit-image-set(
-                          url(./media/007-team-image-anthony-ko-1x.webp) 1x,
-                          url(./media/007-team-image-anthony-ko-2x.webp) 2x
-                        );
-                        background-image: image-set(
-                          url(./media/007-team-image-anthony-ko-1x.webp) 1x,
-                          url(./media/007-team-image-anthony-ko-2x.webp) 2x
-                        );
-                      "
-                      alt="image of Anthony Ko"
-                    ></div>
-                    <div class="team-card__text-label">Anthony Ko</div>
-                  </div>
+              <!-- Anthony -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-2-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card-outline">
+                  <div
+                    class="mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url(./media/007-team-image-anthony-ko-1x.png);
+                      background-image: -webkit-image-set(
+                        url(./media/007-team-image-anthony-ko-1x.webp) 1x,
+                        url(./media/007-team-image-anthony-ko-2x.webp) 2x
+                      );
+                      background-image: image-set(
+                        url(./media/007-team-image-anthony-ko-1x.webp) 1x,
+                        url(./media/007-team-image-anthony-ko-2x.webp) 2x
+                      );
+                    "
+                    alt="image of Anthony Ko"
+                  ></div>
+                  <div class="team-card__text-label">Anthony Ko</div>
                 </div>
+              </div>
 
-                <!-- Luciano -->
-                <div
-                  class="
-                    mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-2-phone
-                    mdc-layout-grid__cell--span-2-tablet
-                    mdc-layout-grid__cell--span-3-desktop
-                    mdc-layout-grid__cell--span-3-desktop-hd
-                  "
-                >
-                  <div class="mdc-card mdc-card--outlined">
-                    <div
-                      class="mdc-card__media mdc-card__media--square"
-                      style="
-                        background-image: url(./media/008-team-image-luciano-kholos-1x.png);
-                        background-image: -webkit-image-set(
-                          url(./media/008-team-image-luciano-kholos-1x.webp) 1x,
-                          url(./media/008-team-image-luciano-kholos-2x.webp) 2x
-                        );
-                        background-image: image-set(
-                          url(./media/008-team-image-luciano-kholos-1x.webp) 1x,
-                          url(./media/008-team-image-luciano-kholos-2x.webp) 2x
-                        );
-                      "
-                      alt="image of Luciano Kholos"
-                    ></div>
-                    <div class="team-card__text-label">Luciano Kholos</div>
-                  </div>
+              <!-- Luciano -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-2-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card-outline">
+                  <div
+                    class="mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url(./media/008-team-image-luciano-kholos-1x.png);
+                      background-image: -webkit-image-set(
+                        url(./media/008-team-image-luciano-kholos-1x.webp) 1x,
+                        url(./media/008-team-image-luciano-kholos-2x.webp) 2x
+                      );
+                      background-image: image-set(
+                        url(./media/008-team-image-luciano-kholos-1x.webp) 1x,
+                        url(./media/008-team-image-luciano-kholos-2x.webp) 2x
+                      );
+                    "
+                    alt="image of Luciano Kholos"
+                  ></div>
+                  <div class="team-card__text-label">Luciano Kholos</div>
                 </div>
+              </div>
 
-                <!-- Nicolas -->
-                <div
-                  class="
-                    mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-2-phone
-                    mdc-layout-grid__cell--span-2-tablet
-                    mdc-layout-grid__cell--span-3-desktop
-                    mdc-layout-grid__cell--span-3-desktop-hd
-                  "
-                >
-                  <div class="mdc-card mdc-card--outlined">
-                    <div
-                      class="mdc-card__media mdc-card__media--square"
-                      style="
-                        background-image: url(./media/009-team-image-nicolas-hernandez-1x.png);
-                        background-image: -webkit-image-set(
-                          url(./media/009-team-image-nicolas-hernandez-1x.webp)
-                            1x,
-                          url(./media/009-team-image-nicolas-hernandez-2x.webp)
-                            2x
-                        );
-                        background-image: image-set(
-                          url(./media/009-team-image-nicolas-hernandez-1x.webp)
-                            1x,
-                          url(./media/009-team-image-nicolas-hernandez-2x.webp)
-                            2x
-                        );
-                      "
-                      alt="image of Nicolas Hernandez"
-                    ></div>
-                    <div class="team-card__text-label">Nicolas Hernandez</div>
-                  </div>
+              <!-- Nicolas -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-2-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card-outline">
+                  <div
+                    class="mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url(./media/009-team-image-nicolas-hernandez-1x.png);
+                      background-image: -webkit-image-set(
+                        url(./media/009-team-image-nicolas-hernandez-1x.webp) 1x,
+                        url(./media/009-team-image-nicolas-hernandez-2x.webp) 2x
+                      );
+                      background-image: image-set(
+                        url(./media/009-team-image-nicolas-hernandez-1x.webp) 1x,
+                        url(./media/009-team-image-nicolas-hernandez-2x.webp) 2x
+                      );
+                    "
+                    alt="image of Nicolas Hernandez"
+                  ></div>
+                  <div class="team-card__text-label">Nicolas Hernandez</div>
                 </div>
+              </div>
 
-                <!-- Jesse -->
-                <div
-                  class="
-                    mdc-layout-grid__cell
-                    mdc-layout-grid__cell--span-2-phone
-                    mdc-layout-grid__cell--span-2-tablet
-                    mdc-layout-grid__cell--span-3-desktop
-                    mdc-layout-grid__cell--span-3-desktop-hd
-                  "
-                >
-                  <div class="mdc-card mdc-card--outlined">
-                    <div
-                      class="mdc-card__media mdc-card__media--square"
-                      style="
-                        background-image: url(./media/010-team-image-jesse-tzo-1x.png);
-                        background-image: -webkit-image-set(
-                          url(./media/010-team-image-jesse-tzo-1x.webp) 1x,
-                          url(./media/010-team-image-jesse-tzo-2x.webp) 2x
-                        );
-                        background-image: image-set(
-                          url(./media/010-team-image-jesse-tzo-1x.webp) 1x,
-                          url(./media/010-team-image-jesse-tzo-2x.webp) 2x
-                        );
-                      "
-                      alt="image of Jesse Tzo"
-                    ></div>
-                    <div class="team-card__text-label">Jesse Tzo</div>
-                  </div>
+              <!-- Jesse -->
+              <div
+                class="
+                  mdc-layout-grid__cell
+                  mdc-layout-grid__cell--span-2-phone
+                  mdc-layout-grid__cell--span-2-tablet
+                  mdc-layout-grid__cell--span-3-desktop
+                  mdc-layout-grid__cell--span-3-desktop-hd
+                "
+              >
+                <div class="mdc-card mdc-card--outlined team-card-outline">
+                  <div
+                    class="mdc-card__media mdc-card__media--square"
+                    style="
+                      background-image: url(./media/010-team-image-jesse-tzo-1x.png);
+                      background-image: -webkit-image-set(
+                        url(./media/010-team-image-jesse-tzo-1x.webp) 1x,
+                        url(./media/010-team-image-jesse-tzo-2x.webp) 2x
+                      );
+                      background-image: image-set(
+                        url(./media/010-team-image-jesse-tzo-1x.webp) 1x,
+                        url(./media/010-team-image-jesse-tzo-2x.webp) 2x
+                      );
+                    "
+                    alt="image of Jesse Tzo"
+                  ></div>
+                  <div class="team-card__text-label">Jesse Tzo</div>
                 </div>
               </div>
             </div>
@@ -662,7 +653,10 @@
             </div>
 
             <!-- Logo Image Grid -->
-            <div class="mdc-layout-grid__inner collaborator-logo-grid">
+
+            <div
+              class="mdc-layout-grid__inner collaborator-logo-grid-container"
+            >
               <!-- Supplyframe -->
               <div
                 class="
@@ -680,7 +674,12 @@
                   rel="noopener"
                   aria-label="Supplyframe website"
                 >
-                  <div class="mdc-card mdc-card--outlined">
+                  <div
+                    class="
+                      mdc-card mdc-card--outlined
+                      collaborator-logo-outline
+                    "
+                  >
                     <div class="mdc-card__primary-action" tabindex="0">
                       <div
                         class="mdc-card__media mdc-card__media--square"
@@ -720,7 +719,12 @@
                   rel="noopener"
                   aria-label="echoAR website"
                 >
-                  <div class="mdc-card mdc-card--outlined">
+                  <div
+                    class="
+                      mdc-card mdc-card--outlined
+                      collaborator-logo-outline
+                    "
+                  >
                     <div class="mdc-card__primary-action" tabindex="0">
                       <div
                         class="mdc-card__media mdc-card__media--square"
@@ -760,7 +764,12 @@
                   rel="noopener"
                   aria-label="Replit website"
                 >
-                  <div class="mdc-card mdc-card--outlined">
+                  <div
+                    class="
+                      mdc-card mdc-card--outlined
+                      collaborator-logo-outline
+                    "
+                  >
                     <div class="mdc-card__primary-action" tabindex="0">
                       <div
                         class="mdc-card__media mdc-card__media--square"
@@ -800,7 +809,12 @@
                   rel="noopener"
                   aria-label="Wolfram website"
                 >
-                  <div class="mdc-card mdc-card--outlined">
+                  <div
+                    class="
+                      mdc-card mdc-card--outlined
+                      collaborator-logo-outline
+                    "
+                  >
                     <div class="mdc-card__primary-action" tabindex="0">
                       <div
                         class="mdc-card__media mdc-card__media--square"
@@ -840,7 +854,12 @@
                   rel="noopener"
                   aria-label="Command Tech website"
                 >
-                  <div class="mdc-card mdc-card--outlined">
+                  <div
+                    class="
+                      mdc-card mdc-card--outlined
+                      collaborator-logo-outline
+                    "
+                  >
                     <div class="mdc-card__primary-action" tabindex="0">
                       <div
                         class="mdc-card__media mdc-card__media--square"
@@ -880,7 +899,12 @@
                   rel="noopener"
                   aria-label="Pasadena City College MESA website"
                 >
-                  <div class="mdc-card mdc-card--outlined">
+                  <div
+                    class="
+                      mdc-card mdc-card--outlined
+                      collaborator-logo-outline
+                    "
+                  >
                     <div class="mdc-card__primary-action" tabindex="0">
                       <div
                         class="mdc-card__media mdc-card__media--square"
@@ -897,7 +921,12 @@
                         "
                         alt="Pasadena City College logo"
                       ></div>
-                      <div class="mdc-card__ripple"></div>
+                      <div
+                        class="
+                          mdc-card__ripple
+                          mdc-ripple-surface mdc-ripple-surface--primary
+                        "
+                      ></div>
                     </div>
                   </div>
                 </a>
@@ -920,7 +949,12 @@
                   rel="noopener"
                   aria-label="Innovate Pasadena website"
                 >
-                  <div class="mdc-card mdc-card--outlined">
+                  <div
+                    class="
+                      mdc-card mdc-card--outlined
+                      collaborator-logo-outline
+                    "
+                  >
                     <div class="mdc-card__primary-action" tabindex="0">
                       <div
                         class="mdc-card__media mdc-card__media--square"
@@ -960,7 +994,12 @@
                   rel="noopener"
                   aria-label="Blaze Pizza website"
                 >
-                  <div class="mdc-card mdc-card--outlined">
+                  <div
+                    class="
+                      mdc-card mdc-card--outlined
+                      collaborator-logo-outline
+                    "
+                  >
                     <div class="mdc-card__primary-action" tabindex="0">
                       <div
                         class="mdc-card__media mdc-card__media--square"
@@ -1040,6 +1079,8 @@
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
   </body>
 
-  <!-- TODO: Set up older browser compatibility -->
+  <!-- TODO: Set up older browser compatibility (roll up) -->
   <!-- TODO: Fix small screen logo -->
+  <!-- TODO: Add image sizes -->
+  <!-- TODO: Fix erformance text -->
 </html>
