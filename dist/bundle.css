@@ -1007,6 +1007,9 @@ svg.mdc-button__icon {
     padding: var(--mdc-layout-grid-margin-phone, 16px);
   }
 }
+.mdc-layout-grid__inner {
+  justify-content: center;
+}
 
 @media (min-width: 840px) {
   .mdc-layout-grid__inner {
@@ -8218,7 +8221,7 @@ hr {
   text-decoration: none;
 }
 
-body {
+.main-content {
   width: 100%;
   height: 100vh;
   padding: 0;
@@ -8318,7 +8321,7 @@ hr {
 }
 
 .collaborator-logo-grid-container {
-  max-width: 800px;
+  /* max-width: 800px; */
 }
 
 /* Add padding to image grids */
