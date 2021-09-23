@@ -5,6 +5,12 @@ href="https://spaceapps-pasadena.netlify.app/" target="_blank">View the live sit
 
 <br>
 
+## Special thanks!
+
+Thank you to Oneal Douglin & Francesca Norelli for your helping make this site possible! ❤️
+
+</br>
+
 ## Steps for contributors
 
 Hi! Here are some steps that will help you set up your environment. Hope you
