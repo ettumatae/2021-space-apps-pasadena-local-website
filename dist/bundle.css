@@ -8295,7 +8295,7 @@ hr {
 }
 
 /* BREAKPOINT for viewport widths >920 */
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1025px) {
   hr {
     margin-right: 0;
   }
@@ -8317,12 +8317,56 @@ hr {
   max-width: 900px;
 }
 
-.collaborator-logo-grid-container {
-  max-width: 800px;
-}
-
 /* Add padding to image grids */
 .collaborator-logo-grid-container,
 .meet-the-team-grid-container {
   padding-top: 1.5em;
+}
+
+/* Logo image grid */
+.collaborator-logo-grid-container {
+  display: grid;
+  max-width: 800px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0.25em;
+}
+
+/* Supplyframe */
+.row-1-1 {
+  grid-column: 1/13;
+}
+
+/* Wolfram */
+.row-2-1 {
+  grid-column: 1/5;
+}
+
+/* echoAR */
+.row-2-2 {
+  grid-column: 5/9;
+}
+
+/* Replit */
+.row-2-3 {
+  grid-column: 9/13;
+}
+
+/* Command Tech */
+.row-3-1 {
+  grid-column: 1/4;
+}
+
+/* PCC */
+.row-3-2 {
+  grid-column: 4/7;
+}
+
+/* Innovate Pasadena */
+.row-3-3 {
+  grid-column: 7/10;
+}
+
+/* Blaze Pizza */
+.row-3-4 {
+  grid-column: 10/13;
 }
